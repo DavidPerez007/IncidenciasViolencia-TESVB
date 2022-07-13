@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSituconyugal extends Migration
+class CreateAreaLesion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateSituconyugal extends Migration
      */
     public function up()
     {
-        Schema::create('situconyugal', function (Blueprint $table) {
-            $table->id('id_situconyugal');
-            $table->string('situconyugal', 10);
+        Schema::create('area_lesion', function (Blueprint $table) {
+            $table->id('id_arealesion');
+            $table->string('arealesion', 150);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +28,6 @@ class CreateSituconyugal extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('situconyugal');
+        Schema::dropIfExists('area_lesion');
     }
 }
