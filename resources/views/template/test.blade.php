@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html lang="es" class="no-js">
 
-
-{{-- {{asset('public/css')}} --}}
 <head>
   <!-- Mobile Specific Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -55,7 +53,7 @@
             <li><a href="courses.html">Registrarse</a></li>
             <li><a href="about.html">¿Quienes somos?</a></li>
             <!-- Dropdown -->
-            
+
             <li><a href="contacts.html">Contactos</a></li>
 
             <li>
@@ -82,13 +80,11 @@
   <!-- ================ start banner Area ================= -->
   <section class="home-banner-area">
     <div class="container">
-      <div class="row justify-content-center fullscreen align-items-center">
-        <div class="col-lg-5 col-md-8 home-banner-left">
+     <div class="row justify-content-center fullscreen align-items-center">
+        <div class="col-lg-5 col-md-8 home-banner-left mb-2">
           <h1 class="text-white">
             Aplicación para recabar incidencias de violencia en contra de la mujer <br />
-           
           </h1>
-        
         </div>
         <div class="offset-lg-2 col-lg-5 col-md-12 home-banner-right">
           <img class="img-fluid" src="img/Mujersegura2.png" alt="" />
@@ -98,207 +94,43 @@
   </section>
   <!-- ================ End banner Area ================= -->
 
-  <!-- ================ Start Feature Area ================= -->
+  <!--
+     ================ Start Feature Area =================
   <section class="feature-area">
     <div class="container-fluid">
       <div class="feature-inner row">
         <div class="col-lg-2 col-md-6">
           <div class="feature-item d-flex">
-            <i class="ti-book"></i>
             <div class="ml-20">
-              <h4>New Classes</h4>
-              <p>
-                In the history of modern astronomy, there is probably no one greater leap forward.
-              </p>
+              <br>
+              <img class="col-12 col-16" src="img/itesvb.jpg ">
             </div>
           </div>
         </div>
+
         <div class="col-lg-2 col-md-6">
           <div class="feature-item d-flex">
-            <i class="ti-cup"></i>
             <div class="ml-20">
-              <h4>Top Courses</h4>
-              <p>
-                In the history of modern astronomy, there is probably no one greater leap forward.
-              </p>
+                <img src='img/tec.png' class="col-12 col-16 ">
             </div>
           </div>
         </div>
+
         <div class="col-lg-2 col-md-6">
           <div class="feature-item d-flex border-right-0">
-            <i class="ti-desktop"></i>
             <div class="ml-20">
-              <h4>Full E-Books</h4>
-              <p>
-                In the history of modern astronomy, there is probably no one greater leap forward.
-              </p>
+                <img src='img/imujer.jpg' class="col-12 col-16">
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
   <!-- ================ End Feature Area ================= -->
+-->
 
-  <!-- ================ Start Popular Course Area ================= -->
-  <section class="popular-course-area section-gap">
-    <div class="container-fluid">
-      <div class="row justify-content-center section-title">
-        <div class="col-lg-12">
-          <h2>
-            Popular Courses <br />
-            Available Right Now
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </div>
-      <div class="owl-carousel popuar-course-carusel">
-        <div class="single-popular-course">
-          <div class="thumb">
-            <img class="f-img img-fluid mx-auto" src="img/popular-course/p1.jpg" alt="" />
-          </div>
-          <div class="details">
-            <div class="d-flex justify-content-between mb-20">
-              <p class="name">programming language</p>
-              <p class="value">$150</p>
-            </div>
-            <a href="#">
-              <h4>Learn Angular JS Course for Legendary Persons</h4>
-            </a>
-            <div class="bottom d-flex mt-15">
-              <ul class="list">
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-              </ul>
-              <p class="ml-20">25 Reviews</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="single-popular-course">
-          <div class="thumb">
-            <img class="f-img img-fluid mx-auto" src="img/popular-course/p2.jpg" alt="" />
-          </div>
-          <div class="details">
-            <div class="d-flex justify-content-between mb-20">
-              <p class="name">programming language</p>
-              <p class="value">$150</p>
-            </div>
-            <a href="#">
-              <h4>Learn Angular JS Course for Legendary Persons</h4>
-            </a>
-            <div class="bottom d-flex mt-15">
-              <ul class="list">
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-              </ul>
-              <p class="ml-20">25 Reviews</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="single-popular-course">
-          <div class="thumb">
-            <img class="f-img img-fluid mx-auto" src="img/popular-course/p3.jpg" alt="" />
-          </div>
-          <div class="details">
-            <div class="d-flex justify-content-between mb-20">
-              <p class="name">programming language</p>
-              <p class="value">$150</p>
-            </div>
-            <a href="#">
-              <h4>Learn Angular JS Course for Legendary Persons</h4>
-            </a>
-            <div class="bottom d-flex mt-15">
-              <ul class="list">
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-              </ul>
-              <p class="ml-20">25 Reviews</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="single-popular-course">
-          <div class="thumb">
-            <img class="f-img img-fluid mx-auto" src="img/popular-course/p4.jpg" alt="" />
-          </div>
-          <div class="details">
-            <div class="d-flex justify-content-between mb-20">
-              <p class="name">programming language</p>
-              <p class="value">$150</p>
-            </div>
-            <a href="#">
-              <h4>Learn Angular JS Course for Legendary Persons</h4>
-            </a>
-            <div class="bottom d-flex mt-15">
-              <ul class="list">
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </li>
-              </ul>
-              <p class="ml-20">25 Reviews</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ================ End Popular Course Area ================= -->
 
   <!-- ================ Start Video Area ================= -->
   <section class="video-area section-gap-bottom">
@@ -307,12 +139,10 @@
         <div class="col-lg-5">
           <div class="section-title text-white">
             <h2 class="text-white">
-              Watch Our Trainers <br>
-              in Live Action
+             sobre nosotros
             </h2>
             <p>
-              In the history of modern astronomy, there is probably no one greater leap forward than the building and
-              launch of the space telescope known as the Hubble.
+                Un grupo sin fines de lucro formado por tres organizaciones: Tecnológico de Estudios Superiores de Valle de Bravo, Instituto Tecnológico Superior de Misantla y el Instituto Municipal de la Mujer de Valle de Bravo, que surge en en año 2022 debido al incremento de violencia principalmente en contra de la mujer. Mujer segura esta comprometida a lograr que la población tenga acceso a información verídica y en tiempo real de datos recabados de incidencias en contra de la mujer en el Estado de México pues es el estado que ocupa el primer lugar en feminicidios en toda la República Mexicana.
             </p>
           </div>
         </div>
@@ -361,100 +191,53 @@
         <div class="col-lg-12">
           <div class="section-title text-left">
             <h2>
-              Features That <br />
-              Can Avail By Everyone
+             Instituciones involucradas
             </h2>
-            <p>
-              If you are looking at blank cassettes on the web, you may be
-              very confused at the difference in price. You may see some for
-              as low as $.17 each.
-            </p>
+
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="other-feature-item">
-            <i class="ti-key"></i>
-            <h4>Lifetime Access</h4>
+
+            <h4>Tecnoligico de Estudios superiores de Valle de Bravo</h4>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
+                Misión: Ofrecer a la comunidad servicios de educación superior tecnológica de calidad, formando profesionistas con conocimientos científicos, tecnológicos y humanísticos que contribuyan al desarrollo económico y social del estado y la nación, basado en la sustentabilidad.
+                <br>
+                Visión: Ser una Institución de educación superior tecnológica reconocida por la excelencia de sus programas académicos y la calidad de sus egresados, siendo pilar fundamental del desarrollo sostenido, sustentable y equitativo de la nación.
               </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mt--160">
-          <div class="other-feature-item">
-            <i class="ti-files"></i>
-            <h4>Source File Included</h4>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mt--260">
-          <div class="other-feature-item">
-            <i class="ti-medall-alt"></i>
-            <h4>Student Membership</h4>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
-              </p>
-            </div>
-          </div>
-        </div>
+
+
         <div class="col-lg-4 col-md-6">
           <div class="other-feature-item">
-            <i class="ti-briefcase"></i>
-            <h4>35000+ Courses</h4>
+
+            <h4>Instituto Tecnológico Superior de Misantla</h4>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
+                Misión: Ofrecer un servicio de Educación Superior Tecnológica, pertinente y de calidad, para la formación de profesionistas competitivos; que cimentados en un desarrollo integral y armónico, les permita responder en un contexto de globalización, a los retos que demanda el País. Así mismo, compartir con la población en general los beneficios del conocimiento, la cultura científica y tecnológica; en particular, proporcionar servicios directos a los diversos sectores, mismos que contribuyan al bienestar que demanda la sociedad.
+                <br>
+                Visión: Ser en nuestra Región y zona de influencia, un Instituto Tecnológico de prestigio en la formación de profesionistas competitivos acordes con la demanda que exige el desarrollo del país; sustentado en la calidad de los servicios educativos infraestructura, ambiente armónico,difusión de la cultura y vinculación con los sectores social, público y privado.
               </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mt--160">
+        <div class="col-lg-4 col-md-6 ">
           <div class="other-feature-item">
-            <i class="ti-crown"></i>
-            <h4>Expert Mentors</h4>
+
+            <h4>Instituto Municipal de la Mujer Valle de Bravo</h4>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
+                MISIÓN: Crear, fomentar y ejecutar las políticas públicas que propicien la no discriminación, la igualdad y la equidad de oportunidades, de toma de decisiones y de los beneficios del desarrollo, así como acciones afirmativas que garanticen el ejercicio pleno de todos los derechos de las mujeres.
+                <br>
+                VISIÓN Eliminar toda forma de discriminación hacia las mujeres en los ámbitos público, privado y social para garantizar la equidad y el acceso a los beneficios del desarrollo.
               </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mt--260">
-          <div class="other-feature-item">
-            <i class="ti-headphone-alt"></i>
-            <h4>Live Supports</h4>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
-                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
-                amet consec tetur adipisicing elit, sed do eiusmod tempor
-                incididunt labore.
-              </p>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -658,71 +441,13 @@
   <footer class="footer-area section-gap">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Top Products</h4>
-					<ul>
-						<li><a href="#">Managed Website</a></li>
-						<li><a href="#">Manage Reputation</a></li>
-						<li><a href="#">Power Tools</a></li>
-						<li><a href="#">Marketing Service</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Quick Links</h4>
-					<ul>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Brand Assets</a></li>
-						<li><a href="#">Investor Relations</a></li>
-						<li><a href="#">Terms of Service</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Features</h4>
-					<ul>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Brand Assets</a></li>
-						<li><a href="#">Investor Relations</a></li>
-						<li><a href="#">Terms of Service</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-2 col-md-6 single-footer-widget">
-					<h4>Resources</h4>
-					<ul>
-						<li><a href="#">Guides</a></li>
-						<li><a href="#">Research</a></li>
-						<li><a href="#">Experts</a></li>
-						<li><a href="#">Agencies</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-4 col-md-6 single-footer-widget">
-					<h4>Newsletter</h4>
-					<p>You can trust us. we only send promo offers,</p>
-					<div class="form-wrap" id="mc_embed_signup">
-						<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-						 method="get" class="form-inline">
-							<input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
-							 required="" type="email">
-							<button class="click-btn btn btn-default text-uppercase">subscribe</button>
-							<div style="position: absolute; left: -5000px;">
-								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-							</div>
 
-							<div class="info"></div>
-						</form>
-					</div>
-				</div>
 			</div>
 			<div class="footer-bottom row align-items-center">
-				<p class="footer-text m-0 col-lg-8 col-md-12">
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-				<div class="col-lg-4 col-md-12 footer-social">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-dribbble"></i></a>
-					<a href="#"><i class="fa fa-behance"></i></a>
-				</div>
+				<p class="footer-text m-0 col-lg-8 col-md-12 text-right" >
+                Tecnologico de Estudios Superiores de Valle de Bravo
+                </p>
+
 			</div>
 		</div>
 	</footer>
