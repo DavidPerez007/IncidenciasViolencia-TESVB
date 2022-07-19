@@ -205,6 +205,10 @@
                 Misión: Ofrecer a la comunidad servicios de educación superior tecnológica de calidad, formando profesionistas con conocimientos científicos, tecnológicos y humanísticos que contribuyan al desarrollo económico y social del estado y la nación, basado en la sustentabilidad.
                 <br>
                 Visión: Ser una Institución de educación superior tecnológica reconocida por la excelencia de sus programas académicos y la calidad de sus egresados, siendo pilar fundamental del desarrollo sostenido, sustentable y equitativo de la nación.
+                <br>
+                <br>
+                <br>
+                <img class="img-box" src="img/itesvb.jpg"/>
               </p>
             </div>
           </div>
@@ -220,6 +224,10 @@
                 Misión: Ofrecer un servicio de Educación Superior Tecnológica, pertinente y de calidad, para la formación de profesionistas competitivos; que cimentados en un desarrollo integral y armónico, les permita responder en un contexto de globalización, a los retos que demanda el País. Así mismo, compartir con la población en general los beneficios del conocimiento, la cultura científica y tecnológica; en particular, proporcionar servicios directos a los diversos sectores, mismos que contribuyan al bienestar que demanda la sociedad.
                 <br>
                 Visión: Ser en nuestra Región y zona de influencia, un Instituto Tecnológico de prestigio en la formación de profesionistas competitivos acordes con la demanda que exige el desarrollo del país; sustentado en la calidad de los servicios educativos infraestructura, ambiente armónico,difusión de la cultura y vinculación con los sectores social, público y privado.
+                <br>
+                <br>
+                <br>
+                <img class="img-box" src="img/tec.png"/>
               </p>
             </div>
           </div>
@@ -233,6 +241,10 @@
                 MISIÓN: Crear, fomentar y ejecutar las políticas públicas que propicien la no discriminación, la igualdad y la equidad de oportunidades, de toma de decisiones y de los beneficios del desarrollo, así como acciones afirmativas que garanticen el ejercicio pleno de todos los derechos de las mujeres.
                 <br>
                 VISIÓN Eliminar toda forma de discriminación hacia las mujeres en los ámbitos público, privado y social para garantizar la equidad y el acceso a los beneficios del desarrollo.
+                <br>
+                <br>
+                <br>
+                <img class="img-box" src="img/imujer.jpg"/>
               </p>
             </div>
           </div>

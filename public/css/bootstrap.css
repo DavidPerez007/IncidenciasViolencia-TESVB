@@ -524,6 +524,11 @@ mark {
     height: auto
 }
 
+.img-box{
+    width: 100%;
+    height: auto;
+}
+
 .figure {
     display: inline-block
 }
@@ -1296,6 +1301,7 @@ pre code {
         max-width: 25%
     }
     .col-lg-4 {
+        display:flex;
         -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
         max-width: 33.333333%

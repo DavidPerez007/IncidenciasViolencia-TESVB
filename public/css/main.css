@@ -1200,7 +1200,7 @@ th {
   transition: all 0.3s ease 0s; }
   @media (max-width: 1024px) {
     .other-feature-item {
-      padding: 50px 30px; } }
+      padding: 50px 30px;} }
   .other-feature-item i {
     font-size: 36px;
     color: #222222;
