@@ -242,11 +242,11 @@
 
   <!-- ================ start footer Area ================= -->
   <footer class="footer-area section-gap">
-		<div class="container">
+		<div class="container-footer">
 			<div class="row">
 			</div>
 			<div class="footer-bottom row align-items-center">
-				<p class="footer-text m-0 col-lg-8 col-md-12 text-right" >
+				<p class="footer-textm-0 col-lg-12 col-md-12 text-center" >
                 Tecnologico de Estudios Superiores de Valle de Bravo
         </p>
 			</div>

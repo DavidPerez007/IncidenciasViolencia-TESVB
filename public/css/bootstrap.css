@@ -591,6 +591,9 @@ pre code {
     margin-right: auto;
     margin-left: auto
 }
+.container-footer{
+    margin-top:200px
+}
 
 @media (min-width:576px) {
     .container {
