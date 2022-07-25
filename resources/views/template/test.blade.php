@@ -78,12 +78,12 @@
   <!-- ================ End Header Area ================= -->
 
   <!-- ================ start banner Area ================= -->
-  <section class="home-banner-area">
+  <section class="mb-5 home-banner-area">
     <div class="container">
      <div class="row justify-content-center fullscreen align-items-center">
-        <div class="col-lg-5 col-md-8 home-banner-left mb-2">
+        <div class="mb-5 col-lg-5 col-md-8 home-banner-left mb-2">
           <h1 class="text-white">
-            Aplicación para recabar incidencias de violencia en contra de la mujer <br />
+            Plataforma web para recabar incidencias de violencia en contra de la mujer <br />
           </h1>
         </div>
         <div class="offset-lg-2 col-lg-5 col-md-12 home-banner-right">
@@ -95,7 +95,7 @@
   <!-- ================ End banner Area ================= -->
 
   <!-- ================ Start Video Area ================= -->
-  <section class="video-area section-gap-bottom">
+  <section class="mt-5 pt-5 video-area section-gap-bottom">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-5">
@@ -103,7 +103,7 @@
             <h2 class="text-white">
              Sobre nosotros
             </h2>
-            <p>
+            <p class="mb-5">
                 Un grupo sin fines de lucro formado por tres organizaciones: Tecnológico de Estudios Superiores de Valle de Bravo, Instituto Tecnológico Superior de Misantla y el Instituto Municipal de la Mujer de Valle de Bravo, que surge en en año 2022 debido al incremento de violencia principalmente en contra de la mujer. Mujer segura esta comprometida a lograr que la población tenga acceso a información verídica y en tiempo real de datos recabados de incidencias en contra de la mujer en el Estado de México pues es el estado que ocupa el primer lugar en feminicidios en toda la República Mexicana.
             </p>
           </div>
@@ -114,7 +114,7 @@
             <div class="single-video ">
               <div class="video-part">
                 <img class="img-fluid align-center" src="img/itesvb.jpg" alt="">
-                <div class="overlay"></div>
+                <div></div>
 <!--
                 <a class="popup-youtube play-btn" href="https://www.youtube.com/watch?v=VufDd-QL1c0">
                   <img class="play-icon" src="img/play-btn.png" alt="">
@@ -133,7 +133,7 @@
             <div class="single-video">
               <div class="video-part">
                 <img class="img-fluid" src="img/imujer.jpg" alt="">
-                <div class="overlay"></div>
+                <div></div>
              <!--   <a class="popup-youtube play-btn" href="https://www.youtube.com/watch?v=VufDd-QL1c0">
                   <img class="play-icon" src="img/play-btn.png" alt="">
                 </a> -->
@@ -155,7 +155,7 @@
   <!-- ================ End Video Area ================= -->
 
   <!-- ================ Start Feature Area ================= -->
-  <section class="other-feature-area">
+  <section class="mb-5 other-feature-area">
     <div class="container">
       <div class="feature-inner row">
         <div class="col-lg-12">
@@ -166,7 +166,7 @@
 
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="d-flex col-lg-4 col-md-6">
           <div class="other-feature-item">
 
             <h4>Tecnoligico de Estudios superiores de Valle de Bravo</h4>
@@ -183,14 +183,14 @@
                 <br>
                 <br>
                 <br>
-                <img class="img-box" src="img/itesvb.jpg"/>
+                <img class="w-100 h-auto" src="img/itesvb.jpg"/>
               </p>
             </div>
           </div>
         </div>
 
 
-        <div class="col-lg-4 col-md-6">
+        <div class="d-flex col-lg-4 col-md-6">
           <div class="other-feature-item">
 
             <h4>Instituto Tecnológico Superior de Misantla</h4>
@@ -207,12 +207,12 @@
                 <br>
                 <br>
                 <br>
-                <img class="img-box" src="img/tec.png"/>
+                <img class="w-100 h-auto" src="img/tec.png"/>
               </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 ">
+        <div class="d-flex col-lg-4 col-md-6 ">
           <div class="other-feature-item">
 
             <h4>Instituto Municipal de la Mujer Valle de Bravo</h4>
@@ -229,7 +229,7 @@
                 <br>
                 <br>
                 <br>
-                <img class="img-box" src="img/imujer.jpg"/>
+                <img class="w-100 h-auto" src="img/imujer.jpg"/>
               </p>
             </div>
           </div>
@@ -241,8 +241,8 @@
   <!-- ================ End Feature Area ================= -->
 
   <!-- ================ start footer Area ================= -->
-  <footer class="footer-area section-gap">
-		<div class="container-footer">
+  <footer class="mt-5 footer-area section-gap">
+		<div class="container">
 			<div class="row">
 			</div>
 			<div class="footer-bottom row align-items-center">
