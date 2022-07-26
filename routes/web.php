@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Idioma as LivewireIdioma;
+use App\Models\idioma;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +16,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    //return view('template.test');
     return view('welcome');
 });
 Route::get('pagina_prueba',function(){
     return view('template.test');
 });
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
+Route::get("idioma",\App\Http\Livewire\Idioma::class);
