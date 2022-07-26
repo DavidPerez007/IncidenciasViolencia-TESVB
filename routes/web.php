@@ -29,4 +29,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
 Route::get("pais",\App\Http\Livewire\Paises::class);
+
+
+Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
+
