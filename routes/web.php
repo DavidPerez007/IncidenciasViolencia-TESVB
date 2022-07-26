@@ -29,3 +29,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
