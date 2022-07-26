@@ -30,12 +30,9 @@ Route::middleware([
     })->name('dashboard');
 });
 
-<<<<<<< HEAD
+
 Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
-=======
 Route::get("pais",\App\Http\Livewire\Paises::class);
-
-
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
 
->>>>>>> dbbfd973859d0c54bd9d563b1b4584255786760b
+
