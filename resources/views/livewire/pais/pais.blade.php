@@ -1,0 +1,19 @@
+<div>
+  <table>
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Descripcion</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($paises as $value)
+        <tr>
+            <td>{{$loop->index+1}}</td>
+            <td>{{$value->pais}}</td>
+        </tr>
+        @endforeach
+    </tbody>
+  </table> 
+</div>

@@ -32,4 +32,12 @@ Route::middleware([
     })->name('dashboard');
 });
 
+
 Route::get("sexo", \App\Http\Livewire\Sexos::class);
+
+Route::get("pais",\App\Http\Livewire\Paises::class);
+
+
+Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
+
+
