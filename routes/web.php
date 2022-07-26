@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Sexo;
+use App\Models\Sexo as ModelsSexo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +31,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get("sexo", \App\Http\Livewire\Sexos::class);
