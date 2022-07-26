@@ -15,7 +15,7 @@ class CreateNacionalidad extends Migration
     {
         Schema::create('nacionalidad', function (Blueprint $table) {
             $table->id('id_nacionalidad');
-            $table->string('nacionalida', 20);
+            $table->string('nacionalidad', 20);
             $table->timestamps();
             $table->softDeletes();
         });
