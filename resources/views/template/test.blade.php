@@ -96,11 +96,11 @@
 
   <!-- ================ Start Video Area ================= -->
   <section class="mt-5 pt-5 video-area section-gap-bottom">
-    <div class="container">
+    <div name="sobreNosotros" class="container">
       <div class="row align-items-center">
         <div class="col-lg-5">
           <div class="section-title text-white">
-            <h2 name= "sobreNosotros" class="text-white">
+            <h2  class="text-white">
              Sobre nosotros
             </h2>
             <p class="mb-5">

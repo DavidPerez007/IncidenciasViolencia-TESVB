@@ -1,7 +1,12 @@
 <?php
 
+
 use App\Http\Livewire\Idioma as LivewireIdioma;
 use App\Models\idioma;
+
+use App\Http\Livewire\Sexo;
+use App\Models\Sexo as ModelsSexo;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,13 +33,22 @@ Route::middleware([ 'auth:sanctum',
 
     Route::get('/dashboard', function () {
         return view('template.plantilla');
+       //return view('dashboard');
     })->name('dashboard');
 });
 
 
+
+Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
+
+Route::get("sexo", \App\Http\Livewire\Sexos::class);
+
+
+Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
+
+
+
 Route::get("pais",\App\Http\Livewire\Paises::class);
-
-
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
 
 
