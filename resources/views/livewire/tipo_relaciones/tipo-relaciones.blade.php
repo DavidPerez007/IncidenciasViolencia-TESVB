@@ -1,0 +1,19 @@
+<div>
+    <table>
+      <thead>
+          <tr>
+              <th>No.</th>
+              <th>Descripcion</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach($tipo_relaciones as $value)
+          <tr>
+              <td>{{$loop->index+1}}</td>
+              <td>{{$value->tipo_relacion}}</td>
+          </tr>
+          @endforeach
+      </tbody>
+    </table> 
+  </div>
