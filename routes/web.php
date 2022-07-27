@@ -33,20 +33,8 @@ Route::middleware([
 });
 
 
-<<<<<<< HEAD
 Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
-=======
 Route::get("sexo", \App\Http\Livewire\Sexos::class);
-
-
-Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
-
-
->>>>>>> 842a8cd1d06e2fa89933bab2963e93998c6b67f6
 Route::get("pais",\App\Http\Livewire\Paises::class);
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 842a8cd1d06e2fa89933bab2963e93998c6b67f6
