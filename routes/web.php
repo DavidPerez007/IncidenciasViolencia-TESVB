@@ -32,10 +32,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 132ab34a8e149afce9d63e2aaa94c20287854cfc
 Route::get("sexo", \App\Http\Livewire\Sexos::class);
 
 Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
@@ -43,12 +40,12 @@ Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
 Route::get("pais",\App\Http\Livewire\Paises::class);
 
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
-<<<<<<< HEAD
 
 Route::get("tipo_apoyo",\App\Http\Livewire\TipoApoyos::class);
 
 Route::get("servicio_medico",\App\Http\Livewire\ServicioMedicos::class);
 
+Route::get("vivienda",\App\Http\Livewire\Viviendas::class);
 
-=======
->>>>>>> 132ab34a8e149afce9d63e2aaa94c20287854cfc
+
+
