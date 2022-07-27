@@ -1,12 +1,5 @@
 <?php
 
-
-use App\Http\Livewire\Idioma as LivewireIdioma;
-use App\Models\idioma;
-
-use App\Http\Livewire\Sexo;
-use App\Models\Sexo as ModelsSexo;
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,31 +31,18 @@ Route::middleware([ 'auth:sanctum',
 });
 
 
-<<<<<<< HEAD
-Route::get("sexo", \App\Http\Livewire\Sexos::class);
-=======
->>>>>>> a9f2ec608771337b4f7b01c4b6bb4d257bb2faa0
 
 Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
 
 Route::get("sexo", \App\Http\Livewire\Sexos::class);
 
-
-Route::get("sexo", \App\Http\Livewire\Sexos::class);
-
-
-
 Route::get("pais",\App\Http\Livewire\Paises::class);
 
-
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
-<<<<<<< HEAD
 
 Route::get("tipo_apoyo",\App\Http\Livewire\TipoApoyos::class);
 
 Route::get("servicio_medico",\App\Http\Livewire\ServicioMedicos::class);
-=======
->>>>>>> a9f2ec608771337b4f7b01c4b6bb4d257bb2faa0
 
 Route::get("vivienda",\App\Http\Livewire\Viviendas::class);
 
