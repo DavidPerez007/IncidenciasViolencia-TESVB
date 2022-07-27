@@ -3,7 +3,6 @@
 
 use App\Http\Livewire\Idioma as LivewireIdioma;
 use App\Models\idioma;
-
 use App\Http\Livewire\Sexo;
 use App\Models\Sexo as ModelsSexo;
 
