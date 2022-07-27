@@ -78,13 +78,14 @@
     <div class="container">
      <div class="row justify-content-center fullscreen align-items-center">
         <div class="mb-5 col-12 col-md-7 home-banner-left">
-          <h2 class="text-white">
-        
-            Plataforma web para recabar incidencias de violencia en contra de la mujer. <br />
-            <br />
+          <h1 class="text-white">
             Plataforma web r'aaa jioduú ytuch zobyiiñ dra nuú ndixu. <br />
+         
+            <h2 class="text-white">
+            Plataforma web para recabar incidencias de violencia en contra de la mujer.<br />
             <br />
-          </h2>
+            </h2>
+          </h1>
       
         </div>
         <div class="col-6 col-md-5 home-banner-right">
