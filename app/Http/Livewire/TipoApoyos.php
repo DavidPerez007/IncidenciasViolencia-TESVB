@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-use \App\Models\Tipo_apoyo;
+use \App\Models\TipoApoyo;
 
 class TipoApoyos extends Component
 
@@ -15,7 +15,7 @@ class TipoApoyos extends Component
     public function render()
 
     {
-        $this->tipo_apoyos = Tipo_apoyo::all();
+        $this->tipo_apoyos = TipoApoyo::all();
         return view('livewire.tipo_apoyo.tipo-apoyos');
     }
 }
