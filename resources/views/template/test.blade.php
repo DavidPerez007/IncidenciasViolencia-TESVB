@@ -49,9 +49,9 @@
 
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li><a href="courses.html">Iniciar sesion</a></li>
-            <li><a href="courses.html">Registrarse</a></li>
-            <li><a href="about.html">¿Quienes somos?</a></li>
+            <li><a href="{{route('login')}}">Iniciar sesion</a></li>
+            <li><a href="{{route('register')}}">Registrarse</a></li>
+            <li><a href="#sobreNosotros">¿Quienes somos?</a></li>
             <!-- Dropdown -->
 
             <li><a href="contacts.html">Contactos</a></li>
@@ -98,11 +98,11 @@
 
   <!-- ================ Start Video Area ================= -->
   <section class="mt-5 pt-5 video-area section-gap-bottom">
-    <div class="container">
+    <div name="sobreNosotros" class="container">
       <div class="row align-items-center">
         <div class="col-lg-5">
-          <div class="mb-5 section-title text-white">
-            <h2 class="text-white">
+          <div class="section-title text-white">
+            <h2  class="text-white">
              Sobre nosotros
             </h2>
             <p class="mb-5">
@@ -174,7 +174,7 @@
             <h4>Tecnoligico de Estudios superiores de Valle de Bravo</h4>
             <div>
               <p>
-                MISIÓN 
+                MISIÓN
                 <br>
                 Ofrecer a la comunidad servicios de educación superior tecnológica de calidad, formando profesionistas con conocimientos científicos, tecnológicos y humanísticos que contribuyan al desarrollo económico y social del estado y la nación, basado en la sustentabilidad.
                 <br>
@@ -198,7 +198,7 @@
             <h4>Instituto Tecnológico Superior de Misantla</h4>
             <div>
               <p>
-                MISIÓN 
+                MISIÓN
                 <br>
                 Ofrecer un servicio de Educación Superior Tecnológica, pertinente y de calidad, para la formación de profesionistas competitivos; que cimentados en un desarrollo integral y armónico, les permita responder en un contexto de globalización, a los retos que demanda el País. Así mismo, compartir con la población en general los beneficios del conocimiento, la cultura científica y tecnológica; en particular, proporcionar servicios directos a los diversos sectores, mismos que contribuyan al bienestar que demanda la sociedad.
                 <br>
@@ -220,7 +220,7 @@
             <h4>Instituto Municipal de la Mujer Valle de Bravo</h4>
             <div>
               <p>
-                MISIÓN 
+                MISIÓN
                 <br>
                 Crear, fomentar y ejecutar las políticas públicas que propicien la no discriminación, la igualdad y la equidad de oportunidades, de toma de decisiones y de los beneficios del desarrollo, así como acciones afirmativas que garanticen el ejercicio pleno de todos los derechos de las mujeres.
                 <br>
