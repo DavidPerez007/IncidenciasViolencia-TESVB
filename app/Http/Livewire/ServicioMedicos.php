@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-use \App\Models\Servicio_medico;
+use \App\Models\ServicioMedico;
 
 class ServicioMedicos extends Component
 {
@@ -14,7 +14,7 @@ class ServicioMedicos extends Component
 
     public function render()
     {
-        $this->servicio_medicos = Servicio_medico::all();
+        $this->servicio_medicos = ServicioMedico::all();
         return view('livewire.servicio_medico.servicio-medicos');
     }
 }
