@@ -33,20 +33,13 @@ Route::middleware([
 });
 
 
-Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
+Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
 Route::get("sexo", \App\Http\Livewire\Sexos::class);
-
-
-Route::get("sexo", \App\Http\Livewire\Sexos::class);
-
-
 Route::get("pais",\App\Http\Livewire\Paises::class);
-
-
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
-
 Route::get("tipo_apoyo",\App\Http\Livewire\TipoApoyos::class);
-
 Route::get("servicio_medico",\App\Http\Livewire\ServicioMedicos::class);
+Route::get("ambitoViolencia",\App\Http\Livewire\AmbitosViolencia::class);
+Route::get("modalidad_violencia",\App\Http\Livewire\ModalidadesViolencia::class);
 
 
