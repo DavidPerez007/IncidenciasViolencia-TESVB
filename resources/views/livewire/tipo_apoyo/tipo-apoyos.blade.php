@@ -1,5 +1,5 @@
 <div>
-    {{-- Do your work, then step back. --}}
+    {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
 
     <table class = "table table-bordered mt-5">
         <thead>
@@ -10,13 +10,15 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($sexos as $value)
+            @foreach($tipo_apoyos as $value)
 
             <td>{{ $loop->index+1}}</td>
-            <td>{{ $value->sexo}}</td>
+            <td>{{ $value->tipo_apoyo}}</td>
 
             @endforeach
         </tbody>
+
+
 
     </table>
 
