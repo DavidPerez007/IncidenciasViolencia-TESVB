@@ -1,5 +1,5 @@
 <div>
-    {{-- Do your work, then step back. --}}
+    {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
 
     <table class = "table table-bordered mt-5">
         <thead>
@@ -10,14 +10,13 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($sexos as $value)
+            @foreach($servicio_medicos as $value)
 
             <td>{{ $loop->index+1}}</td>
-            <td>{{ $value->sexo}}</td>
+            <td>{{ $value->servicio_medico}}</td>
 
             @endforeach
         </tbody>
 
     </table>
-
 </div>
