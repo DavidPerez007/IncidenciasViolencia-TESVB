@@ -3,9 +3,11 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+
 use \App\Models\Sexo;
 
 class Sexos extends Component
+
 {
 
     public $sexos, $sexo, $id_sexo;
