@@ -1,11 +1,5 @@
 <?php
 
-use App\Http\Livewire\Idioma as LivewireIdioma;
-use App\Models\idioma;
-
-use App\Http\Livewire\Sexo;
-use App\Models\Sexo as ModelsSexo;
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,3 +43,6 @@ Route::get("ambitoViolencia",\App\Http\Livewire\AmbitosViolencia::class);
 Route::get("modalidad_violencia",\App\Http\Livewire\ModalidadesViolencia::class);
 Route::get("vivienda",\App\Http\Livewire\Viviendas::class);
 
+Route::get("escolaridad", \App\Http\Livewire\Escolaridades::class);
+
+Route::get("efectos", \App\Http\Livewire\Efectos::class);
