@@ -4,6 +4,7 @@
 use App\Http\Livewire\Idioma as LivewireIdioma;
 use App\Models\idioma;
 
+
 use App\Http\Livewire\Sexo;
 use App\Models\Sexo as ModelsSexo;
 
@@ -52,5 +53,9 @@ Route::get("pais",\App\Http\Livewire\Paises::class);
 
 
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
+
+Route::get("escolaridad", \App\Http\Livewire\Escolaridades::class);
+
+Route::get("efectos", \App\Http\Livewire\Efectos::class);
 
 
