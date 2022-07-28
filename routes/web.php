@@ -1,16 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-=======
-
-use App\Http\Livewire\Idioma as LivewireIdioma;
-use App\Models\idioma;
 
 
-use App\Http\Livewire\Sexo;
-use App\Models\Sexo as ModelsSexo;
-
->>>>>>> e4ce03cfbcbc667190bb0727ee4e7b6d5631c0c2
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,7 +27,7 @@ Route::middleware([ 'auth:sanctum',
 ])->group(function () {
 
     Route::get('/dashboard', function () {
-        return view('template.plantilla');
+        return view('dashboard');
        //return view('dashboard');
     })->name('dashboard');
 });
@@ -44,23 +35,18 @@ Route::middleware([ 'auth:sanctum',
 
 Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
 Route::get("sexo", \App\Http\Livewire\Sexos::class);
-<<<<<<< HEAD
 
-Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
 
-=======
-Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
->>>>>>> e4ce03cfbcbc667190bb0727ee4e7b6d5631c0c2
 Route::get("pais",\App\Http\Livewire\Paises::class);
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
-<<<<<<< HEAD
+
 
 Route::get("tipo_relacion",\App\Http\Livewire\TipoRelaciones::class);
 
 Route::get("situ_conyugal",\App\Http\Livewire\SituConyugales::class);
 
 Route::get("ocupacion",\App\Http\Livewire\Ocupaciones::class);
-=======
+
 Route::get("tipo_apoyo",\App\Http\Livewire\TipoApoyos::class);
 Route::get("servicio_medico",\App\Http\Livewire\ServicioMedicos::class);
 Route::get("ambitoViolencia",\App\Http\Livewire\AmbitosViolencia::class);
@@ -72,5 +58,3 @@ Route::get("escolaridad", \App\Http\Livewire\Escolaridades::class);
 Route::get("efectos", \App\Http\Livewire\Efectos::class);
 
 
-
->>>>>>> e4ce03cfbcbc667190bb0727ee4e7b6d5631c0c2
