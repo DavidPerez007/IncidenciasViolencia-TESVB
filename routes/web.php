@@ -1,14 +1,11 @@
 <?php
 
-<<<<<<< HEAD
+
 
 use App\Http\Livewire\Idioma as LivewireIdioma;
 use App\Models\idioma;
 use App\Http\Livewire\Sexo;
 use App\Models\Sexo as ModelsSexo;
-
-=======
->>>>>>> a28ba79e70cac7cba109594631c643c422b4d09f
 use Illuminate\Support\Facades\Route;
 
 /*
