@@ -27,12 +27,17 @@
             <a class="navbar-brand ps-3" href="index.html">Mujer Segura</a>
 
             <button class="btn btn-link btn-sm order-2  order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <form method="POST">
-            <input  type="button"  class="btn btn-dark float-right"><a href="{{route('logout')}}">Cerrar sesion </a></button>
-            </form>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none"><
-                @csrf
-            </form>
+            <a class="dropdown-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+             {{ __('Logout') }}
+         </a>
+
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+             @csrf
+         </form>
+
+
 
 
 
