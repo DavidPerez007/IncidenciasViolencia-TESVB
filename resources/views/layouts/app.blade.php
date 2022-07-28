@@ -19,85 +19,14 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 </head>
 <body>
-<x-jet-banner />
-<div id="app">
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav me-auto">
-
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ms-auto">
-                    <!-- Authentication Links -->
-                    @guest
-                        @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                        @endif
-
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
-                    @else
-                       <li class="nav-item">
-                            <a href="{{url("tipos_reacciones")}}" class="nav-link @yield("reaction_type")">Reacciones</a>
-                        </li>
 
 
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-
-                    @endguest
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container py-4">
-        {{ $slot }}
-    </main>
-
-</div>
-@stack('modals')
-<script type="text/javascript">
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-
-    // new bootstrap.Tooltip(document.getElementById('content_description'))
-</script>
 
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
 
@@ -108,19 +37,11 @@
     onclick="event.preventDefault();
                       document.getElementById('logout-form').submit();">
      {{ __('Logout') }}
- </a>
+    </a>
 
  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
      @csrf
  </form>
-
-
-
-
-
-
-
-
 </nav>
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
@@ -135,12 +56,12 @@
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                        Layouts
+                     Generales
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                            <a class="nav-link" href="{{url("nacionalidad")}}">Nacionalidades</a>
                             <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                         </nav>
                     </div>
@@ -195,12 +116,9 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Dashboard</h1>
-                <ol class="breadcrumb mb-4">
-                    <li class="breadcrumb-item active">Dashboard</li>
-                </ol>
 
-                </div>
+                {{$slot}}
+
             </div>
 
         </main>
@@ -224,7 +142,10 @@
 <script src="js/datatables-simple-demo.js"></script>
 <script src="{{ mix('/js/app.js')}}"></script>
 <button type="button" class="btn btn-primary btn-sm">Small button</button>
-</body>
+
+@stack('modals')
+
+@livewireScripts
 </body>
 </html>
 

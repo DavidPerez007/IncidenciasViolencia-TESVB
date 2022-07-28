@@ -1,5 +1,7 @@
 <div>
     {{-- The Master doesn't talk, he acts. --}}
+    <h1 class="mt-4">Nacionalidades</h1>
+
     <table class="table table-bordered mt-5">
         <thead>
         <tr>
