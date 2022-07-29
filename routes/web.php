@@ -1,6 +1,5 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,13 +31,10 @@ Route::middleware([ 'auth:sanctum',
 });
 
 
-Route::get( "dificultad", \App\Http\Livewire\Dificultades::class);
 Route::get("sexo", \App\Http\Livewire\Sexos::class);
 Route::get("pais",\App\Http\Livewire\Paises::class);
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
 Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
-Route::get("pais",\App\Http\Livewire\Paises::class);
-Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
 
 Route::get("tipo_relacion",\App\Http\Livewire\TipoRelaciones::class);
 Route::get("situ_conyugal",\App\Http\Livewire\SituConyugales::class);
