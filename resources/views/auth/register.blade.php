@@ -9,7 +9,7 @@
                 <div class="card-header alert alert-primary text-center">
                   Registrarse
                 </div>
-                <div class="card-body">
+                <div class="card-body ">
 
         <form method="POST" action="{{ route('register') }}">
             @csrf

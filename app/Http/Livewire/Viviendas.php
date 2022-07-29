@@ -26,4 +26,9 @@ class Viviendas extends Component
         Vivienda::destroy($id_vivienda);
 
     }
+
+    public function editar($id_vivienda){
+
+
+    }
 }
