@@ -29,7 +29,7 @@
             <div class="row justify-content-center">
                 <div class="col-4">
                     <div class="card">
-                        <div class="card-header text-lg-center font-weight-bold">
+                        <div class="card-header alert alert-primary text-center font-weight-bold">
                            Iniciar sesión
                         </div>
                         <div class="card-body">
@@ -37,14 +37,14 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="mt-2">
+                        <div class="">
                             {{-- <label for="email" class="form-label"></label>  --}}
-                            <input type="email" id="email" class="form-control " type="email" name="email" :value="old('email')" required autofocus placeholder="Correo electrónico">
+                            <input id="email" class="form-control " type="email" name="email" :value="old('email')" required autofocus placeholder="Correo electrónico">
                         </div>
                         <div class="mt-4">
                             {{-- <label for="password" class="form-label"></label> --}}
                             <div class="input-group">
-                            <input type="password"  id="password" class="form-control" type="password" name="password" required autocomplete="current-password" placeholder="Contraseña">
+                            <input id="password" class="form-control" type="password" name="password" required autocomplete="current-password" placeholder="Contraseña">
                             <div class="input-group-append">
                                 <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
                               </div>
@@ -57,10 +57,10 @@
                                 <span >{{ __('Recordar contraseña') }}</span>
                             </label>
                         </div>
-                        <div class="mt-2 p-2">
+                        <div class="mt-1 p-2">
                             <button class="btn btn-primary btn-sm btn-block font-weight-bold rounded-pill"> {{ __('Entrar') }}  </button>
                         </div>
-                        <div class="d-flex justify-content-center links">
+                        <div class="d-flex justify-content-center links mb-2">
                             ¿No tiene una cuenta? <a class="font-weight-bold" href="{{ route('register') }}" class="ml-2">&nbsp;Registrarse</a>
                         </div>
                         <div class="d-flex justify-content-center links">
