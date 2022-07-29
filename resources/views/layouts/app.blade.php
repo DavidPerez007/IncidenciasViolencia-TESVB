@@ -32,12 +32,14 @@
 
     <a class="navbar-brand ps-3" href="index.html">Mujer Segura</a>
 
-    <button class="btn btn-link btn-sm order-2  order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-    <a class="dropdown-item" href="{{ route('logout') }}"
+    <button class="btn btn-link btn-sm order-2 float-right order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+
+   <button  class="btn btn-secondary float-right text-white"> <a class="dropdown-item " href="{{ route('logout') }}"
     onclick="event.preventDefault();
                       document.getElementById('logout-form').submit();">
-     {{ __('Logout') }}
+     {{ __('Cerrar sesion') }}
     </a>
+   </button>
 
  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
      @csrf
@@ -141,7 +143,7 @@
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 <script src="js/datatables-simple-demo.js"></script>
 <script src="{{ mix('/js/app.js')}}"></script>
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
+
 
 @stack('modals')
 

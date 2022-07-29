@@ -12,6 +12,7 @@
                            Login
                         </div>
                         <div class="card-body">
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

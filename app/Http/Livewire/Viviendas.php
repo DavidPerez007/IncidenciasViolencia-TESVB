@@ -16,4 +16,14 @@ class Viviendas extends Component
         $this->viviendas = Vivienda::all();
         return view('livewire.vivienda.viviendas');
     }
+
+    public function eliminar()
+    {
+
+    }
+    public function destroy($id_vivienda){
+
+        Vivienda::destroy($id_vivienda);
+
+    }
 }
