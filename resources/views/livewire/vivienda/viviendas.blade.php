@@ -10,7 +10,6 @@
 
             </tr>
         </thead>
-        <tbody>
             @foreach($viviendas as $value)
             <tr>
             <td>{{ $value->id_vivienda}}</td>

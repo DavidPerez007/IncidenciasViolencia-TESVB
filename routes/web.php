@@ -31,7 +31,7 @@ Route::middleware([ 'auth:sanctum',
 });
 
 
-Route::get("sexo", \App\Http\Livewire\Sexos::class);
+//oute::get("sexo", \App\Http\Livewire\Sexos::class);
 Route::get("pais",\App\Http\Livewire\Paises::class);
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
 Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
@@ -47,3 +47,18 @@ Route::get("modalidad_violencia",\App\Http\Livewire\ModalidadesViolencia::class)
 Route::get("vivienda",\App\Http\Livewire\Viviendas::class);
 Route::get("escolaridad", \App\Http\Livewire\Escolaridades::class);
 Route::get("efectos", \App\Http\Livewire\Efectos::class);
+
+
+
+Route::get('viviendas', function () {
+    return view('catalogos.vivienda');
+});
+
+
+Route::get('pais/catalogo',[App\Http\Controllers\CatalogoController::class,'pais']);
+
+
+
+
+Route::resource("catalogo", \App\Http\Controllers\CatalogoController::class);
+Route::resource("sexo", \App\Http\Controllers\SexoController::class);
