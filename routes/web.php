@@ -50,6 +50,8 @@ Route::get("efectos", \App\Http\Livewire\Efectos::class);
 
 Route::get("registro_caso_victima", \App\Http\Livewire\RegistroCasoVictima::class);
 
+Route::get("caso_violencia", \App\Http\Livewire\CasoViolencia::class);
+
 
 
 Route::get('viviendas', function () {
