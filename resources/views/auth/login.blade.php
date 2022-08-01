@@ -39,7 +39,7 @@
 
                         <div class="">
                             {{-- <label for="email" class="form-label"></label>  --}}
-                            <input id="email" class="form-control " type="email" name="email" :value="old('email')" required autofocus placeholder="Correo electrónico">
+                            <input id="email" class="form-control" type="email" name="email" :value="old('email')" required autofocus placeholder="Correo electrónico">
                         </div>
                         <div class="mt-4">
                             {{-- <label for="password" class="form-label"></label> --}}
@@ -54,7 +54,7 @@
                         <div class="form-check mt-2">
                             <input type="checkbox"  class="form-check-input" id="remember_me" name="remember" />
                             <label for="remember_me" class="form-check-label">
-                                <span >{{ __('Recordar contraseña') }}</span>
+                                <span>{{ __('Recordar contraseña') }}</span>
                             </label>
                         </div>
                         <div class="mt-1 p-2">
@@ -66,7 +66,7 @@
                         <div class="d-flex justify-content-center links">
                         @if (Route::has('password.request'))
                             <a class="font-weight-bold" href="{{ route('password.request') }}">
-                                {{ __('¿Olvidó su contraseña?') }}
+                              ¿Olvidó su contraseña?
                             </a>
                         @endif
                         </div>

@@ -47,3 +47,5 @@ Route::get("modalidad_violencia",\App\Http\Livewire\ModalidadesViolencia::class)
 Route::get("vivienda",\App\Http\Livewire\Viviendas::class);
 Route::get("escolaridad", \App\Http\Livewire\Escolaridades::class);
 Route::get("efectos", \App\Http\Livewire\Efectos::class);
+
+Route::get("registro_caso_victima", \App\Http\Livewire\RegistroCasoVictima::class);
