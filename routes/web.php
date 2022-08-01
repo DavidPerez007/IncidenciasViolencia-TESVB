@@ -48,9 +48,8 @@ Route::get("vivienda",\App\Http\Livewire\Viviendas::class);
 Route::get("escolaridad", \App\Http\Livewire\Escolaridades::class);
 Route::get("efectos", \App\Http\Livewire\Efectos::class);
 
-<<<<<<< HEAD
 Route::get("registro_caso_victima", \App\Http\Livewire\RegistroCasoVictima::class);
-=======
+
 
 
 Route::get('viviendas', function () {
@@ -65,4 +64,4 @@ Route::get('pais/catalogo',[App\Http\Controllers\CatalogoController::class,'pais
 
 Route::resource("catalogo", \App\Http\Controllers\CatalogoController::class);
 Route::resource("sexo", \App\Http\Controllers\SexoController::class);
->>>>>>> 16b990c952b37f69d646835103fbcedce8db1950
+
