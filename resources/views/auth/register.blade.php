@@ -1,7 +1,4 @@
 <x-guest-layout>
-{{--    <x-jet-authentication-card>
-    <x-jet-validation-errors class="mb-4" />
-    --}}
 
     <div class="row justify-content-center ">
         <div class="col-4">
@@ -36,8 +33,6 @@
                 {{-- <label for="password_confirmation" class="form-label" value="{{ __('ConfirmPassword') }}"></label> --}}
             <div class="input-group-append">
                 <input id="password_confirmation" placeholder="Confirmar contraseña" class="form-control" type="password" name="password_confirmation" required autocomplete="new-password" />
-             {{--   <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
-             --}}
             </div>
             </div>
             <div class="mt-2 p-2">
