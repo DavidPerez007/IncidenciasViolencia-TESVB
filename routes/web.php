@@ -50,17 +50,11 @@ Route::get("efectos", \App\Http\Livewire\Efectos::class);
 
 Route::get("registro_caso_victima", \App\Http\Livewire\RegistroCasoVictima::class);
 
-
-
 Route::get('viviendas', function () {
     return view('catalogos.vivienda');
 });
 
-
 Route::get('pais/catalogo',[App\Http\Controllers\CatalogoController::class,'pais']);
-
-
-
 
 Route::resource("catalogo", \App\Http\Controllers\CatalogoController::class);
 Route::resource("sexo", \App\Http\Controllers\SexoController::class);
