@@ -1,5 +1,6 @@
 <div>
-    <table>
+<h1 class="mt-4">Ocupación</h1>
+    <table class = "table table-bordered mt-5">
       <thead>
           <tr>
               <th>No.</th>

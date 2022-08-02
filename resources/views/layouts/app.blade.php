@@ -62,7 +62,22 @@
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="{{url("nacionalidad")}}">Nacionalidades</a>
-                            <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                            <a class="nav-link" href="{{url("ambitoViolencia")}}">Ámbito Violencia</a>
+                            <a class="nav-link" href="{{url("dificultad")}}">Dificultad</a>
+                            <a class="nav-link" href="{{url("efectos")}}">Efectos</a>
+                            <a class="nav-link" href="{{url("escolaridad")}}">Escolaridad</a>
+                            <a class="nav-link" href="{{url("modalidad_violencia")}}">Modalidad Violencia</a>
+                            <a class="nav-link" href="{{url("ocupacion")}}">Ocupación</a>
+                            <a class="nav-link" href="{{url("pais")}}">País</a>
+                            <a class="nav-link" href="{{url("servicio_medico")}}">Servicio Médico</a>
+                            <a class="nav-link" href="{{url("sexo")}}">Sexo</a>
+                            <a class="nav-link" href="{{url("situ_conyugal")}}">Situación Conyugal</a>
+                            <a class="nav-link" href="{{url("tipo_apoyo")}}">Tipo de Apoyos</a>
+                            <a class="nav-link" href="{{url("tipo_relacion")}}">Tipo de relaciones</a>
+                            <a class="nav-link" href="{{url("tipo_violencia")}}">Tipos de Violencia</a>
+                            <a class="nav-link" href="{{url("vivienda")}}">Vivienda</a>
+
+                            <!-- <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a> -->
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">

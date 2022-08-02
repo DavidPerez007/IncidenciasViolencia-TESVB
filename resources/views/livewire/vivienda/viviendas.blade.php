@@ -1,6 +1,6 @@
 <div>
     {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
-    
+    <h1 class="mt-4">Vivienda</h1>
     <table class = "table table-bordered mt-5">
         <thead>
             <tr>
