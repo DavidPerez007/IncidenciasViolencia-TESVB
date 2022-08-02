@@ -13,4 +13,8 @@ class Sexo extends Model
     protected $table= "sexo";
     protected $primaryKey = "id_sexo";
     protected $fillable = ["sexo"];
+
+    static $rules = [
+        'sexo'=> 'required',
+    ];
 }
