@@ -53,6 +53,7 @@ Route::get("escolaridad", \App\Http\Livewire\Escolaridades::class);
 Route::get("efectos", \App\Http\Livewire\Efectos::class);
 
 Route::get("registro_caso_victima", \App\Http\Livewire\RegistroCasoVictima::class);
+Route::get("datos_comp_victima", \App\Http\Livewire\DatosComplementariosVictima::class);
 
 
 

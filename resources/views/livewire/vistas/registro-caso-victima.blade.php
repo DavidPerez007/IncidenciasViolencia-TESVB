@@ -138,7 +138,8 @@
                                     <label for="telefono" class="col-form-label col-sm-5 p-0">Teléfono:
                                     </label>
                                     <div class="col-7">
-                                        <input id="telefono" type="tel" class="form-control" pattern="[0-9]{3}-[0-9]{7}" required>
+                                        <input id="telefono" type="tel" class="form-control"
+                                            pattern="[0-9]{3}-[0-9]{7}" required>
                                     </div>
                                 </div>
                             </div>
@@ -165,7 +166,8 @@
 
                             <div class="col-5">
                                 <div class="col form-group row">
-                                    <label for="vive_con" class="col-form-label col-sm-5 p-0 mt-1">¿Con quién vive?:</label>
+                                    <label for="vive_con" class="col-form-label col-sm-5 p-0 mt-1">¿Con quién
+                                        vive?:</label>
                                     <div class="col-7">
                                         <input id="vive_con" type="text" class="form-control">
                                     </div>
@@ -174,7 +176,8 @@
 
                             <div class="col-4">
                                 <div class="col form-group row">
-                                    <label for="situConyugal" class="col-form-label col-sm-6 p-0 mt-1"> Situation Conyugal: *
+                                    <label for="situConyugal" class="col-form-label col-sm-6 p-0 mt-1"> Situation
+                                        Conyugal: *
                                     </label>
                                     <div class="col-6">
                                         <select id="situConyugal" class="form-select" list="datalistOptions">
@@ -209,9 +212,10 @@
                             <div class="form-group">
                                 <div class="ms-4">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="idioma" value="option1">
+                                        <input class="form-check-input" type="checkbox" id="idioma"
+                                            value="option1">
                                         <label class="form-check-label" for="inlineCheckbox1">Habla español</label>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -221,8 +225,10 @@
                             <div class="form-group">
                                 <div class="ms-4">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="idioma" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">Lengua extranjera</label>
+                                        <input class="form-check-input" type="checkbox" id="idioma"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">Lengua
+                                            extranjera</label>
                                     </div>
                                 </div>
                             </div>
@@ -232,7 +238,8 @@
                     <div class="row p-2 mt-3">
                         <div class="col-5">
                             <div class="col form-group row">
-                                <label for="email" class="col-form-label col-sm-7 p-0">¿Pertenece a un grupo étnico?: *</label>
+                                <label for="email" class="col-form-label col-sm-7 p-0">¿Pertenece a un grupo
+                                    étnico?: *</label>
                             </div>
                         </div>
                     </div>
@@ -297,14 +304,15 @@
 
                         <div class="col-4">
                             <div class="form-group row">
-                                <label for="no_interior" class="col-form-label col-sm-3 p-0 mt-1">No. interior:</label>
+                                <label for="no_interior" class="col-form-label col-sm-3 p-0 mt-1">No.
+                                    interior:</label>
                                 <div class="col-9">
                                     <input type="text" name="no_interior" id="no_interior" class="form-control">
                                 </div>
                             </div>
                         </div>
-                    </div>  
-                    
+                    </div>
+
                     <div class="row p-2 mt-3">
 
                         <div class="col-4">
@@ -330,13 +338,14 @@
 
                         <div class="col-4">
                             <div class="form-group row">
-                                <label for="no_exterior" class="col-form-label col-sm-4 p-0 mt-1">No. exterior:</label>
+                                <label for="no_exterior" class="col-form-label col-sm-4 p-0 mt-1">No.
+                                    exterior:</label>
                                 <div class="col-8">
                                     <input type="text" name="no_exterior" id="no_exterior" class="form-control">
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
 
                     <div class="row p-2 mt-3">
 
@@ -363,22 +372,23 @@
 
                         <div class="col-4">
                             <div class="form-group row">
-                                <label for="cod_postal" class="col-form-label col-sm-4 p-0 mt-1">Código Postal:</label>
+                                <label for="cod_postal" class="col-form-label col-sm-4 p-0 mt-1">Código
+                                    Postal:</label>
                                 <div class="col-8">
                                     <input type="text" name="cod_postal" id="cod_postal" class="form-control">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row p-2 mt-3">
 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-success mb-3" type="submit">GUARDAR</button>
-                        <button class="btn btn-success mb-3" type="submit">SIGUIENTE</button>
-                    </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="btn btn-success mb-3" type="submit">GUARDAR</button>
+                            <button class="btn btn-success mb-3" type="submit">SIGUIENTE</button>
+                        </div>
 
-                     </div>
+                    </div>
 
                 </div>
 
