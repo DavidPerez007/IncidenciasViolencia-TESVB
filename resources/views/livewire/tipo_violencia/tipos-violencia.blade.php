@@ -1,6 +1,9 @@
 <div>
     {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
-    <table class = "table table-bordered mt-5">
+
+    <h1 class="mt-4">Tipos de Violencia</h1>
+
+    <table class="table table-bordered mt-5">
         <thead>
             <tr>
                 <th>No.</th>
@@ -9,13 +12,14 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($tipo_violencias as $value)
-
-            <td>{{ $loop->index+1}}</td>
-            <td>{{ $value->tipo_violencia}}</td>
+            @foreach($tipos_violencia as $value)
+            <tr>
+                <td>{{ $loop->index+1}}</td>
+                <td>{{ $value->tipo_violencia}}</td>
+            </tr>
 
             @endforeach
         </tbody>
-        
+
     </table>
 </div>

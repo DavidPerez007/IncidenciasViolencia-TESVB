@@ -64,8 +64,23 @@
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
+
                             <a class="nav-link" href="{{url("nacionalidad")}}">Nacionalidades</a>
-                            <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                            <a class="nav-link" href="{{url("ambitoViolencia")}}">Ámbito Violencia</a>
+                            <a class="nav-link" href="{{url("dificultad")}}">Dificultad</a>
+                            <a class="nav-link" href="{{url("efectos")}}">Efectos</a>
+                            <a class="nav-link" href="{{url("escolaridad")}}">Escolaridad</a>
+                            <a class="nav-link" href="{{url("modalidad_violencia")}}">Modalidad Violencia</a>
+                            <a class="nav-link" href="{{url("ocupacion")}}">Ocupación</a>
+                            <a class="nav-link" href="{{url("pais")}}">País</a>
+                            <a class="nav-link" href="{{url("servicio_medico")}}">Servicio Médico</a>
+                            <a class="nav-link" href="{{url("sexo")}}">Sexo</a>
+                            <a class="nav-link" href="{{url("situ_conyugal")}}">Situación Conyugal</a>
+                            <a class="nav-link" href="{{url("tipo_apoyo")}}">Tipo de Apoyos</a>
+                            <a class="nav-link" href="{{url("tipo_relacion")}}">Tipo de relaciones</a>
+                            <a class="nav-link" href="{{url("tipo_violencia")}}">Tipos de Violencia</a>
+                            <a class="nav-link" href="{{url("vivienda")}}">Vivienda</a>
+
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -137,7 +152,7 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> --}}
 <script src="js/scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
 <script src="assets/demo/chart-area-demo.js"></script>
@@ -146,10 +161,10 @@
 <script src="js/datatables-simple-demo.js"></script>
 <script src="{{ mix('/js/app.js')}}"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> --}}
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
 
 
 
