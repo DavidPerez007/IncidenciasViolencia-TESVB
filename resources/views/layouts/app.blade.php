@@ -65,9 +65,6 @@
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
 
-                            <a class="nav-link" href="{{url("nacionalidad")}}">Nacionalidades</a>                           
-                            <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
-
                             <a class="nav-link" href="{{url("nacionalidad")}}">Nacionalidades</a>
                             <a class="nav-link" href="{{url("ambitoViolencia")}}">Ámbito Violencia</a>
                             <a class="nav-link" href="{{url("dificultad")}}">Dificultad</a>
@@ -83,8 +80,6 @@
                             <a class="nav-link" href="{{url("tipo_relacion")}}">Tipo de relaciones</a>
                             <a class="nav-link" href="{{url("tipo_violencia")}}">Tipos de Violencia</a>
                             <a class="nav-link" href="{{url("vivienda")}}">Vivienda</a>
-
-                            <!-- <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a> -->
 
                         </nav>
                     </div>
