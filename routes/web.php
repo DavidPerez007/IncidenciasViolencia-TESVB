@@ -31,15 +31,28 @@ Route::middleware([ 'auth:sanctum',
 });
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 08dc7880a5a3960ac091fd7b291cd895cc0da7d1
 
 Route::get("sexo", \App\Http\Livewire\Sexos::class);
 Route::get("pais",\App\Http\Livewire\Paises::class);
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
 Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
+<<<<<<< HEAD
+
+Route::get("pais",\App\Http\Livewire\Paises::class);
+Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
+Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
+
+
+=======
 
 
 
 
+>>>>>>> 08dc7880a5a3960ac091fd7b291cd895cc0da7d1
 Route::get("tipo_relacion",\App\Http\Livewire\TipoRelaciones::class);
 Route::get("situ_conyugal",\App\Http\Livewire\SituConyugales::class);
 Route::get("ocupacion",\App\Http\Livewire\Ocupaciones::class);
@@ -52,6 +65,10 @@ Route::get("escolaridad", \App\Http\Livewire\Escolaridades::class);
 Route::get("efectos", \App\Http\Livewire\Efectos::class);
 
 Route::get("tipo_violencia", \App\Http\Livewire\TiposViolencia::class);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 08dc7880a5a3960ac091fd7b291cd895cc0da7d1
 Route::get("registro_caso_victima", \App\Http\Livewire\RegistroCasoVictima::class);
 Route::get("caso_violencia", \App\Http\Livewire\CasoViolencia::class);
 
