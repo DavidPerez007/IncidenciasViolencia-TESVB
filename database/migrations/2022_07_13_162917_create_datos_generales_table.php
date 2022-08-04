@@ -18,6 +18,8 @@ class CreateDatosGeneralesTable extends Migration
             $table->string('nombres',45);
             $table->string('ape_paterno',20);
             $table->string('ape_materno',20);
+            $table->string('pais');
+            $table->string('estado');
             $table->unsignedBigInteger('id_situ_conyugal');
             $table->foreign('id_situ_conyugal')->references('id_situ_conyugal')->on('situ_conyugal');
             $table->unsignedBigInteger('id_sexo');
@@ -31,6 +33,8 @@ class CreateDatosGeneralesTable extends Migration
             $table->foreign('id_nacionalidad')->references('id_nacionalidad')->on('nacionalidad');
             $table->unsignedBigInteger('id_idioma');
             $table->foreign('id_idioma')->references('id_idioma')->on('idioma');
+            $table->unsignedBigInteger('id_domicilio');
+            $table->foreign('id_domicilio')->references('id_domicilio')->on('domicilio');
             $table->timestamps();
             $table->softDeletes();
         });

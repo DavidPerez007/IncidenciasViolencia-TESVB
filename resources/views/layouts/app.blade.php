@@ -132,7 +132,7 @@
         </nav>
     </div>
     <div id="layoutSidenav_content">
-        <main>
+        <main class="container">
             <div class="px-4">
 
                 {{$slot ?? ''}}
