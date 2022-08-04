@@ -73,15 +73,15 @@
                                     <div class="card-body">
                                         <h5 class="card-title text-center">Datos de la vivienda</h5>
                                         <div class="form-check form-check-inline col-6">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="vivienda" value="option1">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="vivienda" value="option1">
                                             <label class="form-check-label" for="inlineRadio1">Rentada</label>
                                         </div>
                                         <div class="form-check form-check-inline col-6">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="vivienda" value="option2">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="vivienda" value="option2">
                                             <label class="form-check-label" for="inlineRadio1">Prestada</label>
                                         </div>
                                         <div class="form-check form-check-inline col-6">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="vivienda" value="option3">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="vivienda" value="option3">
                                             <label class="form-check-label" for="inlineRadio1">Propia</label>
                                         </div>
                                     </div>
@@ -95,11 +95,11 @@
                                         <div class="row justify-content-center">
                                             <div class="col-6">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fuente_ingresos" value="option1">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="fuente_ingresos" value="option1">
                                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fuente_ingresos" value="option2">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="fuente_ingresos" value="option2">
                                                     <label class="form-check-label" for="inlineRadio1">No</label>
                                                 </div>
                                             </div>
@@ -114,19 +114,19 @@
                                         <div class="row justify-content-center">
                                             <div class="col-12">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="servicio_medico" value="option1">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="servicio_medico" value="option1">
                                                     <label class="form-check-label" for="inlineRadio1">ISSSTE</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="servicio_medico" value="option2">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="servicio_medico" value="option2">
                                                     <label class="form-check-label" for="inlineRadio1">IMSS</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="servicio_medico" value="option3">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="servicio_medico" value="option3">
                                                     <label class="form-check-label" for="inlineRadio1">SEDENA</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="servicio_medico" value="option4">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="servicio_medico" value="option4">
                                                     <label class="form-check-label" for="inlineRadio1">PEMEX</label>
                                                 </div>
                                             </div>
@@ -135,21 +135,21 @@
                                         <div class="row justify-content-center">
                                             <div class="col-12">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="servicio_medico" value="option1">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="servicio_medico" value="option1">
                                                     <label class="form-check-label" for="inlineRadio1">SECMAR</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="servicio_medico" value="option2">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="servicio_medico" value="option2">
                                                     <label class="form-check-label" for="inlineRadio1">Seguro
                                                         privado</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="servicio_medico" value="option3">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="servicio_medico" value="option3">
                                                     <label class="form-check-label" for="inlineRadio1">Becas para
                                                         el bienestar</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="servicio_medico" value="option4">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="servicio_medico" value="option4">
                                                     <label class="form-check-label" for="inlineRadio1">Otro</label>
                                                 </div>
                                             </div>
@@ -158,7 +158,7 @@
                                         <div class="row justify-content-center">
                                             <div class="col-12">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="servicio_medico" value="option1">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="servicio_medico" value="option1">
                                                     <label class="form-check-label" for="inlineRadio1">Ninguno</label>
                                                 </div>
                                             </div>
@@ -201,11 +201,11 @@
                                             <div class="row justify-content-center">
                                                 <div class="col-7">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sabe_escribir" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="sabe_escribir" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">Si</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sabe_escribir" value="option2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="sabe_escribir" value="option2">
                                                         <label class="form-check-label mb-2" for="inlineRadio1">No</label>
                                                     </div>
                                                 </div>
@@ -220,11 +220,11 @@
                                             <div class="row justify-content-center">
                                                 <div class="col-7">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sabe_leer" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="sabe_leer" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">Si</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sabe_leer" value="option2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="sabe_leer" value="option2">
                                                         <label class="form-check-label mb-2" for="inlineRadio1">No</label>
                                                     </div>
                                                 </div>
@@ -253,12 +253,12 @@
                                             <div class="col-12">
                                                 <label for="embarazada" class="form-label p-1 mt-2"><strong>¿Esta embarazada?</strong></label>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="embarazada" value="option1">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio1" value="option1">
                                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="embarazada" value="option2">
-                                                    <label class="form-check-label" for="inlineRadio1">No</label>
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">No</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -274,26 +274,26 @@
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_caminar" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio1" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">No puede hacerlo</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-3 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_caminar" value="option2">
-                                                        <label class="form-check-label" for="inlineRadio1">Lo hace con dificultad </label>
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">Lo hace con dificultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_caminar" value="option3">
-                                                        <label class="form-check-label" for="inlineRadio1">Poca difultad </label>
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio3" value="option3">
+                                                        <label class="form-check-label" for="inlineRadio3">Poca difultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_caminar" value="option4">
-                                                        <label class="form-check-label" for="inlineRadio1">No tiene difilcultad</label>
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio4" value="option4">
+                                                        <label class="form-check-label" for="inlineRadio4">No tiene difilcultad</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -306,26 +306,26 @@
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_ver" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio5" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">No puede hacerlo</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-3 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_ver" value="option2">
-                                                        <label class="form-check-label" for="inlineRadio1">Lo hace con dificultad </label>
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio6" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">Lo hace con dificultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_ver" value="option3">
-                                                        <label class="form-check-label" for="inlineRadio1">Poca difultad </label>
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio7" value="option3">
+                                                        <label class="form-check-label" for="inlineRadio3">Poca difultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_ver" value="option4">
-                                                        <label class="form-check-label" for="inlineRadio1">No tiene difilcultad</label>
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio8" value="option4">
+                                                        <label class="form-check-label" for="inlineRadio4">No tiene difilcultad</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -337,26 +337,26 @@
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_mover_manos" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio1" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">No puede hacerlo</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-3 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_mover_manos" value="option2">
-                                                        <label class="form-check-label" for="inlineRadio1">Lo hace con dificultad </label>
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">Lo hace con dificultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_mover_manos" value="option3">
-                                                        <label class="form-check-label" for="inlineRadio1">Poca difultad </label>
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio3" value="option3">
+                                                        <label class="form-check-label" for="inlineRadio3">Poca difultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_mover_manos" value="option4">
-                                                        <label class="form-check-label" for="inlineRadio1">No tiene difilcultad</label>
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio4" value="option4">
+                                                        <label class="form-check-label" for="inlineRadio4">No tiene difilcultad</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -368,25 +368,25 @@
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_escuchar" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="dif_escuchar" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">No puede hacerlo</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-3 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_escuchar" value="option2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="dif_escuchar" value="option2">
                                                         <label class="form-check-label" for="inlineRadio1">Lo hace con dificultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_escuchar" value="option3">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="dif_escuchar" value="option3">
                                                         <label class="form-check-label" for="inlineRadio1">Poca difultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_escuchar" value="option4">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="dif_escuchar" value="option4">
                                                         <label class="form-check-label" for="inlineRadio1">No tiene difilcultad</label>
                                                     </div>
                                                 </div>
@@ -399,25 +399,25 @@
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_acti_cotidiana" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="dif_acti_cotidiana" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">No puede hacerlo</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-3 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_acti_cotidiana" value="option2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="dif_acti_cotidiana" value="option2">
                                                         <label class="form-check-label" for="inlineRadio1">Lo hace con dificultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_acti_cotidiana" value="option3">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="dif_acti_cotidiana" value="option3">
                                                         <label class="form-check-label" for="inlineRadio1">Poca difultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_acti_cotidiana" value="option4">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="dif_acti_cotidiana" value="option4">
                                                         <label class="form-check-label" for="inlineRadio1">No tiene difilcultad</label>
                                                     </div>
                                                 </div>
@@ -430,25 +430,25 @@
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_hablar" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="dif_hablar" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">No puede hacerlo</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-3 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_hablar" value="option2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="dif_hablar" value="option2">
                                                         <label class="form-check-label" for="inlineRadio1">Lo hace con dificultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_hablar" value="option3">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="dif_hablar" value="option3">
                                                         <label class="form-check-label" for="inlineRadio1">Poca difultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_hablar" value="option4">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="dif_hablar" value="option4">
                                                         <label class="form-check-label" for="inlineRadio1">No tiene difilcultad</label>
                                                     </div>
                                                 </div>
@@ -461,25 +461,25 @@
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_aprender" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="dif_aprender" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">No puede hacerlo</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-3 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_aprender" value="option2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="dif_aprender" value="option2">
                                                         <label class="form-check-label" for="inlineRadio1">Lo hace con dificultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_aprender" value="option3">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="dif_aprender" value="option3">
                                                         <label class="form-check-label" for="inlineRadio1">Poca difultad </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dif_aprender" value="option4">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="dif_aprender" value="option4">
                                                         <label class="form-check-label" for="inlineRadio1">No tiene difilcultad</label>
                                                     </div>
                                                 </div>
@@ -492,25 +492,25 @@
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="proble_emociona" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions15" id="proble_emociona" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">Muy grave</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-3 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="proble_emociona" value="option2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions15" id="proble_emociona" value="option2">
                                                         <label class="form-check-label" for="inlineRadio1">Grave</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="proble_emociona" value="option3">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions15" id="proble_emociona" value="option3">
                                                         <label class="form-check-label" for="inlineRadio1">No grave</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2 mt-4">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="proble_emociona" value="option4">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions15" id="proble_emociona" value="option4">
                                                         <label class="form-check-label" for="inlineRadio1">No lo padece</label>
                                                     </div>
                                                 </div>
@@ -538,27 +538,27 @@
                                             <h5 class="card-title">Tipo de relacion</h5>
                                             <div class="row ms-1">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_relacion" value="option1">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions16" id="tipo_relacion" value="option1">
                                                     <label class="form-check-label" for="inlineRadio1">Personales y familiares</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_relacion" value="option2">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions16" id="tipo_relacion" value="option2">
                                                     <label class="form-check-label mb-2" for="inlineRadio1">Laboral</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_relacion" value="option3">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions16" id="tipo_relacion" value="option3">
                                                     <label class="form-check-label" for="inlineRadio1">Docente</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_relacion" value="option4">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions16" id="tipo_relacion" value="option4">
                                                     <label class="form-check-label mb-2" for="inlineRadio1">Comunitario/Social</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_relacion" value="option5">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions16" id="tipo_relacion" value="option5">
                                                     <label class="form-check-label" for="inlineRadio1">Institucional</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_relacion" value="option6">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions16" id="tipo_relacion" value="option6">
                                                     <label class="form-check-label mb-2" for="inlineRadio1">Otro</label>
                                                 </div>
 
@@ -573,13 +573,13 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline col-6">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option1">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option1">
                                                         <label class="form-check-label" for="inlineRadio1">Economico</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline col-8">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option2">
                                                         <label class="form-check-label" for="inlineRadio1">Salud</label>
                                                     </div>
                                                 </div>
@@ -587,13 +587,13 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option3">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option3">
                                                         <label class="form-check-label" for="inlineRadio1">Emocional</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option4">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option4">
                                                         <label class="form-check-label" for="inlineRadio1">Legal</label>
                                                     </div>
                                                 </div>
@@ -601,13 +601,13 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option5">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option5">
                                                         <label class="form-check-label" for="inlineRadio1">Estructural</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option6">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option6">
                                                         <label class="form-check-label" for="inlineRadio1">Capacitacion</label>
                                                     </div>
                                                 </div>
@@ -615,13 +615,13 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option5">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option5">
                                                         <label class="form-check-label" for="inlineRadio1">Consejo/ Asesoria</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option6">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option6">
                                                         <label class="form-check-label" for="inlineRadio1">Alimentario</label>
                                                     </div>
                                                 </div>
@@ -629,13 +629,13 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option5">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option5">
                                                         <label class="form-check-label" for="inlineRadio1">Vivienda</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option6">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option6">
                                                         <label class="form-check-label" for="inlineRadio1">Religioso</label>
                                                     </div>
                                                 </div>
@@ -643,19 +643,19 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option5">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option5">
                                                         <label class="form-check-label" for="inlineRadio1">Laboral</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option6">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option6">
                                                         <label class="form-check-label" for="inlineRadio1">Otro</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tipo_apoyo" value="option7">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="tipo_apoyo" value="option7">
                                                 <label class="form-check-label" for="inlineRadio1">Manejo medico</label>
                                             </div>
                                         </div>

@@ -180,12 +180,7 @@
 
                             <div class="col-5">
                                 <div class="col form-group row">
-                                    <label for="vive_con" class="col-form-label col-sm-5 p-0 mt-1">¿Con quién
-<<<<<<< HEAD
-                                        vive?:</label>
-=======
-                                        vive?</label>
->>>>>>> 08dc7880a5a3960ac091fd7b291cd895cc0da7d1
+                                    <label for="vive_con" class="col-form-label col-sm-5 p-0 mt-1">¿Con quién vive?:</label>
                                     <div class="col-7">
                                         <input id="vive_con" type="text" class="form-control">
                                     </div>
@@ -195,12 +190,8 @@
                             <div class="col-4">
                                 <div class="col form-group row">
                                     <label for="situConyugal" class="col-form-label col-sm-6 p-0 mt-1"> Situation
-<<<<<<< HEAD
-                                        Conyugal: *
-=======
                                         Conyugal:
                                         <small class="text-danger">*</small>
->>>>>>> 08dc7880a5a3960ac091fd7b291cd895cc0da7d1
                                     </label>
                                     <div class="col-6">
                                         <select id="situConyugal" class="form-select" list="datalistOptions">
@@ -241,7 +232,6 @@
                                 </div>
                             </div>
 
-<<<<<<< HEAD
                         <div class="col-3">
                             <div class="form-group">
                                 <div class="ms-4">
@@ -250,7 +240,6 @@
                                             value="option1">
                                         <label class="form-check-label" for="inlineCheckbox1">Habla español</label>
 
-=======
                             <div class="col-3">
                                 <div class="form-group">
                                     <div class="ms-4">
@@ -260,13 +249,11 @@
                                             <label class="form-check-label" for="inlineCheckbox1">Lengua
                                                 extranjera</label>
                                         </div>
->>>>>>> 08dc7880a5a3960ac091fd7b291cd895cc0da7d1
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-<<<<<<< HEAD
                         <div class="col-3">
                             <div class="form-group">
                                 <div class="ms-4">
@@ -275,7 +262,6 @@
                                             value="option1">
                                         <label class="form-check-label" for="inlineCheckbox1">Lengua
                                             extranjera</label>
-=======
                         <div class="row p-2 mt-3">
                             <div class="col-5">
                                 <div class="col form-group row">
@@ -352,19 +338,16 @@
                                     <label for="no_interior" class="col-form-label col-sm-3 p-0 mt-1">No. interior:</label>
                                     <div class="col-9">
                                         <input type="text" name="no_interior" id="no_interior" class="form-control">
->>>>>>> 08dc7880a5a3960ac091fd7b291cd895cc0da7d1
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-<<<<<<< HEAD
                     <div class="row p-2 mt-3">
                         <div class="col-5">
                             <div class="col form-group row">
                                 <label for="email" class="col-form-label col-sm-7 p-0">¿Pertenece a un grupo
-                                    étnico?: *</label>
-=======
+                                    étnico?:</label>
                         <div class="row p-2 mt-3">
                             <div class="col-4">
                                 <div class="col form-group row">
@@ -396,7 +379,6 @@
                                         <input type="text" name="no_exterior" id="no_exterior" class="form-control">
                                     </div>
                                 </div>
->>>>>>> 08dc7880a5a3960ac091fd7b291cd895cc0da7d1
                             </div>
                         </div>
 
@@ -441,7 +423,6 @@
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingThree">
@@ -458,7 +439,7 @@
 
                         <div class="col-4">
                             <div class="col form-group row">
-                                <label class="col-form-label col-sm-4 p-0">País: *</label>
+                                <label class="col-form-label col-sm-4 p-0">País:</label>
                                 <div class="col-8">
                                     <select id="pais" class="form-select" list="datalistOptions">
                                         <option selected>México</option>
@@ -492,7 +473,7 @@
 
                         <div class="col-4">
                             <div class="col form-group row">
-                                <label class="col-form-label col-sm-4 p-0">Estado: *</label>
+                                <label class="col-form-label col-sm-4 p-0">Estado:</label>
                                 <div class="col-8">
                                     <select id="estado" class="form-select" list="datalistOptions">
                                         <option selected>Estado de México</option>
@@ -565,12 +546,10 @@
 
                     </div>
 
-=======
             <div class="row p-2 mt-3">
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button class="btn btn-success mb-3" type="submit">GUARDAR</button>
                     <button class="btn btn-success mb-3" type="submit">SIGUIENTE</button>
->>>>>>> 08dc7880a5a3960ac091fd7b291cd895cc0da7d1
                 </div>
             </div>
         </form>
