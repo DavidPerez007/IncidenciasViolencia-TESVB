@@ -31,19 +31,18 @@ Route::middleware([ 'auth:sanctum',
 });
 
 
-<<<<<<< HEAD
+
 
 Route::get("sexo", \App\Http\Livewire\Sexos::class);
 Route::get("pais",\App\Http\Livewire\Paises::class);
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
 Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
-=======
-//oute::get("sexo", \App\Http\Livewire\Sexos::class);
+
 Route::get("pais",\App\Http\Livewire\Paises::class);
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
 Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
 
->>>>>>> b53cd1c09199145a82330ce77375f0e694df1e1c
+
 Route::get("tipo_relacion",\App\Http\Livewire\TipoRelaciones::class);
 Route::get("situ_conyugal",\App\Http\Livewire\SituConyugales::class);
 Route::get("ocupacion",\App\Http\Livewire\Ocupaciones::class);
@@ -54,9 +53,8 @@ Route::get("modalidad_violencia",\App\Http\Livewire\ModalidadesViolencia::class)
 Route::get("vivienda",\App\Http\Livewire\Viviendas::class);
 Route::get("escolaridad", \App\Http\Livewire\Escolaridades::class);
 Route::get("efectos", \App\Http\Livewire\Efectos::class);
-<<<<<<< HEAD
+
 Route::get("tipo_violencia", \App\Http\Livewire\TiposViolencia::class);
-=======
 
 Route::get("registro_caso_victima", \App\Http\Livewire\RegistroCasoVictima::class);
 
@@ -77,4 +75,3 @@ Route::get('pais/catalogo',[App\Http\Controllers\CatalogoController::class,'pais
 Route::resource("catalogo", \App\Http\Controllers\CatalogoController::class);
 Route::resource("sexo", \App\Http\Controllers\SexoController::class);
 
->>>>>>> b53cd1c09199145a82330ce77375f0e694df1e1c
