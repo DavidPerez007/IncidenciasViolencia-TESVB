@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
 
-<div class="container">
     <div class="accordion" id="accordionExample">
         <form method="POST" role="form" class="p-2">
             <div class="accordion-item">
@@ -109,7 +109,7 @@
                                         nacimiento:</label>
                                     <div class="col-6">
                                         <div class="input-group date">
-                                            <input type="text" class="form-control" id="datepicker">
+                                            <input type="text" class="form-control" id="fecha_nacimiento">
                                             <span class="input-group-append">
                                                 <span class="input-group-text bg-white d-block">
                                                     <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -128,7 +128,7 @@
                                         <small class="text-danger">*</small>
                                     </label>
                                     <div class="col-6">
-                                        <select id="sexo" class="form-select" list="datalistOptions">
+                                        <select id="nacionalidad" class="form-select" list="datalistOptions">
                                             <option selected>Mexicana</option>
                                             <option>Extranjera</option>
                                         </select>
@@ -224,10 +224,9 @@
                                     <div class="ms-4">
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="idioma"
-                                                value="option1">
+                                                value="Español">
                                             <label class="form-check-label" for="inlineCheckbox1">Habla
                                                 español</label>
-
                                         </div>
                                     </div>
                                 </div>
@@ -238,7 +237,7 @@
                                     <div class="ms-4">
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="idioma"
-                                                value="option1">
+                                                value="Extranjera">
                                             <label class="form-check-label" for="inlineCheckbox1">Lengua
                                                 extranjera</label>
                                         </div>
@@ -250,7 +249,7 @@
                         <div class="row p-2 mt-3">
                             <div class="col-5">
                                 <div class="col form-group row">
-                                    <label for="email" class="col-form-label col-sm-7 p-0">¿Pertenece a un grupo
+                                    <label for="grupo_etnico" class="col-form-label col-sm-7 p-0">¿Pertenece a un grupo
                                         étnico?
                                         <small class="text-danger">*</small>
                                     </label>
@@ -261,18 +260,18 @@
                         <div class="row p-2 mt-3">
                             <div class="col-9">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="si" value="option1">
+                                    <input class="form-check-input" type="radio" name="etnia"
+                                        id="grupo_etnico" value="Si">
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="no" value="option2">
+                                    <input class="form-check-input" type="radio" name="etnia"
+                                        id="grupo_etnico" value="No">
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="desconoce" value="option2">
+                                    <input class="form-check-input" type="radio" name="etnia"
+                                        id="grupo_etnico" value="Se desconoce">
                                     <label class="form-check-label" for="inlineRadio3">Se desconoce</label>
                                 </div>
                             </div>
@@ -294,6 +293,15 @@
                     <div class="accordion-body">
                         <div class="row p-2 mt-3">
                             <div class="col-4">
+                                <div class="form-group row">
+                                    <label for="calle" class="col-form-label col-sm-4 p-0 mt-1">Calle/Camino:</label>
+                                    <div class="col-8">
+                                        <input wire:model.defer="domicilio.calle" type="text" name="calle" id="calle" class="form-control" value="{{$domicilio->calle}}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
                                 <div class="col form-group row">
                                     <label class="col-form-label col-sm-4 p-0">País:
                                         <small class="text-danger">*</small>
@@ -304,31 +312,30 @@
                                             <option>China</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div>   
                             </div>
-
                             <div class="col-4">
                                 <div class="form-group row">
-                                    <label for="localidad" class="col-form-label col-sm-3 p-0 mt-1">Localidad:
+                                    <label for="colonia" class="col-form-label col-sm-5 p-0 mt-1">Colonia/Barrio:
                                         <small class="text-danger">*</small>
                                     </label>
-                                    <div class="col-9">
-                                        <input type="text" name="localidad" id="localidad" class="form-control">
+                                    <div class="col-7">
+                                        <input wire:model.defer="domicilio.colonia" type="text" name="colonia" id="colonia" class="form-control" value="{{$domicilio->colonia}}">
                                     </div>
                                 </div>
-                            </div>
-
+                                </div>
+                        </div>
+                        
+                        <div class="row p-2 mt-3">
                             <div class="col-4">
                                 <div class="form-group row">
-                                    <label for="no_interior" class="col-form-label col-sm-3 p-0 mt-1">No. interior:</label>
-                                    <div class="col-9">
-                                        <input type="text" name="no_interior" id="no_interior" class="form-control">
+                                    <label for="no_exterior" class="col-form-label col-sm-4 p-0 mt-1">No. exterior:</label>
+                                    <div class="col-8">
+                                        <input wire:model.defer="domicilio.no_exterior" type="text" name="no_exterior" id="no_exterior" class="form-control" value="{{$domicilio->no_exterior}}">
                                     </div>
-                                </div>
+                                </div> 
                             </div>
-                        </div>
 
-                        <div class="row p-2 mt-3">
                             <div class="col-4">
                                 <div class="col form-group row">
                                     <label class="col-form-label col-sm-4 p-0">Estado:
@@ -340,29 +347,31 @@
                                             <option>Otro estado</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div>                     
                             </div>
 
                             <div class="col-4">
                                 <div class="form-group row">
-                                    <label for="calle" class="col-form-label col-sm-3 p-0 mt-1">Calle:</label>
-                                    <div class="col-9">
-                                        <input type="text" name="calle" id="calle" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group row">
-                                    <label for="no_exterior" class="col-form-label col-sm-4 p-0 mt-1">No. exterior:</label>
-                                    <div class="col-8">
-                                        <input type="text" name="no_exterior" id="no_exterior" class="form-control">
+                                    <label for="cod_postal" class="col-form-label col-sm-5 p-0 mt-1">Código
+                                        Postal:</label>
+                                    <div class="col-7">
+                                        <input wire:model.defer="domicilio.cod_postal" type="text" name="cod_postal" id="cod_postal"
+                                            class="form-control" value="{{$domicilio->cod_postal}}">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row p-2 mt-3">
+                            <div class="col-4">
+                                <div class="form-group row">
+                                    <label for="no_interior" class="col-form-label col-sm-4 p-0 mt-1">No. interior:</label>
+                                    <div class="col-8">
+                                        <input wire:model.defer="domicilio.no_interior" type="text" name="no_interior" id="no_interior" class="form-control" value="{{$domicilio->no_interior}}">
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="col-4">
                                 <div class="col form-group row">
                                     <label class="col-form-label col-sm-4 p-0">Municipio:
@@ -373,28 +382,6 @@
                                             <option selected>Valle de Bravo</option>
                                             <option>Otro Municipio</option>
                                         </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group row">
-                                    <label for="colonia" class="col-form-label col-sm-3 p-0 mt-1">Colonia:
-                                        <small class="text-danger">*</small>
-                                    </label>
-                                    <div class="col-9">
-                                        <input type="text" name="colonia" id="colonia" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group row">
-                                    <label for="cod_postal" class="col-form-label col-sm-4 p-0 mt-1">Código
-                                        Postal:</label>
-                                    <div class="col-8">
-                                        <input type="text" name="cod_postal" id="cod_postal"
-                                            class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -411,12 +398,12 @@
             </div>
         </form>
     </div>
-</div>
+
 
 
 <script type="text/javascript">
     $(function() {
-        $('#datepicker').datepicker();
+        $('#fecha_nacimiento').datepicker();
     });
 </script>
 

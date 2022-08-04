@@ -64,3 +64,4 @@ Route::get('pais/catalogo',[App\Http\Controllers\CatalogoController::class,'pais
 Route::resource("catalogo", \App\Http\Controllers\CatalogoController::class);
 Route::resource("sexo", \App\Http\Controllers\SexoController::class);
 
+// Route::get('vistas/registro-caso-vistima',[])
