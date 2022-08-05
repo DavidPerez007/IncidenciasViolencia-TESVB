@@ -13,4 +13,9 @@ class TipoRelacion extends Model
     protected $table="tipo_relacion";
     protected $primaryKey="id_tiporelacion";
     protected $fillable=["tipo_relacion"];
+
+    static $rules =[
+        'tipo_relacion'=>'required',
+
+    ];
 }

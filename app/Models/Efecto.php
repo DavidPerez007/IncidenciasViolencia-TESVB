@@ -13,4 +13,9 @@ class Efecto extends Model
     Protected $table="efectos";
     Protected $primaryKey="id_efectos";
     protected $fillable=["efectos"];
+
+    //reglas para validancion de formularios
+    static $rules=[
+        'efectos'=>'required',
+    ];
 }

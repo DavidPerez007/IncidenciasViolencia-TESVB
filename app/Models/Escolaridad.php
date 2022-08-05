@@ -14,4 +14,9 @@ class Escolaridad extends Model
     protected $primaryKey="id_escolaridad";
     protected $fillable=["escolaridad"];
 
+//Definir la reglas para el validacion de fomularios
+    static $rules = [
+        'escolaridad'=> 'required',
+    ];
+
 }

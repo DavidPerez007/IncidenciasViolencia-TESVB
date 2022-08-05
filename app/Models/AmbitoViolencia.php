@@ -12,5 +12,10 @@ class AmbitoViolencia extends Model
     use softDeletes;
     protected $table="ambito_violencia";
     protected $primaryKey="id_ambito_violencia";
-    protected $fillable=["ambito_violencia"];
+    protected $fillable=["ambito"];
+
+    static $rules =[
+        'ambito'=> 'required',
+
+    ];
 }

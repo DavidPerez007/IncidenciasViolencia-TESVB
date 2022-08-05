@@ -13,4 +13,8 @@ class Ocupacion extends Model
     protected $table="ocupacion";
     protected $primaryKey="id_actividad_realiza";
     protected $fillable=["actividad_realiza"];
+
+    static $rules = [
+        'actividad_realiza'=> 'required',
+    ];
 }

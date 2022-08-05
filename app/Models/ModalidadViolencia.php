@@ -12,5 +12,10 @@ class ModalidadViolencia extends Model
     use softDeletes;
     protected $table="modalidad_violencia";
     protected $primaryKey="id_modalidad_violencia";
-    protected $fillable=["modalidad_violencia"];
+    protected $fillable=["modalidad"];
+
+    static $rules = [
+        'modalidad'=> 'required',
+
+    ];
 }

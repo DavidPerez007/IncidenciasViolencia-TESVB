@@ -13,4 +13,9 @@ class Dificultad extends Model
     protected $table="dificultad";
     protected $primaryKey="id_dificultad";
     protected $fillable=["dificultad"];
+
+    static $rules =[
+        'dificultad'=> 'required',
+
+    ];
 }

@@ -13,4 +13,9 @@ class SituConyugal extends Model
     protected $table="situ_conyugal";
     protected $primaryKey="id_situ_conyugal";
     protected $fillable=["situacion_conyugal"];
+
+    static $rules = [
+        'situacion_conyugal'=> 'required',
+
+    ];
 }

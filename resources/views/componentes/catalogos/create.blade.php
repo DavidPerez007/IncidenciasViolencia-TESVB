@@ -1,24 +1,16 @@
 
-<div class="modal fade" id="create" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="create" tabindex="-1"                  aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header alert alert-primary">
-          <h5 class="modal-title text-center" id="exampleModalLabel">Agregar nuevo registro</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title text-center" id="exampleModalLabel">Agregar nuevo {{$nombre}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          </button>
         </div>
-        <div class="modal-body">
             <form method="POST" action="{{ route($ruta_store) }}"  role="form" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" value="create" name="mode">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="row col-4">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Agregar nuevo {{$nombre}}</h5>
-
-                        </div>
-                    </div>
                     <div class="modal-body p-5">
-                        <div class="row">
                             <div class="col-12">
                                 <label for="{{$descripcion}}">Descripción <small class="text-danger">*</small><br></label>
                                 <input type="text" name="{{$descripcion}}" id="{{$descripcion}}" class="form-control" placeholder="Descripción ...">
@@ -26,7 +18,6 @@
                                     @error($descripcion) <span class="text-danger">{{ $message }}</span> @enderror
                                 @endif
                             </div>
-                        </div>
                     </div>
                     <div class="modal-footer border-white">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -35,7 +26,12 @@
                 </div>
             </form>
         </div>
+        </div>
 
       </div>
     </div>
   </div>
+
+  @if(old("mode")=='crear')
+       @error('descripcion') <span class="text-danger">{{ $message }}</span> @enderror
+@endif

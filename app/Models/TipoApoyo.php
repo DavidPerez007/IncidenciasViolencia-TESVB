@@ -13,4 +13,9 @@ class TipoApoyo extends Model
     protected $table= "tipo_apoyo";
     protected $primaryKey = "id_tipo_apoyo";
     protected $fillable = ["tipo_apoyo"];
+
+    static $rules=[
+        'tipo_apoyo'=>'required',
+
+    ];
 }

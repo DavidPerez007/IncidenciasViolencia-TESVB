@@ -13,4 +13,9 @@ class Vivienda extends Model
     protected $table= "vivienda";
     protected $primaryKey = "id_vivienda";
     protected $fillable = ["vivienda"];
+
+    static $rules = [
+        'vivienda'=> 'required',
+
+    ];
 }

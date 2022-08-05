@@ -11,6 +11,11 @@ class TipoViolencia extends Model
     use HasFactory;
     use SoftDeletes;
     protected $table= "tipo_violencia";
-    protected $primaryKey = "id_tipo_violencia ";
+    protected $primaryKey = "id_tipo_violencia";
     protected $fillable = ["tipo_violencia"];
+
+    static $rules = [
+        'tipo_violencia'=> 'required',
+
+    ];
 }

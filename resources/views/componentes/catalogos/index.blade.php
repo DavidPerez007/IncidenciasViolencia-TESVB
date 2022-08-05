@@ -3,39 +3,27 @@
 
 <!-- Button trigger modal -->
 
-<div class="position-absolute top-0 end-0 mb-5 mx-3 ">
+<div class="text-end">
     <button type="button" class="btn btn-primary mt-4 mb-5 " data-bs-toggle="modal" data-bs-target="#create">
     <i class="fas fa-plus-circle"></i> Agregar
     </button>
 </div>
 
-
-
-
-
-       <table class = "table table-bordered my-5 table-hover table-striped  ">
-            <thead class="thead-dark">
-                <tr class="text-center">
-                    <th>Id</th>
-                    <th>Descripción</th>
-                    <th class="size">Acción</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($datos as $dato)
-                <tr>
-
-                <td>
-                   {{$loop->index+1}}
-                </td>
-                <td>
-                   {{$dato[$descripcion]}}
-                </td>
-                <td>
-
-
-
+<div class="">
+    <table class = "table table-bordered table-hover table-striped  ">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th>Id</th>
+                <th>Descripción</th>
+                <th class="size">Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($datos as $dato)
+            <tr>
+                <td class="text-center">{{$loop->index+1}}</td>
+                <td class="text-center">{{$dato[$descripcion]}}</td>
+                <td class="text-center">
                     <div class="d-inline-flex">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit-{{$dato[$id]}}">
                         <i class="fa-solid fa-pen-to-square"></i>
@@ -43,7 +31,6 @@
                         @include('componentes.catalogos.edit')
                     </div>
                     <div class="d-inline-flex">
-
                         <form action="{{route($ruta_destroy, $dato[$id])}}"     method="POST" class="">
                         @csrf
                         @method('DELETE')
@@ -52,11 +39,27 @@
                     </div>
                 </td>
             </tr>
-                @endforeach
-            </tbody>
+            @endforeach
+        </tbody>
+    </table>
+</div>
 
+@include('componentes.catalogos.create')
+{{-- errores--}}
 
-        </table>
-        @include('componentes.catalogos.create')
+@if($errors->any() && old("mode")=='create' )
+    @push("scripts")
+        <script type="text/javascript">
+            new bootstrap.Modal(document.getElementById('create')).show();
+        </script>
+    @endpush
+@elseif($errors->any() && old("dato_id"))
+	@push("scripts")
+        <script type="text/javascript">
+            new bootstrap.Modal(document.getElementById('edit-{{$dato[$id]}}')).show();
+        </script>
+    @endpush
 
-        @endsection
+@endif
+
+@endsection

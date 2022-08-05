@@ -12,6 +12,11 @@ class Nacionalidad extends Model
     use softDeletes;
     protected $table="nacionalidad";
     protected $primaryKey="id_nacionalidad";
-    protected $fillable=["nacionalidad"];
+    protected $fillable=["nacionalida"];
+
+    static $rules = [
+        'nacionalida'=> 'required',
+
+    ];
 
 }

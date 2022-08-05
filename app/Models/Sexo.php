@@ -14,6 +14,8 @@ class Sexo extends Model
     protected $primaryKey = "id_sexo";
     protected $fillable = ["sexo"];
 
+    
+//Definir la reglas para el validacion de fomularios
     static $rules = [
         'sexo'=> 'required',
     ];

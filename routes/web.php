@@ -32,21 +32,20 @@ Route::middleware([ 'auth:sanctum',
 
 
 //oute::get("sexo", \App\Http\Livewire\Sexos::class);
-Route::get("pais",\App\Http\Livewire\Paises::class);
-Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
-Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
+//Route::get("pais",\App\Http\Livewire\Paises::class);
+//Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
+//Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
 
-Route::get("tipo_relacion",\App\Http\Livewire\TipoRelaciones::class);
-Route::get("situ_conyugal",\App\Http\Livewire\SituConyugales::class);
-Route::get("ocupacion",\App\Http\Livewire\Ocupaciones::class);
+//Route::get("tipo_relacion",\App\Http\Livewire\TipoRelaciones::class);
+//Route::get("situ_conyugal",\App\Http\Livewire\SituConyugales::class);
+//Route::get("ocupacion",\App\Http\Livewire\Ocupaciones::class);
 
-Route::get("tipo_apoyo",\App\Http\Livewire\TipoApoyos::class);
+//Route::get("tipo_apoyo",\App\Http\Livewire\TipoApoyos::class);
 Route::get("servicio_medico",\App\Http\Livewire\ServicioMedicos::class);
-Route::get("ambitoViolencia",\App\Http\Livewire\AmbitosViolencia::class);
-Route::get("modalidad_violencia",\App\Http\Livewire\ModalidadesViolencia::class);
-Route::get("vivienda",\App\Http\Livewire\Viviendas::class);
-Route::get("escolaridad", \App\Http\Livewire\Escolaridades::class);
-Route::get("efectos", \App\Http\Livewire\Efectos::class);
+//Route::get("ambitoViolencia",\App\Http\Livewire\AmbitosViolencia::class);
+//Route::get("modalidad_violencia",\App\Http\Livewire\ModalidadesViolencia::class);
+//Route::get("vivienda",\App\Http\Livewire\Viviendas::class);
+
 
 Route::get("registro_caso_victima", \App\Http\Livewire\RegistroCasoVictima::class);
 
@@ -66,4 +65,17 @@ Route::get('pais/catalogo',[App\Http\Controllers\CatalogoController::class,'pais
 
 Route::resource("catalogo", \App\Http\Controllers\CatalogoController::class);
 Route::resource("sexo", \App\Http\Controllers\SexoController::class);
+Route::resource("escolaridad",\App\Http\Controllers\EscolaridadController::class);
+Route::resource("efectos", \App\Http\Controllers\EfectosController::class);
+Route::resource("ocupacion", \App\Http\Controllers\OcupacionController::class);
+Route::resource("situacion_conyugal", \App\Http\Controllers\SituacionConyugalController::class);
+Route::resource("vivienda", \App\Http\Controllers\ViviendaController::class);
+Route::resource("tipo_violencia", \App\Http\Controllers\TipoViolenciaController::class);
+Route::resource("nacionalidad", \App\Http\Controllers\NacionalidadController::class);
+Route::resource("modalidad_violencia", \App\Http\Controllers\ModalidadViolenciaController::class);
+Route::resource("ambito_violencia", \App\Http\Controllers\AmbitoViolenciaController::class);
+Route::resource("dificultad", \App\Http\Controllers\DificultadController::class);
+Route::resource("tipo_relacion", \App\Http\Controllers\TipoRelacionController::class);
+Route::resource("tipo_apoyo", \App\Http\Controllers\TipoApoyoController::class);
+
 
