@@ -1,7 +1,9 @@
 <div>
     {{-- The whole world belongs to you. --}}
 
-    <table class = "table-bordered mt-5">
+    <h1 class="mt-4">Modalidad Violencia</h1>
+
+    <table class = "table table-bordered mt-5">
         <thead>
             <tr>
                 <th>No.</th>

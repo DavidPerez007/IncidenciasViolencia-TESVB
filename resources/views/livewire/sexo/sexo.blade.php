@@ -1,6 +1,8 @@
 <div>
     {{-- Do your work, then step back. --}}
 
+    <h1 class="mt-4">Sexo</h1>
+
     <table class = "table table-bordered mt-5">
         <thead>
             <tr>

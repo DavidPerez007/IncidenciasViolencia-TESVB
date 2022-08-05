@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Livewire\Idioma as LivewireIdioma;
+use App\Models\idioma;
+use App\Http\Livewire\Sexo;
+use App\Models\Sexo as ModelsSexo;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,28 +46,40 @@ Route::middleware([ 'auth:sanctum',
 //Route::get("ocupacion",\App\Http\Livewire\Ocupaciones::class);
 
 //Route::get("tipo_apoyo",\App\Http\Livewire\TipoApoyos::class);
+
+
+
+Route::get("sexo", \App\Http\Livewire\Sexos::class);
+Route::get("pais",\App\Http\Livewire\Paises::class);
+Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
+
+Route::get("pais",\App\Http\Livewire\Paises::class);
+Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
+Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
+
+
+
+
+
+Route::get("tipo_relacion",\App\Http\Livewire\TipoRelaciones::class);
+Route::get("situ_conyugal",\App\Http\Livewire\SituConyugales::class);
+Route::get("ocupacion",\App\Http\Livewire\Ocupaciones::class);
+Route::get("tipo_apoyo",\App\Http\Livewire\TipoApoyos::class);
 Route::get("servicio_medico",\App\Http\Livewire\ServicioMedicos::class);
 //Route::get("ambitoViolencia",\App\Http\Livewire\AmbitosViolencia::class);
 //Route::get("modalidad_violencia",\App\Http\Livewire\ModalidadesViolencia::class);
 //Route::get("vivienda",\App\Http\Livewire\Viviendas::class);
 
 
+Route::get("tipo_violencia", \App\Http\Livewire\TiposViolencia::class);
+
 Route::get("registro_caso_victima", \App\Http\Livewire\RegistroCasoVictima::class);
-
+Route::get("datos_comp_victima", \App\Http\Livewire\DatosComplementariosVictima::class);
 Route::get("caso_violencia", \App\Http\Livewire\CasoViolencia::class);
-
-
-
 Route::get('viviendas', function () {
     return view('catalogos.vivienda');
 });
-
-
 Route::get('pais/catalogo',[App\Http\Controllers\CatalogoController::class,'pais']);
-
-
-
-
 Route::resource("catalogo", \App\Http\Controllers\CatalogoController::class);
 Route::resource("sexo", \App\Http\Controllers\SexoController::class);
 Route::resource("escolaridad",\App\Http\Controllers\EscolaridadController::class);
@@ -79,3 +96,4 @@ Route::resource("tipo_relacion", \App\Http\Controllers\TipoRelacionController::c
 Route::resource("tipo_apoyo", \App\Http\Controllers\TipoApoyoController::class);
 
 
+// Route::get('vistas/registro-caso-vistima',[])
