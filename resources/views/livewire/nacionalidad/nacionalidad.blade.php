@@ -14,7 +14,7 @@
         @foreach($nacionalidades as $value)
             <tr>
                 <td>{{ $value->id_nacionalidad}}</td>
-                <td>{{ $value->nacionalida}}</td>
+                <td>{{ $value->nacionalidad}}</td>
             {{--
                 <td>
                     <button wire:click="edit({{ $value->id_nacionalidad }})" class="btn btn-primary btn-sm">Edit</button>

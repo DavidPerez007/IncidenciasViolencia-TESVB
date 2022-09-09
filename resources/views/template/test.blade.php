@@ -56,7 +56,7 @@
 
             <li><a href="contacts.html">Contactos</a></li>
 
-          
+  
           </ul>
         </div>
       </div>
@@ -71,9 +71,6 @@
       </div>
     </div>
   </header>
-  <!-- ================ End Header Area ================= -->
-
-  <!-- ================ start banner Area ================= -->
   <section class="mb-5 home-banner-area">
     <div class="container">
      <div class="row justify-content-center fullscreen align-items-center">
@@ -94,9 +91,6 @@
       </div>
     </div>
   </section>
-  <!-- ================ End banner Area ================= -->
-
-  <!-- ================ Start Video Area ================= -->
   <section class="mt-5 pt-5 video-area section-gap-bottom">
     <div name="sobreNosotros" class="container">
       <div class="row align-items-center">
@@ -116,47 +110,20 @@
             <div class="single-video ">
               <div class="video-part">
                 <img class="img-fluid align-center" src="img/itesvb.jpg" alt="">
-                <div></div>
-<!--
-                <a class="popup-youtube play-btn" href="https://www.youtube.com/watch?v=VufDd-QL1c0">
-                  <img class="play-icon" src="img/play-btn.png" alt="">
-                </a>
-            -->
               </div>
-    <!--
-              <h4 class="text-white mb-20 mt-30">Learn Angular js Course for Legendary Persons</h4>
-              <p class="text-white mb-20">
-                In the history of modern astronomy, there is probably no one greater leap forward than the building and
-                launch of the space telescope known as the Hubble.
-              </p>
-            -->
             </div>
 
             <div class="single-video">
               <div class="video-part">
                 <img class="img-fluid" src="img/imujer.jpg" alt="">
                 <div></div>
-             <!--   <a class="popup-youtube play-btn" href="https://www.youtube.com/watch?v=VufDd-QL1c0">
-                  <img class="play-icon" src="img/play-btn.png" alt="">
-                </a> -->
               </div>
-<!--
-              <h4 class="text-white mb-20 mt-30">Learn Angular js Course for Legendary Persons</h4>
-              <p class="text-white mb-20">
-                In the history of modern astronomy, there is probably no one greater leap forward than the building and
-                launch of the space telescope known as the Hubble.
-              </p>
-
-            -->
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- ================ End Video Area ================= -->
-
-  <!-- ================ Start Feature Area ================= -->
   <section class="mb-5 other-feature-area">
     <div class="container">
       <div class="feature-inner row">

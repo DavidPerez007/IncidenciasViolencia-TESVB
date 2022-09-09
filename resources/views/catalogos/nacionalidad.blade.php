@@ -1,7 +1,7 @@
 <!--Componente catalogo-->
 @include('componentes.catalogos.index',
 ['datos' => $nacionalidades,
-'descripcion' => 'nacionalida',
+'descripcion' => 'nacionalidad',
 'ruta_destroy'=>'nacionalidad.destroy',
 'id'=>'id_nacionalidad',
 'nombre'=>'nacionalidad',
@@ -9,3 +9,4 @@
 'ruta_edit'=>'nacionalidad.update'
 ])
 <!--componente catalogo-->
+    
