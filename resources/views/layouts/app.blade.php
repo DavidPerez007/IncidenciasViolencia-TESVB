@@ -60,6 +60,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{url("nacionalidad")}}">Nacionalidades</a>
                                     <a class="nav-link" href="{{url("pais")}}">Paises</a>
+                                    <a class="nav-link" href="{{url("estado")}}">Estados</a>
                                     <a class="nav-link" href="{{url("vivienda")}}">Viviendas</a>
                                     <a class="nav-link" href="{{url("domicilio")}}">Domicilios</a>
                                     <a class="nav-link" href="{{url("municipio")}}">Municipios</a>

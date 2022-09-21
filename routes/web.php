@@ -24,6 +24,8 @@ Route::middleware([ 'auth:sanctum',
 
 Route::get("sexo", \App\Http\Livewire\Sexos::class);
 Route::get("pais",\App\Http\Livewire\Paises::class);
+Route::get("estado",\App\Http\Livewire\Estados::class);
+Route::get("municipio",\App\Http\Livewire\Municipios::class);
 Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
 Route::get("tipo_relacion",\App\Http\Livewire\TipoRelaciones::class);
@@ -46,6 +48,9 @@ Route::get('viviendas', function () {
 Route::get('pais/catalogo',[App\Http\Controllers\CatalogoController::class,'pais']);
 Route::resource("catalogo", \App\Http\Controllers\CatalogoController::class);
 Route::resource("sexo", \App\Http\Controllers\SexoController::class);
+Route::resource("pais",\App\Http\Controllers\PaisController::class);
+Route::resource("estado",\App\Http\Controllers\EstadoController::class);
+Route::resource("municipio",\App\Http\Controllers\MunicipioController::class);
 Route::resource("escolaridad",\App\Http\Controllers\EscolaridadController::class);
 Route::resource("efectos", \App\Http\Controllers\EfectosController::class);
 Route::resource("ocupacion", \App\Http\Controllers\OcupacionController::class);
