@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Nacionalidad;
+use App\Models\Domicilio;
 use Illuminate\Http\Request;
 
-class NacionalidadController extends Controller
+class DomicilioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,13 +14,13 @@ class NacionalidadController extends Controller
      */
     public function index()
     {
-        $nacionalidades=Nacionalidad::all();
-       // dd( $nacionalidades);
-        return view ('catalogos.nacionalidad',[
+        $domicilios = Domicilio::all();
+        //dd($domicilios);
+        return view('catalogos.domicilio',
+            [
+                'domicilios' => $domicilios
+            ]);
 
-            'nacionalidades'=> $nacionalidades,
-
-        ]);
     }
 
     /**
@@ -42,20 +42,20 @@ class NacionalidadController extends Controller
     public function store(Request $request)
     {
 
-        request()->validate(Nacionalidad::$rules);
-        $datos_nacionalidad = request()->except(['_token', 'mode']);
-        Nacionalidad::insert($datos_nacionalidad);
-        return redirect()->back();
+        request()->validate(Domicilio::$rules);
 
+        $datos_domicilio = request()->except(['_token', 'mode']);
+        Domicilio::insert($datos_domicilio);
+        return redirect()->back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Domicilio  $domicilio
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Domicilio $domicilio)
     {
         //
     }
@@ -63,10 +63,10 @@ class NacionalidadController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Domicilio  $domicilio
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Domicilio $domicilio)
     {
         //
     }
@@ -75,15 +75,15 @@ class NacionalidadController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Domicilio  $domicilio
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Nacionalidad $nacionalidad)
+    public function update(Request $request, Domicilio $domicilio)
     {
-        request()->validate(Nacionalidad::$rules);
+        request()->validate(Domicilio::$rules);
 
-        $datos_nacionalidad = request()->except(['_token', '_method']);
-        $nacionalidad-> update ($datos_nacionalidad);
+        $datos_domicilio = request()->except(['_token', '_method']);
+        $domicilio-> update ($datos_domicilio);
 
         return redirect()->back();
     }
@@ -91,12 +91,12 @@ class NacionalidadController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Domicilio  $domicilio
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Nacionalidad $nacionalidad)
+    public function destroy(Domicilio $domicilio)
     {
-        $nacionalidad->delete();
+        $domicilio->delete();
         return redirect()->back();
     }
 }

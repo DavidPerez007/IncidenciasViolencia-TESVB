@@ -28,6 +28,7 @@ Route::get("estado",\App\Http\Livewire\Estados::class);
 Route::get("municipio",\App\Http\Livewire\Municipios::class);
 Route::get("dificultad", \App\Http\Livewire\Dificultades::class);
 Route::get("nacionalidad",\App\Http\Livewire\Nacionalidades::class);
+Route::get("domicilio",\App\Http\Livewire\Domicilios::class);
 Route::get("tipo_relacion",\App\Http\Livewire\TipoRelaciones::class);
 Route::get("situ_conyugal",\App\Http\Livewire\SituConyugales::class);
 Route::get("ocupacion",\App\Http\Livewire\Ocupaciones::class);
@@ -58,6 +59,7 @@ Route::resource("situacion_conyugal", \App\Http\Controllers\SituacionConyugalCon
 Route::resource("vivienda", \App\Http\Controllers\ViviendaController::class);
 Route::resource("tipo_violencia", \App\Http\Controllers\TipoViolenciaController::class);
 Route::resource("nacionalidad", \App\Http\Controllers\NacionalidadController::class);
+Route::resource("domicilio", \App\Http\Controllers\DomicilioController::class);
 Route::resource("modalidad_violencia", \App\Http\Controllers\ModalidadViolenciaController::class);
 Route::resource("ambito_violencia", \App\Http\Controllers\AmbitoViolenciaController::class);
 Route::resource("dificultad", \App\Http\Controllers\DificultadController::class);
