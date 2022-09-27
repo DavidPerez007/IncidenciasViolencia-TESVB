@@ -15,7 +15,7 @@ class MunicipioController extends Controller
      */
     public function index()
     {
-        $municipios= Municipio::all();
+        $municipios= Municipio::paginate(25);
         //dd($paises);
         return view('catalogos.municipio',
             [

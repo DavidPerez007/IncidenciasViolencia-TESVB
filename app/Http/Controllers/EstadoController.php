@@ -14,7 +14,7 @@ class EstadoController extends Controller
      */
     public function index()
     {
-        $estados = Estado::all();
+        $estados = Estado::paginate(7);
         //dd($paises);
         return view('catalogos.estado',
             [
