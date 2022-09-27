@@ -15,7 +15,7 @@ class CreatePaisTable extends Migration
     {
         Schema::create('pais', function (Blueprint $table) {
             $table->id('id_pais');
-            $table->string('pais', 15);
+            $table->string('pais', 50);
             $table->timestamps();
             $table->softDeletes();
         });
