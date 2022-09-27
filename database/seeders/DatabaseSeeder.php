@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Http\Controllers\MunicipioController;
 use Illuminate\Database\Seeder;
+use Symfony\Component\VarDumper\Cloner\Data;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,5 +15,18 @@ class DatabaseSeeder extends Seeder
         $this->call([PaisesSeeder::class]);
         $this->call([EstadosSeeder::class]);
         $this->call([MunicipiosSeeder::class]);
+        $this->call([NacionalidadesSeeder::class]);
+        $this->call([Ambitos_ViolenciaSeeder::class]);
+        $this->call([DificultadesSeeder::class]);
+        $this->call([EfectosSeeder::class]);
+        $this->call([EscolaridadesSeeder::class]);
+        $this->call([OcupacionesSeeder::class]);
+        $this->call([SexoSeeder::class]);
+        $this->call([Situacion_ConyugalSeeder::class]);
+        $this->call([Tipo_ApoyoSeeder::class]);
+        $this->call([Tipo_RelacionSeeder::class]);
+        $this->call([Tipo_ViolenciaSeeder::class]);
+        $this->call([ViviendasSeeder::class]);
+
     }
 }

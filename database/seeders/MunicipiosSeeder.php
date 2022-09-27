@@ -12048,28 +12048,23 @@ VILLA GONZÁLEZ ORTEGA",
                 'id_estado' => "32",
             ),
             array(
-                'municipio' => "
-VILLA HIDALGO",
+                'municipio' => "VILLA HIDALGO",
                 'id_estado' => "32",
             ),
             array(
-                'municipio' => "
-VILLANUEVA",
+                'municipio' => "VILLANUEVA",
                 'id_estado' => "32",
             ),
             array(
-                'municipio' => "
-ZACATECAS",
+                'municipio' => "ZACATECAS",
                 'id_estado' => "32",
             ),
             array(
-                'municipio' => "
-TRANCOSO",
+                'municipio' => "TRANCOSO",
                 'id_estado' => "32",
             ),
             array(
-                'municipio' => "
-SANTA MARÍA DE LA PAZ",
+                'municipio' => "SANTA MARÍA DE LA PAZ",
                 'id_estado' => "32",
             ),
         ));
