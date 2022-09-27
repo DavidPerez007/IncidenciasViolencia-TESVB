@@ -12,5 +12,6 @@ class Estado extends Model
     use SoftDeletes;
     protected $table="estado";
     protected $primaryKey="id_estado";
+    protected $foreingKey="id_pais";
     protected $fillable=["estado"];
 }
