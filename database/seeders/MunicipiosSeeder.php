@@ -15,11 +15,11 @@ class MunicipiosSeeder extends Seeder
     public function run()
     {
         DB::statement('SET FOREIGN_KEY_CHECKS = 0;'); // Desactivamos la revisión de claves foráneas
-        DB::table('Municipio')->truncate();
+        DB::table('municipio')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS = 1;'); // Reactivamos la revisión de claves foráneas
 
 
-        DB::table('Municipio')->insert(array(
+        DB::table('municipio')->insert(array(
             array(
                 'municipio' => "Aguascalientes",
                 'id_estado' => "1",
