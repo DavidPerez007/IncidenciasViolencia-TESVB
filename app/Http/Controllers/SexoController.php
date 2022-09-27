@@ -14,7 +14,7 @@ class SexoController extends Controller
      */
     public function index()
     {
-        $sexos=Sexo::all();
+        $sexos=Sexo::paginate(25);
 
         return view('catalogos.sexo',
             [

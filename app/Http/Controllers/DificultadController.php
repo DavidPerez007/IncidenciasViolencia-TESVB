@@ -14,7 +14,7 @@ class DificultadController extends Controller
      */
     public function index()
     {
-        $dificultades = Dificultad::all();
+        $dificultades = Dificultad::paginate(25);
         return view('catalogos.dificultad',[
             'dificultades'=> $dificultades,
         ]);

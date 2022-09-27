@@ -14,7 +14,7 @@ class TipoApoyoController extends Controller
      */
     public function index()
     {
-        $apoyos = TipoApoyo::all();
+        $apoyos = TipoApoyo::apaginate(25);
         return view('catalogos.tipo-apoyo',[
 
             'apoyos'=> $apoyos,

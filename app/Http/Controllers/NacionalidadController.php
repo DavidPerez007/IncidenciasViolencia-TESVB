@@ -14,7 +14,7 @@ class NacionalidadController extends Controller
      */
     public function index()
     {
-        $nacionalidades=Nacionalidad::all();
+        $nacionalidades=Nacionalidad::paginate(25);
        // dd( $nacionalidades);
         return view ('catalogos.nacionalidad',[
 

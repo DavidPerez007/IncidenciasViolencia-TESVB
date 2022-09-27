@@ -13,7 +13,7 @@ class PaisController extends Controller
      */
     public function index()
     {
-        $paises=Pais::all();
+        $paises=Pais::paginate(25);
 
         return view('catalogos.pais',
             [

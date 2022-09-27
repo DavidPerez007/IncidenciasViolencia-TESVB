@@ -15,7 +15,7 @@ class ViviendaController extends Controller
      */
     public function index()
     {
-        $viviendas = Vivienda::all();
+        $viviendas = Vivienda::paginate(25);
         return view ('catalogos.vivienda',[
             'viviendas'=> $viviendas,
 

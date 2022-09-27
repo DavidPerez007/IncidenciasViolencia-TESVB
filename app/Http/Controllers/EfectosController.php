@@ -14,7 +14,7 @@ class EfectosController extends Controller
      */
     public function index()
     {
-        $efectos=Efecto::all();
+        $efectos=Efecto::paginate(25);
 
         return view('catalogos.efectos',
         [

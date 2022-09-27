@@ -14,7 +14,7 @@ class TipoRelacionController extends Controller
      */
     public function index()
     {
-        $relaciones = TipoRelacion::all();
+        $relaciones = TipoRelacion::paginate(25);
         return view ('catalogos.tipo-relacion',[
 
             'relaciones'=>$relaciones,

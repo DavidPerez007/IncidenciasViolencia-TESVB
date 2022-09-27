@@ -14,7 +14,7 @@ class AmbitoViolenciaController extends Controller
      */
     public function index()
     {
-        $ambitoViolencia = AmbitoViolencia::all();
+        $ambitoViolencia = AmbitoViolencia::paginate(25);
 
         return view('catalogos.ambito-violencia',[
             'ambitoViolencia'=> $ambitoViolencia,

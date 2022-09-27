@@ -14,7 +14,7 @@ class ModalidadViolenciaController extends Controller
      */
     public function index()
     {
-        $modalidadViolencia = ModalidadViolencia::all();
+        $modalidadViolencia = ModalidadViolencia::paginate(25);
         return view ('catalogos.modalidad-violencia',[
 
             'modalidadViolencia'=> $modalidadViolencia,

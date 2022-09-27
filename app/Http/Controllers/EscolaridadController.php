@@ -14,7 +14,7 @@ class EscolaridadController extends Controller
      */
     public function index()
     {
-        $escolaridades=Escolaridad::all();
+        $escolaridades=Escolaridad::paginate(25);
         return view('catalogos.escolaridad',
             [
                  'escolaridades' => $escolaridades
@@ -39,7 +39,7 @@ class EscolaridadController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         request()->validate(Escolaridad::$rules);
         $datos_escolaridad = request()->except(['_token','mode']);
         Escolaridad::insert($datos_escolaridad);

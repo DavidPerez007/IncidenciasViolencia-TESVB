@@ -14,7 +14,7 @@ class DomicilioController extends Controller
      */
     public function index()
     {
-        $domicilios = Domicilio::all();
+        $domicilios = Domicilio::paginate(25);
         //dd($domicilios);
         return view('catalogos.domicilio',
             [

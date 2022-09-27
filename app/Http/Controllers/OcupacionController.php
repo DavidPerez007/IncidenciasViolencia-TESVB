@@ -14,7 +14,7 @@ class OcupacionController extends Controller
      */
     public function index()
     {
-        $ocupaciones = Ocupacion::all();
+        $ocupaciones = Ocupacion::paginate(25);
 
         return view('catalogos.ocupacion',
         [

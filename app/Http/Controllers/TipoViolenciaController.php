@@ -14,7 +14,7 @@ class TipoViolenciaController extends Controller
      */
     public function index()
     {
-        $tipo_violencia = TipoViolencia::all();
+        $tipo_violencia = TipoViolencia::paginate(25);
 
         return view ('catalogos.tipo-violencia',[
 

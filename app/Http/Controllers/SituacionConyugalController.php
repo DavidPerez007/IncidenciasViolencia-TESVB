@@ -14,7 +14,7 @@ class SituacionConyugalController extends Controller
      */
     public function index()
     {
-        $situconyugal = SituConyugal::all();
+        $situconyugal = SituConyugal::paginate(25);
 
         return view('catalogos.situacion-conyugal',
         [
