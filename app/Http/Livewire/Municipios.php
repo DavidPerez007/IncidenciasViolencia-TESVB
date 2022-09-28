@@ -9,7 +9,6 @@ class Municipios extends Component
 {
 public $municipios, $municipio, $id_municipio;
 public $isOpen=0;
-
     public function render()
     {
         $this->municipios=Municipio::all();

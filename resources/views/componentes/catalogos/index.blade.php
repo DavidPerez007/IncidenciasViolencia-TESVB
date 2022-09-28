@@ -4,6 +4,11 @@
 <!-- Button trigger modal -->
 
 <div class="text-end">
+    <style>
+        nav svg{
+            height:20px;
+        }
+    </style>
     <button type="button" class="btn btn-primary mt-4 mb-5 " data-bs-toggle="modal" data-bs-target="#create">
     <i class="fas fa-plus-circle"></i> Agregar
     </button>
@@ -42,7 +47,7 @@
             @endforeach
         </tbody>
     </table>
-<div class="d-flex justify-content-end">{!! $datos->links()!!}</div>
+{!! $datos->links()!!}
 
 
 </div>

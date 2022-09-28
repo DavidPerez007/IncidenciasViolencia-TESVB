@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Estado;
 use App\Models\Municipio;
 use Illuminate\Http\Request;
+use Livewire\WithPagination;
 
 class MunicipioController extends Controller
 {
+    use WithPagination;
     /**
      * Display a listing of the resource.
      *
