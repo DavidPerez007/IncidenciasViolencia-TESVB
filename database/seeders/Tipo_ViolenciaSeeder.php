@@ -19,13 +19,15 @@ class Tipo_ViolenciaSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS = 1;'); // Reactivamos la revisión de claves foráneas
         DB::table( 'tipo_violencia')->insert(array(
             array(
-                'tipo_violencia'=>'Económica',
+                'tipo_violencia'=>'Económica y patrimonial',
             ),array(
                 'tipo_violencia'=>'Psicológica',
             ),array(
                 'tipo_violencia'=>'Física',
             ),array(
                 'tipo_violencia'=>'Sexual',
+            ),array(
+                'tipo_violencia'=>'Simbólica',
             ),
             ));
 

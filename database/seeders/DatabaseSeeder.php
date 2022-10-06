@@ -27,6 +27,14 @@ class DatabaseSeeder extends Seeder
         $this->call([Tipo_RelacionSeeder::class]);
         $this->call([Tipo_ViolenciaSeeder::class]);
         $this->call([ViviendasSeeder::class]);
-
+        $this->call([IdiomasSeeder::class]);
+        $this->call([Modalidad_violenciaSeeder::class]);
+        $this->call([EfectosFisicosSeeder::class]);
+        $this->call([ConsecuenciasSexualeseeder::class]);
+        $this->call([EfectosPsicologicosSeeder::class]);
+        $this->call([EfectosEconomicosSeeder::class]);
+        $this->call([AgentesLesionSeeder::class]);
+        $this->call([AreaLesionSeeder::class]);
+        $this->call([ServicioMedicoSeeder::class]);
     }
 }

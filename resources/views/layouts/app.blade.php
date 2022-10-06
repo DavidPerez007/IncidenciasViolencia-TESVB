@@ -8,7 +8,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Mujer Segura') }}</title>
         <script type="text/text/javascript"src="{{asset("js/app.js")}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <!-- Fonts -->
@@ -56,6 +56,12 @@
                             Generales
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#registro" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                               Registros
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{url("nacionalidad")}}">Nacionalidades</a>
@@ -65,6 +71,7 @@
                                     <a class="nav-link" href="{{url("domicilio")}}">Domicilios</a>
                                     <a class="nav-link" href="{{url("municipio")}}">Municipios</a>
                                     <a class="nav-link" href="{{url("escolaridad")}}">Escolaridades</a>
+                                    <a class="nav-link" href="{{url("idioma")}}">Idiomas</a>
                                     <a class="nav-link" href="{{url("ambito_violencia")}}">Ambitos de Violencia</a>
                                     <a class="nav-link" href="{{url("caso_violencia")}}">Casos de Violencia</a>
                                     <a class="nav-link" href="{{url("dificultad")}}">Dificultades</a>
@@ -76,11 +83,20 @@
                                     <a class="nav-link" href="{{url("tipo_apoyo")}}">Tipo de Apoyo</a>
                                     <a class="nav-link" href="{{url("tipo_relacion")}}">Tipo de Relación</a>
                                     <a class="nav-link" href="{{url("tipo_violencia")}}">Tipo de Violencia</a>
-
-
-
+                                    <a class="nav-link" href="{{url("tipo_violencia")}}">Consecuancias Sexuales</a>
                                 </nav>
                             </div>
+
+                            <div class="collapse" id="registro" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+
+                                    <a class="nav-link" href="{{url("clas_violencia ")}}">Clasificación de la violencia</a>
+                                    <a class="nav-link" href="{{url("datos_generales ")}}">Datos Generales</a>
+                                    <a class="nav-link" href="{{url("registro_victima ")}}">Registrar Victimas</a>
+                                </nav>
+                            </div>
+
+
                             <!--   <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                  <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                  Pages

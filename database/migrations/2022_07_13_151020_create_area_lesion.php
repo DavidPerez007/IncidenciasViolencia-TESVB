@@ -15,7 +15,7 @@ class CreateAreaLesion extends Migration
     {
         Schema::create('area_lesion', function (Blueprint $table) {
             $table->id('id_arealesion');
-            $table->string('arealesion', 150);
+            $table->string('area_lesion', 150);
             $table->timestamps();
             $table->softDeletes();
         });

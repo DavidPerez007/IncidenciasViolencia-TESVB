@@ -41,7 +41,6 @@ class NacionalidadController extends Controller
      */
     public function store(Request $request)
     {
-
         request()->validate(Nacionalidad::$rules);
         $datos_nacionalidad = request()->except(['_token', 'mode']);
         Nacionalidad::insert($datos_nacionalidad);
@@ -68,7 +67,6 @@ class NacionalidadController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**

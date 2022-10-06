@@ -15,7 +15,7 @@ class CreateModalidadViolenciaTable extends Migration
     {
         Schema::create('modalidad_violencia', function (Blueprint $table) {
             $table->id('id_modalidad_violencia');
-            $table->string('modalidad', 20);
+            $table->string('modalidad', 80);
             $table->timestamps();
             $table->softDeletes();
         });

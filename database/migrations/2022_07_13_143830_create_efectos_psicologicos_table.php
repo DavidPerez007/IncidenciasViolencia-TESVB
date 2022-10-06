@@ -15,7 +15,7 @@ class CreateEfectosPsicologicosTable extends Migration
     {
         Schema::create('efectos_psicologicos', function (Blueprint $table) {
             $table->id('id_efectos_psicologicos');
-            $table->string('efecto_psicologicos', 25);
+            $table->string('efecto_psicologicos', 50);
             $table->timestamps();
             $table->softDeletes();
         });

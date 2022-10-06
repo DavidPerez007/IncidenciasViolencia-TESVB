@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Sexo;
 
+use App\Models\Idioma;
 use Illuminate\Http\Request;
 
-class SexoController extends Controller
+class IdiomaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,10 @@ class SexoController extends Controller
      */
     public function index()
     {
-        $sexos=Sexo::paginate(25);
-        return view ('vistas.registro_caso_victima');
-        return view('catalogos.sexo',
+        $idiomas = Idioma::paginate(15);
+        return view('catalogos.idioma',
             [
-                 'sexos' => $sexos
+                'idiomas' => $idiomas
             ]);
     }
 
@@ -40,19 +39,16 @@ class SexoController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Sexo::$rules);
-        $datos_sexo = request()->except(['_token','mode']);
-        Sexo::insert($datos_sexo);
-        return redirect()->back();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Idioma  $idioma
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Idioma $idioma)
     {
         //
     }
@@ -60,42 +56,34 @@ class SexoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Idioma  $idioma
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Idioma $idioma)
     {
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Idioma  $idioma
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sexo $sexo)
+    public function update(Request $request, Idioma $idioma)
     {
-        request()->validate(Sexo::$rules);
-        $datos_sexo = request()->except(['_token','_method']);
-        $sexo ->update($datos_sexo);
-
-        return redirect()->back();
-
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Idioma  $idioma
      * @return \Illuminate\Http\Response
      */
-
-    public function destroy(Sexo $sexo)
+    public function destroy(Idioma $idioma)
     {
-        $sexo->delete();
-        return redirect()->back();
+        //
     }
-
-
 }

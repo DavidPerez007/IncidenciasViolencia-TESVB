@@ -1,5 +1,3 @@
-
-
 <!--Componente catalogo-->
 @include('componentes.catalogos.domicilio.index',
 ['datos' => $domicilios,

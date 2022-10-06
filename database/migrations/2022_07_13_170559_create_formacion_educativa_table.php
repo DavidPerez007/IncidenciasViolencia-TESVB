@@ -15,8 +15,8 @@ class CreateFormacionEducativaTable extends Migration
     {
         Schema::create('formacion_educativa', function (Blueprint $table) {
             $table->id('id_formacion_educativa');
-            $table->boolean('sabe_leer');
-            $table->boolean('sabe_escribir');
+            $table->string('sabe_leer', 10);
+            $table->string('sabe_escribir', 10);
             $table->unsignedBigInteger('id_escolaridad');
             $table->foreign('id_escolaridad')->references('id_escolaridad')->on('escolaridad');
             $table->timestamps();

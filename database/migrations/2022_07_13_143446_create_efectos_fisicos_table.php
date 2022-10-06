@@ -15,7 +15,7 @@ class CreateEfectosFisicosTable extends Migration
     {
         Schema::create('efectos_fisicos', function (Blueprint $table) {
             $table->id('id_efectos_fisicos');
-            $table->string('efecto_fisico', 20);
+            $table->string('efecto_fisico', 30);
             $table->timestamps();
             $table->softDeletes();
         });

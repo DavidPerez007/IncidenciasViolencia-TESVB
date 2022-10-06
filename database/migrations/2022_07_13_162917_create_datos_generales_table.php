@@ -18,15 +18,13 @@ class CreateDatosGeneralesTable extends Migration
             $table->string('nombres',45);
             $table->string('ape_paterno',20);
             $table->string('ape_materno',20);
-            $table->string('pais');
-            $table->string('estado');
             $table->unsignedBigInteger('id_situ_conyugal');
             $table->foreign('id_situ_conyugal')->references('id_situ_conyugal')->on('situ_conyugal');
             $table->unsignedBigInteger('id_sexo');
             $table->foreign('id_sexo')->references('id_sexo')->on('sexo');
             $table->date('fecha_nacimiento');
             $table->integer('hijos');
-            $table->integer('telefono');
+            $table->string('telefono',11);
             $table->string('email',45);
             $table->string('grupo_etnico',45);
             $table->unsignedBigInteger('id_nacionalidad');

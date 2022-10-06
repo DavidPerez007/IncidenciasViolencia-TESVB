@@ -1,3 +1,4 @@
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -331,7 +332,7 @@
                                             <option>China</option>
                                         </select>
                                     </div>
-                                </div>   
+                                </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group row">
@@ -344,7 +345,7 @@
                                 </div>
                                 </div>
                         </div>
-                        
+
                         <div class="row p-2 mt-3">
                             <div class="col-4">
                                 <div class="form-group row">
@@ -352,7 +353,7 @@
                                     <div class="col-8">
                                         <input wire:model.defer="domicilio.no_exterior" type="text" name="no_exterior" id="no_exterior" class="form-control" value="{{$domicilio->no_exterior}}">
                                     </div>
-                                </div> 
+                                </div>
                             </div>
 
 <<<<<<< HEAD
@@ -375,7 +376,7 @@
                                             <option>Otro estado</option>
                                         </select>
                                     </div>
-                                </div>                     
+                                </div>
                             </div>
 
                             <div class="col-4">

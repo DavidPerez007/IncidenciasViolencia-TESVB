@@ -13,7 +13,6 @@
     <i class="fas fa-plus-circle"></i> Agregar
     </button>
 </div>
-
 <div class="">
     <table class = "table table-bordered table-hover table-striped  ">
         <thead class="thead-dark">
@@ -24,6 +23,7 @@
             </tr>
         </thead>
         <tbody>
+
             @foreach($datos as $dato)
             <tr>
                 <td class="text-center">{{$loop->index+1}}</td>

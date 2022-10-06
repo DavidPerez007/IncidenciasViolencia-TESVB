@@ -33,7 +33,9 @@ Route::get("tipo_relacion",\App\Http\Livewire\TipoRelaciones::class);
 Route::get("situ_conyugal",\App\Http\Livewire\SituConyugales::class);
 Route::get("ocupacion",\App\Http\Livewire\Ocupaciones::class);
 Route::get("tipo_apoyo",\App\Http\Livewire\TipoApoyos::class);
+Route::get("idioma",\App\Http\Livewire\Idiomas::class);
 Route::get("servicio_medico",\App\Http\Livewire\ServicioMedicos::class);
+Route::get("datos_generales",\App\Http\Livewire\DatosGenerales::class);
 //Route::get("ambitoViolencia",\App\Http\Livewire\AmbitosViolencia::class);
 //Route::get("modalidad_violencia",\App\Http\Livewire\ModalidadesViolencia::class);
 
@@ -46,7 +48,9 @@ Route::get("caso_violencia", \App\Http\Livewire\CasoViolencia::class);
 Route::get('viviendas', function () {
     return view('catalogos.vivienda');
 });
+
 Route::get('pais/catalogo',[App\Http\Controllers\CatalogoController::class,'pais']);
+Route::resource("registro_victima", \App\Http\Controllers\RegistroVictimaController::class);
 Route::resource("catalogo", \App\Http\Controllers\CatalogoController::class);
 Route::resource("sexo", \App\Http\Controllers\SexoController::class);
 Route::resource("pais",\App\Http\Controllers\PaisController::class);
@@ -65,6 +69,10 @@ Route::resource("ambito_violencia", \App\Http\Controllers\AmbitoViolenciaControl
 Route::resource("dificultad", \App\Http\Controllers\DificultadController::class);
 Route::resource("tipo_relacion", \App\Http\Controllers\TipoRelacionController::class);
 Route::resource("tipo_apoyo", \App\Http\Controllers\TipoApoyoController::class);
+Route::resource("idioma", \App\Http\Controllers\IdiomaController::class);
+Route::resource("datos_generales", \App\Http\Controllers\DatoGeneralController::class);
+Route::resource("con_sexual", \App\Http\Controllers\ConsecuenciasSexualesController::class);
+Route::resource("clas_violencia", \App\Http\Controllers\ClasificacionViolenciaController::class);
 
 
 // Route::get('vistas/registro-caso-vistima',[])

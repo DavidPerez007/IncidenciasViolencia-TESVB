@@ -17,8 +17,8 @@ class CreateClasViolenciaTable extends Migration
             $table->id('id_clas_violencia');
             $table->unsignedBigInteger('id_tipo_violencia');
             $table->unsignedBigInteger('id_modalidad_violencia');
-            $table->foreign('id_tipo_violencia')->references('id_tipo_violencia')->on('tipo_violencia');
-            $table->foreign('id_modalidad_violencia')->references('id_modalidad_violencia')->on('modalidad_violencia');
+            $table->foreign('id_tipo_violencia')->references('id_tipo_violencia')->on('tipo_violencia')->onDelete('cascade');
+            $table->foreign('id_modalidad_violencia')->references('id_modalidad_violencia')->on('modalidad_violencia')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

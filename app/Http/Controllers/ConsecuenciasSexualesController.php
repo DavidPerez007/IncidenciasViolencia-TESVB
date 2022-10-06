@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Sexo;
 
+use App\Models\ConsecuenciasSexuales;
 use Illuminate\Http\Request;
 
-class SexoController extends Controller
+class ConsecuenciasSexualesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,10 @@ class SexoController extends Controller
      */
     public function index()
     {
-        $sexos=Sexo::paginate(25);
-        return view ('vistas.registro_caso_victima');
-        return view('catalogos.sexo',
+        $datos_consecuencias = ConsecuenciasSexuales::paginate(15);
+        return view('catalogos.consecuenciasexual',
             [
-                 'sexos' => $sexos
+                'datos_consecuencias' => $datos_consecuencias
             ]);
     }
 
@@ -40,19 +39,16 @@ class SexoController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Sexo::$rules);
-        $datos_sexo = request()->except(['_token','mode']);
-        Sexo::insert($datos_sexo);
-        return redirect()->back();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\ConsecuenciasSexuales  $consecuenciasSexuales
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(ConsecuenciasSexuales $consecuenciasSexuales)
     {
         //
     }
@@ -60,42 +56,34 @@ class SexoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\ConsecuenciasSexuales  $consecuenciasSexuales
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(ConsecuenciasSexuales $consecuenciasSexuales)
     {
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\ConsecuenciasSexuales  $consecuenciasSexuales
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sexo $sexo)
+    public function update(Request $request, ConsecuenciasSexuales $consecuenciasSexuales)
     {
-        request()->validate(Sexo::$rules);
-        $datos_sexo = request()->except(['_token','_method']);
-        $sexo ->update($datos_sexo);
-
-        return redirect()->back();
-
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\ConsecuenciasSexuales  $consecuenciasSexuales
      * @return \Illuminate\Http\Response
      */
-
-    public function destroy(Sexo $sexo)
+    public function destroy(ConsecuenciasSexuales $consecuenciasSexuales)
     {
-        $sexo->delete();
-        return redirect()->back();
+        //
     }
-
-
 }
