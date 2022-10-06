@@ -13,127 +13,60 @@
                     <div class="modal-body p-5">
 
 
-                            <div class="col-12">
-                                <label for="{{$nombre}}">Nombre <small class="text-danger">*</small><br></label>
-                                <input type="text" name="{{$nombre}}" id="{{$nombre}}" class="form-control" placeholder="Nombre...">
-                                @if(old("mode")=='create')
-                                    @error($nombre) <span class="text-danger">{{ $message }}</span> @enderror
-                                @endif
-                            </div>
-                        {{--
-                                               <div class="col-12">
-                                                   <label for="{{$ape_paterno}}">Apellido Paterno <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$ape_paterno}}" id="{{$ape_paterno}}" class="form-control" placeholder="Apellido Paterno...">
-                                                   @if(old("mode")=='create')
-                                                       @error($ape_paterno) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
+                        <div class="col-12">
+                            <label >Datos Generales <small class="text-danger">*</small><br></label>
+                            <select type="text" name="id_datos_generales" id="id_datos_generales" class="form-control">
+                                <option value="">Elegir Datos</option>
+                                @foreach($datos_generales as $dato_generale)
+                                    <option value="{{$dato_generale->$id_datos_generales}}">{{$dato->$nombres}} {{$dato->$ape_paterno}}{{$dato->$ape_materno}}</option>
+                                @endforeach
+                            </select>
+                            @if(old("mode")=='create')
+                                @error(id_datos_generales) <span class="text-danger">{{ $message }}</span> @enderror
+                            @endif
+                        </div>
 
-                                               <div class="col-12">
-                                                   <label for="{{$ape_materno}}">Apellido Materno <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$ape_materno}}" id="{{$ape_materno}}" class="form-control" placeholder="Apellido Materno...">
-                                                   @if(old("mode")=='create')
-                                                       @error($ape_materno) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
+                        <div class="col-12">
+                            <label for="vive_con">Vive con <small class="text-danger">*</small><br></label>
+                            <input type="text" name="vive_con" id="vive_con" class="form-control" placeholder="Vive con...">
+                            @if(old("mode")=='create')
+                                @error($vive_con) <span class="text-danger">{{ $message }}</span> @enderror
+                            @endif
+                        </div>
 
-                                               <div class="col-12">
-                                                   <label for="{{$pais}}">Pais <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$pais}}" id="{{$pais}}" class="form-control" placeholder="Pais...">
-                                                   @if(old("mode")=='create')
-                                                       @error($pais) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
+                        <div class="col-12">
+                            <label for="{{$municipio}}">Municipio <small class="text-danger">*</small><br></label>
+                            <select type="text" name="id_municipio" id="id_municipio" class="form-control">
+                                <option value="">Elegir Municipio</option>
+                                @foreach($datos_municipios as $dato_municipio)
+                                    <option value="{{$dato_municipio->$id_municipio}}">{{$dato_municipio->$municipio}}</option>
+                                @endforeach
+                            </select>
+                            @if(old("mode")=='create')
+                                @error(id_municipio) <span class="text-danger">{{ $message }}</span> @enderror
+                            @endif
+                        </div>
 
-                                               <div class="col-12">
-                                                   <label for="{{$estado}}">Estado <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$estado}}" id="{{$estado}}" class="form-control" placeholder="Estado...">
-                                                   @if(old("mode")=='create')
-                                                       @error($estado) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
+                        <div class="col-12">
+                            <label for="{{$curp}}">Curp <small class="text-danger">*</small><br></label>
+                            <input type="text" name="{{$curp}}" id="{{$curp}}" class="form-control" placeholder="Curp...">
+                            @if(old("mode")=='create')
+                                @error($curp) <span class="text-danger">{{ $message }}</span> @enderror
+                            @endif
+                        </div>
 
-                                               <div class="col-12">
-                                                   <label for="{{$id_situ_conyugal}}">id_situ_conyugal <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$id_situ_conyugal}}" id="{{$id_situ_conyugal}}" class="form-control" placeholder="Situacion Conyugal...">
-                                                   @if(old("mode")=='create')
-                                                       @error($id_situ_conyugal) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
-
-                                               <div class="col-12">
-                                                   <label for="{{$id_sexo}}">id_sexo <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$id_sexo}}" id="{{$id_sexo}}" class="form-control" placeholder="Sexo...">
-                                                   @if(old("mode")=='create')
-                                                       @error($id_sexo) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
-
-                                               <div class="col-12">
-                                                   <label for="{{$fecha_nacimiento}}">Fecha de Nacimiento <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$fecha_nacimiento}}" id="{{$fecha_nacimiento}}" class="form-control" placeholder="Fecha de Nacimiento...">
-                                                   @if(old("mode")=='create')
-                                                       @error($fecha_nacimiento) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
-
-                                               <div class="col-12">
-                                                   <label for="{{$hijos}}">Hijos <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$hijos}}" id="{{$hijos}}" class="form-control" placeholder="Hijos...">
-                                                   @if(old("mode")=='create')
-                                                       @error($hijos) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
-
-                                               <div class="col-12">
-                                                   <label for="{{$telefono}}">Telefono <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$telefono}}" id="{{$telefono}}" class="form-control" placeholder="Telefono...">
-                                                   @if(old("mode")=='create')
-                                                       @error($telefono) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
-
-                                               <div class="col-12">
-                                                   <label for="{{$email}}">Email <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$email}}" id="{{$email}}" class="form-control" placeholder="Email...">
-                                                   @if(old("mode")=='create')
-                                                       @error($email) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
-
-                                               <div class="col-12">
-                                                   <label for="{{$grupo_etnico}}">Grupo Etnico <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$grupo_etnico}}" id="{{$grupo_etnico}}" class="form-control" placeholder="Grupo Etnico...">
-                                                   @if(old("mode")=='create')
-                                                       @error($grupo_etnico) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
-
-                                               <div class="col-12">
-                                                   <label for="{{$id_nacionalidad}}">Id_nacionalidad <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$id_nacionalidad}}" id="{{$id_nacionalidad}}" class="form-control" placeholder="Id_nacionalidad ...">
-                                                   @if(old("mode")=='create')
-                                                       @error($id_nacionalidad) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
-
-                                               <div class="col-12">
-                                                   <label for="{{$id_idioma}}">Id_idioma <small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$id_idioma}}" id="{{$id_idioma}}" class="form-control" placeholder="Idioma...">
-                                                   @if(old("mode")=='create')
-                                                       @error($id_idioma) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
-
-                                               <div class="col-12">
-                                                   <label for="{{$id_domicilio}}">id_domicilio<small class="text-danger">*</small><br></label>
-                                                   <input type="text" name="{{$id_domicilio}}" id="{{$id_domicilio}}" class="form-control" placeholder="Domicilio...">
-                                                   @if(old("mode")=='create')
-                                                       @error($id_domicilio) <span class="text-danger">{{ $message }}</span> @enderror
-                                                   @endif
-                                               </div>
-
-                       --}}
+                        <div class="col-12">
+                            <label for="{{$id_domicilio}}">Domicilio <small class="text-danger">*</small><br></label>
+                            <select type="text" name="id_domicilio" id="id_domicilio" class="form-control">
+                                <option value="">Elegir Municipio</option>
+                                @foreach($datos_domicilios as $dato_domicilio)
+                                    <option value="{{$dato_domicilio->$id_domicilio}}">Calle: {{$dato_domicilio->$calle}}, Colonia: {{$dato_domicilio->$colonia}} </option>
+                                @endforeach
+                            </select>
+                            @if(old("mode")=='create')
+                                @error($id_domicilio) <span class="text-danger">{{ $message }}</span> @enderror
+                            @endif
+                        </div>
 
                     </div>
                     <div class="modal-footer border-white">

@@ -56,7 +56,7 @@
 
             <li><a href="contacts.html">Contactos</a></li>
 
-  
+
           </ul>
         </div>
       </div>
@@ -77,13 +77,13 @@
         <div class="mb-5 col-12 col-md-7 home-banner-left">
           <h1 class="text-white">
             Plataforma web r'aaa jioduú ytuch zobyiiñ dra nuú ndixu. <br />
-         
+
             <h2 class="text-white">
             Plataforma web para recabar incidencias de violencia en contra de la mujer.<br />
             <br />
             </h2>
           </h1>
-      
+
         </div>
         <div class="col-6 col-md-5 home-banner-right">
           <img class="img-fluid" src="img/Mujersegura3.png" alt="" />
@@ -100,7 +100,7 @@
              Sobre nosotros
             </h2>
             <p class="mb-5">
-                Un grupo sin fines de lucro formado por tres organizaciones: Tecnológico de Estudios Superiores de Valle de Bravo, Instituto Tecnológico Superior de Misantla y el Instituto Municipal de la Mujer de Valle de Bravo, que surge en en año 2022 debido al incremento de violencia principalmente en contra de la mujer. Mujer segura esta comprometida a lograr que la población tenga acceso a información verídica y en tiempo real de datos recabados de incidencias en contra de la mujer en el Estado de México pues es el estado que ocupa el primer lugar en feminicidios en toda la República Mexicana.  
+                Un grupo sin fines de lucro formado por tres organizaciones: Tecnológico de Estudios Superiores de Valle de Bravo, Instituto Tecnológico Superior de Misantla y el Instituto Municipal de la Mujer de Valle de Bravo, que surge en en año 2022 debido al incremento de violencia principalmente en contra de la mujer. Mujer segura esta comprometida a lograr que la población tenga acceso a información verídica y en tiempo real de datos recabados de incidencias en contra de la mujer en el Estado de México pues es el estado que ocupa el primer lugar en feminicidios en toda la República Mexicana.
             </p>
           </div>
         </div>
@@ -184,7 +184,7 @@
         <div class="d-flex col-lg-4 col-md-6 ">
           <div class="other-feature-item">
 
-            <h4>Instituto Municipal de la Mujer Valle de Bravo</h4>
+            <h4>Coordinación Municipal de la Mujer Valle de Bravo</h4>
             <div>
               <p>
                 MISIÓN

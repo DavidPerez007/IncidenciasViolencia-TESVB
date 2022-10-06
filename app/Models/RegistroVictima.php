@@ -12,6 +12,14 @@ class RegistroVictima extends Model
     use SoftDeletes;
     protected $table="registro_victima";
     protected $primaryKey="id_registro_victima";
-    protected $foreingKey=["id_datos_generales","id_municipio","id_domicilio"];
-    protected $fillable=["vive_con","curp"];
+    protected $fillable=["vive_con","curp","id_datos_generales","id_municipio","id_domicilio"];
+
+    static $rules = [
+        'vive_con' => 'required',
+        'curp' => 'required',
+        'id_datos_generales' => 'required',
+        'id_municipio' => 'required',
+        'id_domicilio' => 'required',
+
+        ];
 }

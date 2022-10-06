@@ -26,21 +26,21 @@
             @foreach($datos as $dato)
                 <tr>
                     <td class="text-center">{{$loop->index+1}}</td>
-                    <td class="text-center">{{$dato[$id_datos_generales]}} </td>
-                    <td class="text-center">{{$dato[$vive_con]}} </td>
-                    <td class="text-center">{{$dato[$curp]}} </td>
-                    <td class="text-center">{{$dato[$id_municipio]}} </td>
-                    <td class="text-center">{{$dato[$id_domicilio]}} </td>
+                    <td class="text-center">{{$dato->$nombres}} {{$dato->$ape_paterno}}{{$dato->$ape_materno}}</td>
+                    <td class="text-center">{{$dato->$vive_con}} </td>
+                    <td class="text-center">{{$dato->$curp}} </td>
+                    <td class="text-center">{{$dato->$municipio}} </td>
+                    <td class="text-center">Calle: {{$dato->$calle}}, Colonia: {{$dato->$colonia}}</td>
                     <td class="text-center">
-                        <div class="d-inline-flex">
+                     {{--   <div class="d-inline-flex">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#edit-{{$dato[$id]}}">
+                                    data-bs-target="#edit-{{$dato->$id}}">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                              {{-- @include('componentes.catalogos.datovictima.edit')--}}
-                            </div>
+                              {{-- @include('componentes.catalogos.datovictima.edit')
+                            </div>--}}
                          {{--<div class="d-inline-flex">
-                                <form action="{{route($ruta_destroy, $dato[$id])}}" method="POST" class="">
+                                <form action="{{route($ruta_destroy, $dato->$id)}}" method="POST" class="">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" title="Eliminar" class="btn btn-danger mx-1"><i
@@ -66,7 +66,7 @@
     @elseif($errors->any() && old("dato_id"))
         @push("scripts")
             <script type="text/javascript">
-                new bootstrap.Modal(document.getElementById('edit-{{$dato[$id]}}')).show();
+                new bootstrap.Modal(document.getElementById('edit-{{$dato->$id}}')).show();
             </script>
         @endpush
 
