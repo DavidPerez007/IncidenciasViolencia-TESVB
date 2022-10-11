@@ -15,7 +15,7 @@ class SexoController extends Controller
     public function index()
     {
         $sexos=Sexo::paginate(25);
-        return view ('vistas.registro_caso_victima');
+      //  return view ('vistas.registro_caso_victima');
         return view('catalogos.sexo',
             [
                  'sexos' => $sexos

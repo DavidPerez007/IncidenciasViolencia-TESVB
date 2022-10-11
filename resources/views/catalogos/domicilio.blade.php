@@ -9,7 +9,7 @@
 'id_municipio' => 'id_municipio',
 'ruta_destroy'=>'domicilio.destroy',
 'id'=>'id_domicilio',
-'nombre'=>'domicilio',
+'nombre'=>'Lista de Domicilios agreados',
 'ruta_store'=>'domicilio.store',
 'ruta_edit'=>'domicilio.update'
 ])

@@ -18,7 +18,7 @@
                             <select type="text" name="id_datos_generales" id="id_datos_generales" class="form-control">
                                 <option value="">Elegir Datos</option>
                                 @foreach($datos_generales as $dato_generale)
-                                    <option value="{{$dato_generale->$id_datos_generales}}">{{$dato->$nombres}} {{$dato->$ape_paterno}}{{$dato->$ape_materno}}</option>
+                                    <option value="{{$dato_generale->$id_datos_generales}}">{{$dato_generale->$nombres}} {{$dato_generale->$ape_paterno}}{{$dato_generale->$ape_materno}}</option>
                                 @endforeach
                             </select>
                             @if(old("mode")=='create')
@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="vive_con">Vive con <small class="text-danger">*</small><br></label>
+                            <label for="Vive con">Vive con <small class="text-danger">*</small><br></label>
                             <input type="text" name="vive_con" id="vive_con" class="form-control" placeholder="Vive con...">
                             @if(old("mode")=='create')
                                 @error($vive_con) <span class="text-danger">{{ $message }}</span> @enderror

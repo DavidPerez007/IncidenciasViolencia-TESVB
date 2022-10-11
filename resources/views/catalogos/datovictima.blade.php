@@ -10,7 +10,7 @@
 'id_municipio' => 'id_municipio',
 'curp' => 'curp',
 'id_domicilio' => 'id_domicilio',
-'id'=>'	id_registro_victima',
+'id'=>'id_registro_victima',
 'nombre'=>'Victima',
 
 'ruta_destroy'=>'registro_victima.destroy',
@@ -22,6 +22,9 @@
      'datos_domicilios'=>$datos_domicilios,
      'calle'=>'calle',
      'colonia'=>'colonia',
-     'datos_generales'=>$datos_generales
+     'datos_generales'=>$datos_generales,
+      'nombres'=>'nombres',
+       'ape_paterno'=>'ape_paterno',
+       'ape_materno'=>'ape_materno'
 ])
 <!--End componente documento-->

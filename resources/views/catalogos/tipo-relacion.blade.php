@@ -4,7 +4,7 @@
 'descripcion' => 'tipo_relacion',
 'ruta_destroy'=>'tipo_relacion.destroy',
 'id'=>'id_tiporelacion',
-'nombre'=>'tipo_relacion',
+'nombre'=>'Tipos de Relacion',
 'ruta_store'=>'tipo_relacion.store',
 'ruta_edit'=>'tipo_relacion.update'
 ])

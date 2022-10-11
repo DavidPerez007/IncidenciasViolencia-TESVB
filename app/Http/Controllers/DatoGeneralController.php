@@ -84,7 +84,7 @@ class DatoGeneralController extends Controller
 
     public function store(Request $request)
     {
-
+   //  dd($request);
         request()->validate(DatoGeneral::$rules);
         DB::table('datos_generales')
             ->insert(['nombres'=>$request->nombres,'ape_paterno'=>$request->ape_paterno,'ape_materno'=>$request->ape_materno,
@@ -102,10 +102,20 @@ class DatoGeneralController extends Controller
         //dd('');
         DB::table('datos_generales')
             ->where('datos_generales.id_datos_generales','=',$request->dato_id)
-            ->UPDATE(['nombres'=>$request->nombres,'ape_paterno'=>$request->ape_paterno,'ape_materno'=>$request->ape_materno,
-                'id_situ_conyugal'=>$request->id_situ_conyugal,'id_sexo'=>$request->id_sexo,'fecha_nacimiento'=>$request->fecha_nacimiento,
-                'hijos'=>$request->hijos,'telefono'=>$request->telefono,'email'=>$request->email,'grupo_etnico'=>$request->grupo_etnico,
-                'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$request->id_domicilio])
+            ->UPDATE([
+                'nombres'=>$request->nombres,
+                'ape_paterno'=>$request->ape_paterno,
+                'ape_materno'=>$request->ape_materno,
+                'id_situ_conyugal'=>$request->id_situ_conyugal,
+                'id_sexo'=>$request->id_sexo,
+                'fecha_nacimiento'=>$request->fecha_nacimiento,
+                'hijos'=>$request->hijos,
+                'telefono'=>$request->telefono,
+                'email'=>$request->email,
+                'grupo_etnico'=>$request->grupo_etnico,
+                'id_nacionalidad'=>$request->id_nacionalidad,
+                'id_idioma'=>$request->id_idioma,
+                'id_domicilio'=>$request->id_domicilio])
         ;
         return redirect()->back();
     }

@@ -5,7 +5,7 @@
 'descripcion' => 'vivienda',
 'ruta_destroy'=>'vivienda.destroy',
 'id'=>'id_vivienda',
-'nombre'=>'vivienda',
+'nombre'=>'Lista de Viviendas',
 'ruta_store'=>'vivienda.store',
 'ruta_edit'=>'vivienda.update'
 ])

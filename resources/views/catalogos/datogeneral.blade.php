@@ -21,7 +21,7 @@
 'id_domicilio' => 'id_domicilio',
 'ruta_destroy'=>'datos_generales.destroy',
 'id'=>'id_datos_generales',
-'nombre'=>'Dato General',
+'nombre'=>'Datos Generales',
 'ruta_store'=>'datos_generales.store',
 'ruta_edit'=>'datos_generales.update'
 ],[

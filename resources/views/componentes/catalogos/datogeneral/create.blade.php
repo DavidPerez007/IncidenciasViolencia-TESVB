@@ -41,7 +41,6 @@
 
                                 <option value="">Elegir tipo de Situacion Conyugal</option>
                                 @foreach($datos_situacion_conyugal as $dato_situacion_conyugal)
-
                                     <option value="{{$dato_situacion_conyugal->$id_situ_conyugal}}">{{$dato_situacion_conyugal->$situacion_conyugal}}</option>
                                 @endforeach
                             </select>
@@ -149,7 +148,6 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </div>
-                </div>
             </form>
         </div>
         </div>

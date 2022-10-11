@@ -6,7 +6,7 @@
 'descripcion' => 'sexo',
 'ruta_destroy'=>'sexo.destroy',
 'id'=>'id_sexo',
-'nombre'=>'Sexo',
+'nombre'=>'Lista Sexo',
 'ruta_store'=>'sexo.store',
 'ruta_edit'=>'sexo.update'
 ])

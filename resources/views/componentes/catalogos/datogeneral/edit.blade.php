@@ -1,6 +1,6 @@
 
 <div class="modal fade" id="edit-{{$dato->$id}}" tabindex="-1" aria-labelledby="edit-{{$dato->$id}}" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog ">
         <div class="modal-content">
             <div class="modal-header alert alert-primary">
             <h5 class="modal-title" id="exampleModalLabel">Editar {{$nombre}}</h5>
@@ -22,15 +22,15 @@
 
                     <div class="col-12">
                         <label for="{{$ape_paterno}}">Apellido Paterno <small class="text-danger">*</small><br></label>
-                        <input value="{{$dato->$ape_paterno}}" name="{{$ape_paterno}}" id="{{$ape_paterno}}" class="form-control" placeholder="{{$dato->$ape_paterno}}">
+                        <input name="{{$ape_paterno}}" id="{{$ape_paterno}}" class="form-control" value="{{$dato->$ape_paterno}}"  placeholder="{{$dato->$ape_paterno}}">
                         @if(old("mode")=='create')
                             @error($ape_paterno) <span class="text-danger">{{ $message }}</span> @enderror
                         @endif
                     </div>
 
                     <div class="col-12">
-                        <label for="{{$ape_materno}}">Apellido Materno <small class="text-danger">*</small><br></label>
-                        <input type="text" name="{{$ape_materno}}" id="{{$ape_materno}}" class="form-control"value="{{$dato->$ape_materno}}" placeholder="{{$dato->$ape_materno}}">
+                        <label for="{{$ape_materno}}">Apellido Materno <small class="text-danger">*</small><brvalue="{{$dato->$ape_materno}}"></label>
+                        <input type="text" name="{{$ape_materno}}" id="{{$ape_materno}}" class="form-control" placeholder="{{$dato->$ape_materno}}">
                         @if(old("mode")=='create')
                             @error($ape_materno) <span class="text-danger">{{ $message }}</span> @enderror
                         @endif
@@ -88,7 +88,8 @@
 
                     <div class="col-12">
                         <label for="{{$email}}">Email <small class="text-danger">*</small><br></label>
-                        <input type="text" name="{{$email}}" id="{{$email}}" class="form-control"value="{{$dato->$email}}" placeholder="{{$dato->$email}}">
+                        <input type="text" name="{{$email}}" id="{{$email}}" class="form-control"
+                               value="{{$dato->$email}}" placeholder="{{$dato->$email}}">
                         @if(old("mode")=='create')
                             @error($email) <span class="text-danger">{{ $message }}</span> @enderror
                         @endif

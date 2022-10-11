@@ -41,11 +41,11 @@ class RegistroVictimaController extends Controller
                 'domicilio.calle',
                 'domicilio.colonia',
                 'registro_victima.*')->get();
-
+     //   dd($datos_victimas);
         $datos_municipios=Municipio::all();
         $datos_domicilios=Domicilio::all();
         $datos_generales=DatoGeneral::all();
-       // dd($datos_domicilios);
+       // dd($datos_generales);
         return view('catalogos.datovictima',
             [
                 'datos_victimas' => $datos_victimas,
@@ -60,10 +60,15 @@ class RegistroVictimaController extends Controller
     }
     public function update(Request $request, RegistroVictima $datovictima)
     {
-        request()->validate(RegistroVictima::$rules);
-        $datos_victmas = request()->except(['_token', '_method']);
-        $datovictima-> update ($datos_victmas);
 
+        //dd($request);
+        request()->validate(RegistroVictima::$rules);
+        //dd('');
+        DB::table('registro_victima')
+            ->where('registro_victima.id_registro_victima','=',$request->dato_id)
+            ->UPDATE(['id_datos_generales'=>$request->id_datos_generales,'vive_con'=>$request->vive_con,
+                'curp'=>$request->curp,'id_municipio'=>$request->id_municipio,'id_domicilio'=>$request->id_domicilio])
+        ;
         return redirect()->back();
     }
     public function store(Request $request)
@@ -73,6 +78,13 @@ class RegistroVictimaController extends Controller
         DB::table('registro_victima')->
         insert(['id_datos_generales'=>$request->id_datos_generales,'vive_con'=>$request->vive_con,
             'id_municipio'=>$request->id_municipio,'curp'=>$request->curp,'id_domicilio'=>$request->id_domicilio]);
+        return redirect()->back();
+    }
+    public function destroy($id)
+    {
+        DB::table('registro_victima')
+            ->where('registro_victima.id_registro_victima','=',$id)
+            ->delete();
         return redirect()->back();
     }
 }

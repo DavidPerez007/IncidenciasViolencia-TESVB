@@ -6,7 +6,7 @@
 'descripcion' => 'municipio',
 'ruta_destroy'=>'municipio.destroy',
 'id'=>'id_municipio',
-'nombre'=>'Municipio',
+'nombre'=>'Lista de Municipios',
 'ruta_store'=>'municipio.store',
 'ruta_edit'=>'municipio.update'
 ])

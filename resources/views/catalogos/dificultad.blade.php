@@ -4,7 +4,7 @@
 'descripcion' => 'dificultad',
 'ruta_destroy'=>'dificultad.destroy',
 'id'=>'id_dificultad',
-'nombre'=>'dificultad',
+'nombre'=>'Lista de Dificultades',
 'ruta_store'=>'dificultad.store',
 'ruta_edit'=>'dificultad.update'
 ])

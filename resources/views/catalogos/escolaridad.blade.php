@@ -5,7 +5,7 @@
 'descripcion' => 'escolaridad',
 'ruta_destroy'=>'escolaridad.destroy',
 'id'=>'id_escolaridad',
-'nombre'=>'Escolaridad',
+'nombre'=>'Lista de Escolaridades',
 'ruta_store'=>'escolaridad.store',
 'ruta_edit'=>'escolaridad.update'
 ])

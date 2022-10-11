@@ -4,7 +4,7 @@
 'descripcion' => 'tipo_apoyo',
 'ruta_destroy'=>'tipo_apoyo.destroy',
 'id'=>'id_tipo_apoyo',
-'nombre'=>'tipo_apoyo',
+'nombre'=>'Tipos de Apoyo',
 'ruta_store'=>'tipo_apoyo.store',
 'ruta_edit'=>'tipo_apoyo.update'
 ])

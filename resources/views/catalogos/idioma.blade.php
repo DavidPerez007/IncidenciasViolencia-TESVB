@@ -6,7 +6,7 @@
 'descripcion' => 'idioma_espaniol',
 'ruta_destroy'=>'idioma.destroy',
 'id'=>'id_idioma',
-'nombre'=>'idioma_espaniol',
+'nombre'=>'Lista de Idiomas',
 'ruta_store'=>'idioma.store',
 'ruta_edit'=>'idioma.update'
 ])

@@ -6,7 +6,7 @@
 'descripcion' => 'estado',
 'ruta_destroy'=>'estado.destroy',
 'id'=>'id_estado',
-'nombre'=>'Estado',
+'nombre'=>'Lista de Estados',
 'ruta_store'=>'estado.store',
 'ruta_edit'=>'estado.update'
 ])

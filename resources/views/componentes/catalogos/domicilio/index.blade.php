@@ -10,13 +10,14 @@
 </div>
 
 <div class="">
+    <div class="text-center"><label class="text-center"><h2>{{$nombre}}</h2></label></div>
     <table class = "table table-bordered table-hover table-striped  ">
         <thead class="thead-dark">
             <tr class="text-center">
                 <th>Id</th>
                 <th>Calle</th>
-                <th>No_exterior</th>
-                <th>No_Interior</th>
+                <th>No Exterior</th>
+                <th>No Interior</th>
                 <th>Colonia</th>
                 <th>Codigo postal</th>
                 <th class="size">Acción</th>

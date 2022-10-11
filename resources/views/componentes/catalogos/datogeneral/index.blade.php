@@ -7,7 +7,8 @@
         </button>
     </div>
     <div class="">
-        <table class="table table-bordered table-hover table-striped  ">
+        <div class="text-center"><label class="text-center"><h2>{{$nombre}}</h2></label></div>
+        <table class="tables table-bordered table-hover table-striped  ">
             <thead class="thead-dark">
             <tr class="text-center">
                 <th>Id</th>
@@ -63,7 +64,7 @@
             </table>
         </div>
 
-     @include('componentes.catalogos.datogeneral.create')
+     @include('componentes.catalogos.datogeneral.createstep')
 
     @if($errors->any() && old("mode")=='create' )
         @push("scripts")

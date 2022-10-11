@@ -6,7 +6,7 @@
 'descripcion' => 'pais',
 'ruta_destroy'=>'pais.destroy',
 'id'=>'id_pais',
-'nombre'=>'Pais',
+'nombre'=>'Lista de paises',
 'ruta_store'=>'pais.store',
 'ruta_edit'=>'pais.update'
 ])

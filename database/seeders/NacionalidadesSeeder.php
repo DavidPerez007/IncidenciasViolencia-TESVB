@@ -24,7 +24,7 @@ class NacionalidadesSeeder extends Seeder
 
             ),
             array(
-                'nacionalidad'=>' Estadounidense',
+                'nacionalidad'=>' Extranjera',
 
             ),
         ));

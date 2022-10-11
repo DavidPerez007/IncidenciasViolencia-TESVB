@@ -14,9 +14,9 @@
             <thead class="thead-dark">
             <tr class="text-center">
                 <th>Id</th>
-                <th>Datos_Generales </th>
-                <th>vive_con</th>
-                <th>curp</th>
+                <th>Datos Generales </th>
+                <th>Vive con</th>
+                <th>Curp</th>
                 <th>Municipio </th>
                 <th>Domicilio</th>
                 <th class="size">Acción</th>
@@ -24,29 +24,32 @@
             </thead>
             <tbody>
             @foreach($datos as $dato)
+
                 <tr>
                     <td class="text-center">{{$loop->index+1}}</td>
-                    <td class="text-center">{{$dato->$nombres}} {{$dato->$ape_paterno}}{{$dato->$ape_materno}}</td>
+                    <td class="text-center">{{$dato->nombres}} {{$dato->$ape_paterno}}{{$dato->$ape_materno}}</td>
                     <td class="text-center">{{$dato->$vive_con}} </td>
                     <td class="text-center">{{$dato->$curp}} </td>
                     <td class="text-center">{{$dato->$municipio}} </td>
                     <td class="text-center">Calle: {{$dato->$calle}}, Colonia: {{$dato->$colonia}}</td>
                     <td class="text-center">
-                     {{--   <div class="d-inline-flex">
+                        <div class="d-inline-flex">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#edit-{{$dato->$id}}">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                              {{-- @include('componentes.catalogos.datovictima.edit')
-                            </div>--}}
-                         {{--<div class="d-inline-flex">
+
+                            @include('componentes.catalogos.datovictima.edit')
+                        </div>
+
+                        <div class="d-inline-flex">
                                 <form action="{{route($ruta_destroy, $dato->$id)}}" method="POST" class="">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" title="Eliminar" class="btn btn-danger mx-1"><i
                                             class="fas fa-trash"></i></button>
                                 </form>
-                            </div>--}}
+                            </div>
                         </td>
                     </tr>
                 @endforeach

@@ -14,6 +14,8 @@
     </button>
 </div>
 <div class="">
+    <div class="text-center"><label class="text-center"><h2>{{$nombre}}</h2></label></div>
+
     <table class = "table table-bordered table-hover table-striped  ">
         <thead class="thead-dark">
             <tr class="text-center">
