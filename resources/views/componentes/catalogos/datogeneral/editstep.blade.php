@@ -11,6 +11,7 @@
                     {{ csrf_field() }}
                     {{ method_field('PATCH') }}
                     <input type="hidden" value="{{$dato->$id}}" name="dato_id">
+                    <input type="hidden" value="{{$dato->$id_domicilio}}" name="id_domicilio">
                     <div class="card">
                         <div class="form">
                             <div class="left-side">
@@ -19,14 +20,11 @@
                                 </div>
                                 <div class="steps-content">
                                     <h3>Step <span class="step-number">1</span></h3>
-                                    {{--<p class="step-number-content active">Enter your personal information to get closer to companies.</p>
-                                    <p class="step-number-content d-none">Get to know better by adding your diploma,certificate and education life.</p>
-                                    <p class="step-number-content d-none">Help companies get to know you better by telling then about your past experiences.</p>
-                                    <p class="step-number-content d-none">Add your profile piccture and let companies find youy fast.</p>--}}
-                                </div>
+                                     </div>
                                 <ul class="progress-bar">
                                     <li class="active">Información Personal</li>
                                     <li>Información Personal</li>
+                                    <li>Domicilio</li>
                                 </ul>
 
                             </div>
@@ -34,8 +32,8 @@
                                 <div class="main active">
                                     <small><i class="fa fa-smile-o"></i></small>
                                     <div class="text">
-                                        <h2>Información Personal</h2>
-                                        <p>Ingresa tus datos personales</p>
+                                        <h2>Editar Información Personal</h2>
+                                        <p>Corrección de datos personales</p>
                                     </div>
                                     <div class="input-text">
                                         <div class="input-div">
@@ -96,8 +94,8 @@
                                 <div class="main">
                                     <small><i class="fa fa-smile-o"></i></small>
                                     <div class="text">
-                                        <h2>Información Personal</h2>
-                                        <p>Ingresa tus datos personales</p>
+                                        <h2>Editar Información Personal</h2>
+                                        <p>Corrección de datos personales</p>
                                     </div>
                                     <div class="input-text">
                                         <div class="input-div">
@@ -105,7 +103,7 @@
                                             <span>Fecha de Nacimiento</span>
                                         </div>
                                         <div class="input-div">
-                                            <input type="text" required require  name="{{$hijos}}" id="{{$hijos}}" class="form-control">
+                                            <input type="text" required require  name="{{$hijos}}" id="{{$hijos}}" class="form-control" value="{{$dato->$hijos}}" placeholder="{{$dato->$hijos}}">
                                             <span>Hijos</span>
                                         </div>
                                     </div>
@@ -115,18 +113,6 @@
                                             <input type="text" name="{{$grupo_etnico}}" id="{{$grupo_etnico}}" class="form-control" value="{{$dato->$grupo_etnico}}" placeholder="{{$dato->$grupo_etnico}}">
                                         </div>
                                     </div>
-                                    <div class="input-text">
-                                        <div class="input-div">
-                                            <p>Domicilio: </p>
-                                            <select type="text" name="id_domicilio" id="id_domicilio" class="form-control">
-                                                <option value="{{$dato->$id_domicilio}}">{{$dato->$domicilio}}</option>
-                                                @foreach($datos_domicilio as $dato_domicilio)
-                                                    <option value="{{$dato_domicilio->$id_domicilio}}">{{$dato_domicilio->$calle}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-
                                     <div class="input-text">
                                         <div class="input-div">
                                             <p>Nacionalidad: </p>
@@ -150,15 +136,64 @@
                                     </div>
                                     <div class="buttons button_space">
                                         <button class="back_button">Back</button>
+                                        <button class="next_button">Next Step</button>
                                     </div>
+                                </div>
+
+                                <div class="main">
+                                    <small><i class="fa fa-smile-o"></i></small>
+                                    <div class="text">
+                                        <h2>Editar Domicilio</h2>
+                                        <p>Correción a los datos de tu domicilio</p>
+                                    </div>
+                                    <div class="input-text">
+                                        <div class="input-div">
+                                            <input type="text" required require  name="calle" id="calle" class="form-control" value="{{$dato->$calle}}" placeholder="{{$dato->$calle}}">
+                                            <span>Calle</span>
+                                        </div>
+                                        <div class="input-div">
+                                            <input type="text" required require name="colonia" id="colonia" class="form-control" value="{{$dato->$colonia}}" placeholder="{{$dato->$colonia}}" >
+                                            <span>Colonia</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-text">
+                                        <div class="input-div">
+                                            <input type="text" required require value="{{$dato->$no_interior}}" placeholder="{{$dato->$no_interior}}" name="no_interior" id="no_interior" class="form-control" >
+                                            <span>Número Interior</span>
+                                        </div>
+                                        <div class="input-div">
+                                            <input type="text" required require value="{{$dato->$no_exterior}}" placeholder="{{$dato->$no_exterior}}" name="no_exterior" id="no_exterior" class="form-control" >
+                                            <span>Número exterior</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-text">
+                                        <div class="input-div">
+                                            <input type="text" required require value="{{$dato->$cod_postal}}" placeholder="{{$dato->$cod_postal}}" name="cod_postal" id="cod_postal" class="form-control" >
+                                            <span>Codigo postal</span>
+                                        </div>
+                                        <div class="input-div">
+                                            <p>Municipio </p>
+                                            <select type="text" required require  name="id_municipio" id="id_municipio" class="form-control">
+                                                <option value="">Elegir Municipio</option>
+                                                @foreach($datos_municipios as $dato_municipio)
+                                                    <option value="{{$dato_municipio->$id_municipio}}">{{$dato_municipio->$municipio}}</option>
+                                                @endforeach
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons button_space">
+                                        <button class="back_button">Back</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="modal-footer border-white">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </form>
         </div>

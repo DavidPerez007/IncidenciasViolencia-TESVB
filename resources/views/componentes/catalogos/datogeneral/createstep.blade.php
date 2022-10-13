@@ -18,14 +18,11 @@
                                    </div>
                                    <div class="steps-content">
                                        <h3>Paso <span class="step-number">1</span></h3>
-                                       {{--<p class="step-number-content active">Enter your personal information to get closer to companies.</p>
-                                       <p class="step-number-content d-none">Get to know better by adding your diploma,certificate and education life.</p>
-                                       <p class="step-number-content d-none">Help companies get to know you better by telling then about your past experiences.</p>
-                                       <p class="step-number-content d-none">Add your profile piccture and let companies find youy fast.</p>--}}
                                    </div>
                                    <ul class="progress-bar">
                                        <li class="active">Información Personal</li>
                                       <li>Información Personal</li>
+                                       <li>Domicilio</li>
                                    </ul>
 
                                </div>
@@ -68,9 +65,9 @@
                                        </div>
                                        <div class="input-text">
                                            <div class="input-div">
-                                               <label>Situación Conyugal</label>
+                                               <label>Estado Civil en el que se encuentra:</label>
                                                <select type="text"required require  name="id_situ_conyugal" id="id_situ_conyugal" class="form-control">
-                                                   <option value="">Elegir tipo de Situacion Conyugal</option>
+                                                   <option value="">Elegir estado civil</option>
                                                    @foreach($datos_situacion_conyugal as $dato_situacion_conyugal)
                                                        <option value="{{$dato_situacion_conyugal->$id_situ_conyugal}}">{{$dato_situacion_conyugal->$situacion_conyugal}}</option>
                                                    @endforeach
@@ -114,17 +111,6 @@
 
                                            </div>
                                        </div>
-                                       <div class="input-text">
-                                           <div class="input-div">
-                                           <p>Domicilio: </p>
-                                           <select type="text" required require name="id_domicilio" id="id_domicilio" class="form-control">
-                                               <option value="">Elegir Domicilio</option>
-                                               @foreach($datos_domicilio as $dato_domicilio)
-                                                   <option value="{{$dato_domicilio->$id_domicilio}}">{{$dato_domicilio->$calle}}</option>
-                                               @endforeach
-                                           </select>
-                                           </div>
-                                       </div>
 
                                        <div class="input-text">
                                            <div class="input-div">
@@ -149,10 +135,59 @@
                                        </div>
                                        <div class="buttons button_space">
                                            <button class="back_button">Back</button>
+                                           <button class="next_button">Next Step</button>
+                                       </div>
+                                   </div>
 
-                                               <button type="submit" class="btn btn-primary">Guardar</button>
+                                   <div class="main">
+                                       <small><i class="fa fa-smile-o"></i></small>
+                                       <div class="text">
+                                           <h2>Domicilio:</h2>
+                                           <p>Ingresa los datos de tu domiclio</p>
+                                       </div>
+                                       <div class="input-text">
+                                           <div class="input-div">
+                                               <input type="text"  required require  name="calle" id="calle" class="form-control">
+
+                                               <span>Calle</span>
+                                           </div>
+                                           <div class="input-div">
+                                               <input type="text" required require name="colonia" id="colonia" class="form-control" >
+                                               <span>Colonia</span>
+                                           </div>
+                                       </div>
+
+                                       <div class="input-text">
+                                           <div class="input-div">
+                                               <input type="text" required require name="no_interior" id="no_interior" class="form-control">
+                                               <span>Número Interior</span>
+                                           </div>
+                                           <div class="input-div">
+                                               <input type="text" required require name="no_exterior" id="no_exterior" class="form-control" >
+                                               <span>Número exterior</span>
+                                           </div>
+                                       </div>
+                                       <div class="input-text">
+                                           <div class="input-div">
+                                               <input type="text" required require name="cod_postal" id="cod_postal" class="form-control" >
+                                                <span>Codigo postal</span>
+                                           </div>
+                                           <div class="input-div">
+                                               <p>Municipio </p>
+                                               <select type="text" required require  name="id_municipio" id="id_municipio" class="form-control">
+                                                   <option value="">Elegir Municipio</option>
+                                                   @foreach($datos_municipios as $dato_municipio)
+                                                       <option value="{{$dato_municipio->$id_municipio}}">{{$dato_municipio->$municipio}}</option>
+                                                   @endforeach
+                                               </select>
+
+                                           </div>
+                                       </div>
 
 
+                                       <div class="buttons button_space">
+                                           <button class="back_button">Back</button>
+                                           <button type="submit" class="btn btn-primary">Guardar</button>
                                        </div>
                                    </div>
                                </div>

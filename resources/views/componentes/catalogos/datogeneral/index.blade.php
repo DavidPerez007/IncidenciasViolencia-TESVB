@@ -47,7 +47,6 @@
                                     data-bs-target="#edit-{{$dato->$id}}">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                               @include('componentes.catalogos.datogeneral.edit')
                             </div>
                          <div class="d-inline-flex">
                                 <form action="{{route($ruta_destroy, $dato->$id)}}" method="POST" class="">

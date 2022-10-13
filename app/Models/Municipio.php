@@ -12,6 +12,6 @@ class Municipio extends Model
     use SoftDeletes;
     protected $table="municipio";
     protected $primaryKey="id_municipio";
-    protected $fillable=["municipio"];
+    protected $fillable=['municipio','id_estado'];
 
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DatoGeneral;
 use App\Models\Domicilio;
 use App\Models\Idioma;
+use App\Models\Municipio;
 use App\Models\Nacionalidad;
 use App\Models\Sexo;
 use App\Models\SituConyugal;
@@ -56,14 +57,15 @@ class DatoGeneralController extends Controller
                 'situ_conyugal.situacion_conyugal',
                 'nacionalidad.nacionalidad',
                 'idioma.idioma_espaniol',
-                'domicilio.calle')->get();
+                'domicilio.*')->get();
 
        $datos_sit_con=SituConyugal::all();
         $datos_sexo=Sexo::all();
         $datos_nacionalidad=Nacionalidad::all();
         $datos_idioma=Idioma::all();
         $datos_domicilio=Domicilio::all();
-        //dd($datos_domicilio);
+        $datos_municipios=Municipio::all();
+       // dd($datos_generales);
 
 
         return view('catalogos.datogeneral',
@@ -73,7 +75,8 @@ class DatoGeneralController extends Controller
                 'datos_sexo' => $datos_sexo,
                 'datos_nacionalidad' => $datos_nacionalidad,
                 'datos_idioma' => $datos_idioma,
-                'datos_domicilio' => $datos_domicilio
+                'datos_domicilio' => $datos_domicilio,
+                'datos_municipios' => $datos_municipios
             ]);
     }
 
@@ -84,13 +87,26 @@ class DatoGeneralController extends Controller
 
     public function store(Request $request)
     {
-   //  dd($request);
-        request()->validate(DatoGeneral::$rules);
+       // dd($request);
+        DB::table('domicilio')
+            ->insert(['calle'=>$request->calle,'no_interior'=>$request->no_interior,
+                'no_exterior'=>$request->no_exterior,'colonia'=>$request->colonia,'cod_postal'=>$request->cod_postal
+                ,'id_municipio'=>$request->id_municipio]);
+
+        $datos_domicilio = DB::table('domicilio')
+            ->where( 'calle', '=', $request->calle)
+            ->where( 'no_interior', '=', $request->no_interior)
+            ->where('no_exterior', '=', $request->no_exterior)
+            ->where('colonia', '=', $request->colonia)
+            ->where('cod_postal', '=', $request->cod_postal)
+            ->where('id_municipio', '=', $request->id_municipio)
+            ->select('id_domicilio')->get();
+
         DB::table('datos_generales')
             ->insert(['nombres'=>$request->nombres,'ape_paterno'=>$request->ape_paterno,'ape_materno'=>$request->ape_materno,
                 'id_situ_conyugal'=>$request->id_situ_conyugal,'id_sexo'=>$request->id_sexo,'fecha_nacimiento'=>$request->fecha_nacimiento,
                 'hijos'=>$request->hijos,'telefono'=>$request->telefono,'email'=>$request->email,'grupo_etnico'=>$request->grupo_etnico,
-                'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$request->id_domicilio]);
+                'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$datos_domicilio[0]->id_domicilio]);
 
         return redirect()->back();
     }
@@ -98,8 +114,6 @@ class DatoGeneralController extends Controller
     public function update(Request $request)
     {
         //dd($request);
-        request()->validate(DatoGeneral::$rules);
-        //dd('');
         DB::table('datos_generales')
             ->where('datos_generales.id_datos_generales','=',$request->dato_id)
             ->UPDATE([
@@ -117,6 +131,17 @@ class DatoGeneralController extends Controller
                 'id_idioma'=>$request->id_idioma,
                 'id_domicilio'=>$request->id_domicilio])
         ;
+
+        DB::table('domicilio')
+            ->where('domicilio.id_domicilio','=',$request->id_domicilio)
+            ->update([
+                'calle'=> $request->calle,
+                'colonia'=> $request->colonia,
+                'no_interior'=> $request->no_interior,
+                'no_exterior'=> $request->no_exterior,
+                'cod_postal'=> $request->cod_postal,
+                'id_municipio'=> $request->id_municipio,]);
+
         return redirect()->back();
     }
 

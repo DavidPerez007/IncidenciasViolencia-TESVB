@@ -22,6 +22,13 @@
 'ruta_destroy'=>'datos_generales.destroy',
 'id'=>'id_datos_generales',
 'nombre'=>'Datos Generales',
+
+'calle'=>'calle',
+'no_interior'=>'no_interior',
+'no_exterior'=>'no_exterior',
+'colonia'=>'colonia',
+'cod_postal'=>'cod_postal',
+
 'ruta_store'=>'datos_generales.store',
 'ruta_edit'=>'datos_generales.update'
 ],[
@@ -36,8 +43,11 @@
 'datos_idioma' => $datos_idioma,
 'idioma_espaniol'=>'idioma_espaniol',
 
-'datos_domicilio' => $datos_domicilio,
-'calle'=>'calle'
+
+'datos_municipios' => $datos_municipios,
+'id_municipio'=>'id_municipio',
+'municipio'=>'municipio'
+
 
 ])
 <!--End componente documento-->

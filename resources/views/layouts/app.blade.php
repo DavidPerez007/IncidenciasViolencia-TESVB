@@ -87,13 +87,13 @@
                                     <a class="nav-link" href="{{url("tipo_relacion")}}">Tipo de Relación</a>
                                     <a class="nav-link" href="{{url("tipo_violencia")}}">Tipo de Violencia</a>
                                     <a class="nav-link" href="{{url("tipo_violencia")}}">Consecuancias Sexuales</a>
+                                    <a class="nav-link" href="{{url("domicilio")}}">Domicilios</a>
                                 </nav>
                             </div>
 
                             <div class="collapse" id="registro" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
 
-                                    <a class="nav-link" href="{{url("domicilio")}}">Domicilios</a>
                                     <a class="nav-link" href="{{url("clas_violencia ")}}">Clasificación de la violencia</a>
                                     <a class="nav-link" href="{{url("datos_generales ")}}">Datos Generales</a>
                                     <a class="nav-link" href="{{url("registro_victima ")}}">Registrar Victimas</a>
