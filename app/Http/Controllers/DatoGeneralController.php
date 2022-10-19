@@ -9,14 +9,27 @@ use App\Models\Municipio;
 use App\Models\Nacionalidad;
 use App\Models\Sexo;
 use App\Models\SituConyugal;
-use Database\Seeders\Situacion_ConyugalSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class DatoGeneralController extends Controller
 {
+    public function byProject($id){
+
+
+        return [
+            DB::table('domicilio')->where('id_domicilio', $id)
+                ->join('municipio', 'domicilio.id_municipio', '=', 'municipio.id_municipio')
+                ->select(
+                    'municipio.municipio',
+                    'domicilio.*')->get(),
+            Municipio::all(),
+        ];
+        // return Domicilio::where('id_domicilio',$id)->get();
+    }
     public function index()
     {
+
         /**
         SELECT
             datos_generales.nombres,datos_generales.ape_paterno,datos_generales.ape_materno,datos_generales.fecha_nacimiento,datos_generales.hijos,datos_generales.telefono,datos_generales.email,
@@ -31,7 +44,7 @@ class DatoGeneralController extends Controller
          * and datos_generales.id_idioma=idioma.id_idioma
          * and datos_generales.id_domicilio=domicilio.id_domicilio;
         **/
-
+   // dd('id=3');
         $datos_generales=DB::table( 'datos_generales')
             ->join('nacionalidad', 'datos_generales.id_nacionalidad', '=','nacionalidad.id_nacionalidad')
             ->join('situ_conyugal','datos_generales.id_situ_conyugal','=','situ_conyugal.id_situ_conyugal')
@@ -75,7 +88,7 @@ class DatoGeneralController extends Controller
                 'datos_sexo' => $datos_sexo,
                 'datos_nacionalidad' => $datos_nacionalidad,
                 'datos_idioma' => $datos_idioma,
-                'datos_domicilio' => $datos_domicilio,
+                'datos_domicilios' => $datos_domicilio,
                 'datos_municipios' => $datos_municipios
             ]);
     }
@@ -87,26 +100,56 @@ class DatoGeneralController extends Controller
 
     public function store(Request $request)
     {
-       // dd($request);
-        DB::table('domicilio')
-            ->insert(['calle'=>$request->calle,'no_interior'=>$request->no_interior,
-                'no_exterior'=>$request->no_exterior,'colonia'=>$request->colonia,'cod_postal'=>$request->cod_postal
-                ,'id_municipio'=>$request->id_municipio]);
+        ///si se va agregar un nuevo domicilio
+        if ($request->id_domicilio==null) {
 
-        $datos_domicilio = DB::table('domicilio')
-            ->where( 'calle', '=', $request->calle)
-            ->where( 'no_interior', '=', $request->no_interior)
-            ->where('no_exterior', '=', $request->no_exterior)
-            ->where('colonia', '=', $request->colonia)
-            ->where('cod_postal', '=', $request->cod_postal)
-            ->where('id_municipio', '=', $request->id_municipio)
-            ->select('id_domicilio')->get();
+            //insertar domicilio
+            DB::table('domicilio')
+                ->insert(['calle' => $request->calle, 'no_interior' => $request->no_interior,
+                    'no_exterior' => $request->no_exterior, 'colonia' => $request->colonia, 'cod_postal' => $request->cod_postal
+                    , 'id_municipio' => $request->id_municipio]);
 
-        DB::table('datos_generales')
-            ->insert(['nombres'=>$request->nombres,'ape_paterno'=>$request->ape_paterno,'ape_materno'=>$request->ape_materno,
-                'id_situ_conyugal'=>$request->id_situ_conyugal,'id_sexo'=>$request->id_sexo,'fecha_nacimiento'=>$request->fecha_nacimiento,
-                'hijos'=>$request->hijos,'telefono'=>$request->telefono,'email'=>$request->email,'grupo_etnico'=>$request->grupo_etnico,
-                'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$datos_domicilio[0]->id_domicilio]);
+            //obtener id del ultimo registro
+            $domicilio = Domicilio::find(1)->orderBy('id_domicilio', 'desc')->first();
+
+            //insertar en datos generales
+            DB::table('datos_generales')
+                ->insert(['nombres'=>$request->nombres,'ape_paterno'=>$request->ape_paterno,'ape_materno'=>$request->ape_materno,
+                    'id_situ_conyugal'=>$request->id_situ_conyugal,'id_sexo'=>$request->id_sexo,'fecha_nacimiento'=>$request->fecha_nacimiento,
+                    'hijos'=>$request->hijos,'telefono'=>$request->telefono,'email'=>$request->email,'grupo_etnico'=>$request->grupo_etnico,
+                    'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$domicilio->id_domicilio]);
+
+        }
+        ////EDITAR UN DOMICILIO YA EXISTENTE
+        else
+        {
+            //modificar tabla domicilios.
+            DB::table('domicilio')
+                ->where('domicilio.id_domicilio','=',$request->id_domicilio)
+                ->update([
+                    'calle'=> $request->calle,
+                    'colonia'=> $request->colonia,
+                    'no_interior'=> $request->no_interior,
+                    'no_exterior'=> $request->no_exterior,
+                    'cod_postal'=> $request->cod_postal,
+                    'id_municipio'=> $request->id_municipio,]);
+
+            //insertar en datos generales
+            DB::table('datos_generales')
+                ->insert(['nombres'=>$request->nombres,'ape_paterno'=>$request->ape_paterno,'ape_materno'=>$request->ape_materno,
+                    'id_situ_conyugal'=>$request->id_situ_conyugal,'id_sexo'=>$request->id_sexo,'fecha_nacimiento'=>$request->fecha_nacimiento,
+                    'hijos'=>$request->hijos,'telefono'=>$request->telefono,'email'=>$request->email,'grupo_etnico'=>$request->grupo_etnico,
+                    'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$request->id_domicilio]);
+
+        }
+
+        //obtener id del ultimo registro en datos generales
+        $datos_generales = DatoGeneral::find(1)->orderBy('id_datos_generales', 'desc')->first();
+
+        //insertar en Registro Victima
+        DB::table('registro_victima')->
+        insert(['id_datos_generales'=>$datos_generales->id_datos_generales,'vive_con'=>$request->vive_con,
+            'id_municipio'=>$request->id_municipio,'curp'=>$request->curp,'id_domicilio'=>$domicilio->id_domicilio]);
 
         return redirect()->back();
     }

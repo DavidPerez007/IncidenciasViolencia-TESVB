@@ -60,10 +60,10 @@
 }
 .progress-bar li{
     position:relative;
-    margin-left:40px;
-    margin-top:50px;
+    margin-left:20px;
+    margin-top:45px;
     counter-increment:container 1;
-    color:#4f6581;
+    color:#000;
 }
 .progress-bar li::before{
     content:counter(container);
@@ -77,7 +77,7 @@
     left:-40px;
     top:-5px;
     z-index:10;
-    background-color:#304767;
+    background-color:#fff;
 
 
 }
@@ -112,7 +112,7 @@
     border:1px solid #4bae28;
 }
 .progress-bar li.active{
-    color:#4bae28;
+    color:#fff;
 }
 .d-none{
     display:none;
@@ -168,6 +168,7 @@
     color:yellow;
     font-size:19px;
 }
+
 .text{
     margin-top:20px;
 }

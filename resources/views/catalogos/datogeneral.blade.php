@@ -34,20 +34,16 @@
 ],[
 
 'datos_situacion_conyugal' => $datos_situacion_conyugal,
-
-
 'datos_sexo' => $datos_sexo,
-
 'datos_nacionalidad' => $datos_nacionalidad,
-
 'datos_idioma' => $datos_idioma,
 'idioma_espaniol'=>'idioma_espaniol',
 
-
 'datos_municipios' => $datos_municipios,
 'id_municipio'=>'id_municipio',
-'municipio'=>'municipio'
+'municipio'=>'municipio',
 
+'datos_domicilios'=>$datos_domicilios
 
 ])
 <!--End componente documento-->

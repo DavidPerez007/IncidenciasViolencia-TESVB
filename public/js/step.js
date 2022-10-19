@@ -92,5 +92,10 @@
         return validate;
 
     }
-
-
+    $('.datepicker').datepicker();
+    $('.js-date').datepicker({
+        format: "yyyy-mm-dd",
+        language: "es",
+        orientation: "bottom auto",
+        autoclose: true
+    });

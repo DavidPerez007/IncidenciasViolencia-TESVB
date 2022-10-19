@@ -47,6 +47,7 @@
                                     data-bs-target="#edit-{{$dato->$id}}">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
+                            {{--@include('componentes.catalogos.datogeneral.editstep')--}}
                             </div>
                          <div class="d-inline-flex">
                                 <form action="{{route($ruta_destroy, $dato->$id)}}" method="POST" class="">
@@ -61,6 +62,7 @@
                 @endforeach
                 </tbody>
             </table>
+
         </div>
 
      @include('componentes.catalogos.datogeneral.createstep')
@@ -79,5 +81,4 @@
         @endpush
 
     @endif
-
 @endsection
