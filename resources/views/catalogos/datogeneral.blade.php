@@ -1,5 +1,5 @@
 <!--Componente catalogo-->
-@include('componentes.catalogos.datogeneral.nueva',
+@include('componentes.catalogos.datogeneral.index',
 ['datos' => $datos_generales,
 'nombres' => 'nombres',
 'ape_paterno' => 'ape_paterno',
