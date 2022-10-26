@@ -10,7 +10,7 @@
 
         <title>{{ config('app.name', 'Mujer Segura') }}</title>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/vendor/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
         <script  type="text/javascript" src="{{asset("/js/domicilio.js")}}"></script>
@@ -65,27 +65,27 @@
                                 Dashboard
                             </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link" href="{{url("datos_generales ")}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Registros
+                                <div class="sb-sidenav-collapse-arrow"></div>
+                            </a>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                            Generales
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#registro" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                               Registros
+                            Catálogos Generales
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
 
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{url("nacionalidad")}}">Nacionalidades</a>
-                                    <a class="nav-link" href="{{url("pais")}}">Paises</a>
+                                    <a class="nav-link" href="{{url("pais")}}">Países</a>
                                     <a class="nav-link" href="{{url("estado")}}">Estados</a>
                                     <a class="nav-link" href="{{url("vivienda")}}">Viviendas</a>
                                     <a class="nav-link" href="{{url("municipio")}}">Municipios</a>
                                     <a class="nav-link" href="{{url("escolaridad")}}">Escolaridades</a>
                                     <a class="nav-link" href="{{url("idioma")}}">Idiomas</a>
-                                    <a class="nav-link" href="{{url("ambito_violencia")}}">Ambitos de Violencia</a>
+                                    <a class="nav-link" href="{{url("ambito_violencia")}}">Ámbitos Violencia</a>
                                     <a class="nav-link" href="{{url("caso_violencia")}}">Casos de Violencia</a>
                                     <a class="nav-link" href="{{url("dificultad")}}">Dificultades</a>
                                     <a class="nav-link" href="{{url("efectos")}}">Efectos</a>
@@ -96,7 +96,7 @@
                                     <a class="nav-link" href="{{url("tipo_apoyo")}}">Tipo de Apoyo</a>
                                     <a class="nav-link" href="{{url("tipo_relacion")}}">Tipo de Relación</a>
                                     <a class="nav-link" href="{{url("tipo_violencia")}}">Tipo de Violencia</a>
-                                    <a class="nav-link" href="{{url("tipo_violencia")}}">Consecuancias Sexuales</a>
+                                    <a class="nav-link" href="{{url("con_sexual")}}">Consecuencias Sexuales</a>
                                     <a class="nav-link" href="{{url("domicilio")}}">Domicilios</a>
                                 </nav>
                             </div>

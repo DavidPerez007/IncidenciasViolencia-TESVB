@@ -10,7 +10,7 @@
 
     <title>{{ config('app.name', 'Mujer Segura') }}</title>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/vendor/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <script  type="text/javascript" src="{{asset("/js/domicilio.js")}}"></script>
@@ -55,46 +55,42 @@
                     <ul class="progress-bar">
                         <li class="active">Información Personal</li>
                         <li>Información Personal</li>
+                        <li>Información Personal</li>
                         <li>Domicilio</li>
                     </ul>
 
                 </div>
                 <div class="right-side">
-
                     <div class="main active">
-                        <small><i class="fa fa-smile-o"></i></small>
                         <div class="text">
                             <h2>Información Personal</h2>
                             <p>Ingresa tus datos personales</p>
                         </div>
-                        <div class="input-text">
-                            <div class="input-div">
-                                <input type="text" required require name="nombres" id="nombres" class="form-control">
-                                <span>Nombre</span>
-                                @if(old("mode")=='create')
-                                    @error($nombres) <span class="text-danger">{{ $message }}</span> @enderror
-                                @endif
+                        <div class="input-text ">
+                            <div class="input-div form-floating mb-3">
+                                <input type="text" required require name="nombres" id="nombres" class="form-control" placeholder="Nombre">
+                                <label for="nombres">Nombre</label>
                             </div>
-                            <div class="input-div">
-                                <input type="text" required require name="ape_paterno" id="ape_paterno" class="form-control">
-                                <span>Apellido Paterno</span>
+                            <div class="input-div form-floating mb-3">
+                                <input type="text" required require name="ape_paterno" id="ape_paterno" class="form-control" placeholder="Apellido Paterno">
+                                <label for="ape_paterno">Apellido Paterno</label>
                             </div>
                         </div>
                         <div class="input-text">
-                            <div class="input-div">
-                                <input type="text" required require name="ape_materno"  id="ape_materno" class="form-control">
-                                <span>Apellido Materno</span>
+                            <div class="input-div form-floating mb-3">
+                                <input type="text" required require name="ape_materno"  id="ape_materno" class="form-control" placeholder="Apellido Materno">
+                                <label for="ape_materno">Apellido Materno</label>
                             </div>
-                            <div class="input-div">
-                                <input type="text" required require name="telefono" id="telefono" class="form-control">
-                                <span>Número de teléfono</span>
+                            <div class="input-div form-floating mb-3">
+                                <input type="text" required require name="telefono" id="telefono" class="form-control" placeholder="Telefono">
+                                <label for="telefono">Telefono</label>
                             </div>
                         </div>
 
                         <div class="input-text">
-                            <div class="input-div">
-                                <input type="text" required require name="email" id="email" class="form-control">
-                                <span>Correo electrónico</span>
+                            <div class="input-div form-floating mb-3">
+                                <input type="text" required require name="email" id="email" class="form-control" placeholder="Email">
+                                <label for="email">Correo Electrónico</label>
                             </div>
                         </div>
                         <div class="input-text">
@@ -110,63 +106,133 @@
                             </div>
                             <div class="input-div">
                                 <label>Sexo </label>
-                                    <ul class="list-group">
+                                <ul class="list-group">
                                     @foreach($datos_sexo as $dato_sexo)
-
-                                            <li class="list-group-item">
-                                                <input class="form-check-input me-1" type="radio" required require name="id_sexo" value="{{$dato_sexo->$id_sexo}}" id="firstRadio" checked>
-                                                <label class="form-check-label" for="firstRadio">{{$dato_sexo->$sexo}}</label>
-                                            </li>
+                                        <li class="list-group-item">
+                                            <input class="form-check-input me-1" type="radio" required require name="id_sexo" value="{{$dato_sexo->$id_sexo}}" id="firstRadio" checked>
+                                            <label class="form-check-label" for="firstRadio">{{$dato_sexo->$sexo}}</label>
+                                        </li>
                                     @endforeach
-                                    </ul>
+                                </ul>
                             </div>
                         </div>
-                        <div class="buttons">
-                            <button class="next_button">Next Step</button>
+                        <div class="buttons button_space">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+                            <button class="next_button">Siguiente</button>
                         </div>
                     </div>
                     <div class="main">
-                        <small><i class="fa fa-smile-o"></i></small>
                         <div class="text">
                             <h2>Información Personal</h2>
                             <p>Ingresa tus datos personales</p>
                         </div>
 
                         <div class="input-text">
+
                             <div class="input-div">
-                                <input type="text" required require  name="vive_con" id="vive_con" class="form-control" >
-                                <span>Vive con</span>
+                                <p>¿Ha tenido código 100?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="Si" type="radio" name="codigo100" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="No" type="radio" name="codigo100" id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
                             </div>
+                         </div>
+
+                        <div class="input-text">
                             <div class="input-div">
-                                <input type="text" required require  name="curp" id="curp" class="form-control" >
-                                <span>Curp</span>
+                                <p>Tipos de Violencia</p>
+                                @foreach($datos_tipo_violencia as $dato_tipo_violencia)
+                                    <div class="form-group form-check">
+                                        <input class="form-check-input  " type="checkbox" name="id_tipo_violencia[]" value="{{$dato_tipo_violencia->$id_tipo_violencia}}" id="tipo_violencia" >
+                                        <label class="form-check-label" for="tipo_violencia">
+                                            {{$dato_tipo_violencia->$tipo_violencia}}
+                                        </label>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
 
+                        <div class="input-text">
+                            <div class="input-div">
+                                <label>Modalidades </label>
+                                <select type="text" required require  name="id_modalidad_violencia" id="id_nacionalidad" class="form-control">
+                                    <option value="">Elegir Modalidad</option>
+                                    @foreach($datos_modalidad_violencia as $dato_modalidad_violencia)
+                                        <option value="{{$dato_modalidad_violencia->$id_modalidad_violencia}}">{{$dato_modalidad_violencia->$modalidad}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="buttons button_space">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+                            <button class="back_button">Regresar</button>
+                            <button class="next_button">Siguiente</button>
+                        </div>
+                    </div>
+                    <div class="main ">
+                        <div class="text">
+                            <h2>Información Personal</h2>
+                            <p>Ingresa tus datos personales</p>
+                        </div>
 
                         <div class="input-text">
+                            <div class="input-div form-floating mb-3">
+                                <input type="text" required require  name="vive_con" id="vive_con" class="form-control" placeholder="Vive Con">
+                                <label for="vive_con">Vive Con</label>
+                            </div>
+                            <div class="input-div form-floating mb-3">
+                                <input type="text" required require  name="curp" id="curp" class="form-control"  placeholder="Curp">
+                                <label for="curp">Curp</label>
+                            </div>
+                        </div>
 
-                            <div class="input-div input-group date js-date">
-                                <input type="text" required require name="{{$fecha_nacimiento}}" id="{{$fecha_nacimiento}}" class="form-control" >
-                                <span>Fecha de Nacimiento</span>
+                        <div class="input-text">
+                            <div class="input-div input-group date js-date form-floating mb-3">
+                                <input type="text" required require name="{{$fecha_nacimiento}}" id="{{$fecha_nacimiento}}" class="form-control"  placeholder="">
+                                <label for="{{$fecha_nacimiento}}">Fecha de Nacimiento</label>
                                 <span class="input-group-addon">
                                 <i class="glyphicon glyphicon-th"></i>
                             </span>
                             </div>
-                            <div class="input-div">
-                                <input type="text" required require  name="{{$hijos}}" id="{{$hijos}}" class="form-control" >
-                                <span>Hijos</span>
+                            <div class="input-div form-floating mb-3">
+                                <input type="text" required require  name="{{$hijos}}" id="{{$hijos}}" class="form-control"  placeholder="Hijos">
+                                <label for="{{$hijos}}">Hijos</label>
                             </div>
                         </div>
-
                         <div class="input-text">
-                            <div class="input-div">
-                                <p>¿Pertenece a un Grupo etnico? </p>
-                                <input type="text" required require name="{{$grupo_etnico}}" id="{{$grupo_etnico}}" class="form-control" placeholder=" ">
+                            <div class="input-div ">
+                                <label >¿Pertenece a un Grupo étnico? </label>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="Si" type="radio" name="{{$grupo_etnico}}" id="{{$grupo_etnico}}">
+                                    <label class="form-check-label" for="{{$grupo_etnico}}">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="No" type="radio" name="{{$grupo_etnico}}" id="{{$grupo_etnico}}" onclick="myFunctionCheck()">
+                                    <label class="form-check-label" for="{{$grupo_etnico}}">
+                                        No
+                                    </label>
+                                </div>
+                                <script>function myFunctionCheck(){
+                                        console.log("Grupo etnico no");
+                                        let html_select='<option value=""></option>';
+                                        for(let i=1;i==1;i++) {
+                                            html_select += '<option value=""></option>';
 
+                                        }
+                                    }</script>
                             </div>
                         </div>
-
                         <div class="input-text">
                             <div class="input-div">
                                 <p>Nacionalidad: </p>
@@ -189,12 +255,12 @@
 
                         </div>
                         <div class="buttons button_space">
-                            <button class="back_button">Back</button>
-                            <button class="next_button">Next Step</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+                            <button class="back_button">Regresar</button>
+                            <button class="next_button">Siguiente</button>
                         </div>
                     </div>
-                    <div class="main ">
-                        <small><i class="fa fa-smile-o"></i></small>
+                    <div class="main">
                         <div class="text">
                             <h2>Domicilio:</h2>
                             <p>Ingresa los datos de tu domiclio</p>
@@ -261,7 +327,8 @@
                         </div>
 
                         <div class="buttons button_space">
-                            <button class="back_button">Back</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+                            <button class="back_button">Regresar</button>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
                     </div>
@@ -270,6 +337,7 @@
         </div>
     </div>
 </form>
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

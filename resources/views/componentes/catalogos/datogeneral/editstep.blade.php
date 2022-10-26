@@ -1,10 +1,11 @@
 
-<div class="modal fade" id="edit-{{$dato->$id}}" tabindex="-1" aria-labelledby="edit-{{$dato->$id}}" aria-hidden="true">
+<div class="modal fade" id="edit-{{$dato->$id}}  modaledit" tabindex="-1" aria-labelledby="edit-{{$dato->$id}}" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+        <div class="modal-content " >
+
             <div class="modal-header alert alert-primary">
-            <h5 class="modal-title" id="exampleModalLabel">Editar {{$nombre}}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                <h5 class="modal-title" id="exampleModalLabel">Editar {{$nombre}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <form method="POST" action="{{ route($ruta_edit,$dato->$id) }}"  role="form" enctype="multipart/form-data">
                 <div class="container">
@@ -12,6 +13,8 @@
                     {{ method_field('PATCH') }}
                     <input type="hidden" value="{{$dato->$id}}" name="dato_id">
                     <input type="hidden" value="{{$dato->$id_domicilio}}" name="id_domicilio">
+                    <input type="hidden" value="{{$dato->$id_registro_victima}}" name="id_registro_victima">
+
                     <div class="card">
                         <div class="form">
                             <div class="left-side">
@@ -20,7 +23,7 @@
                                 </div>
                                 <div class="steps-content">
                                     <h3>Step <span class="step-number">1</span></h3>
-                                     </div>
+                                </div>
                                 <ul class="progress-bar">
                                     <li class="active">Información Personal</li>
                                     <li>Información Personal</li>
@@ -78,12 +81,20 @@
                                         </div>
                                         <div class="input-div">
                                             <label>Sexo </label>
-                                            <select type="text" required require name="id_sexo" id="id_sexo" class="form-control">
-                                                <option value="{{$dato->$id_sexo}}">{{$dato->$sexo}}</option>
+
+                                            <ul class="list-group">
+
+                                                <li class="list-group-item">
+                                                    <input class="form-check-input me-1" type="radio" required require name="id_sexo" value="{{$dato->$id_sexo}}" id="firstRadio" checked>
+                                                    <label class="form-check-label" for="firstRadio">{{$dato->$sexo}}</label>
+                                                </li>
                                                 @foreach($datos_sexo as $dato_sexo)
-                                                    <option value="{{$dato_sexo->$id_sexo}}">{{$dato_sexo->$sexo}}</option>
+                                                    <li class="list-group-item">
+                                                        <input class="form-check-input me-1" type="radio" required require name="id_sexo" value="{{$dato_sexo->$id_sexo}}" id="firstRadio" >
+                                                        <label class="form-check-label" for="firstRadio">{{$dato_sexo->$sexo}}</label>
+                                                    </li>
                                                 @endforeach
-                                            </select>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="buttons">
@@ -97,6 +108,19 @@
                                         <h2>Editar Información Personal</h2>
                                         <p>Corrección de datos personales</p>
                                     </div>
+
+
+                                    <div class="input-text">
+                                        <div class="input-div">
+                                            <input type="text" required require  name="vive_con" id="vive_con" class="form-control" value="{{$dato->$vive_con}}" placeholder="{{$dato->$vive_con}}">
+                                            <span>Vive con</span>
+                                        </div>
+                                        <div class="input-div">
+                                            <input type="text" required require  name="curp" id="curp" class="form-control" value="{{$dato->$curp}}" placeholder="{{$dato->$curp}}">
+                                            <span>Curp</span>
+                                        </div>
+                                    </div>
+
                                     <div class="input-text">
                                         <div class="input-div">
                                             <input type="text" name="{{$fecha_nacimiento}}" id="{{$fecha_nacimiento}}" class="form-control" value="{{$dato->$fecha_nacimiento}}" placeholder="{{$dato->$fecha_nacimiento}}">
@@ -175,7 +199,7 @@
                                         <div class="input-div">
                                             <p>Municipio </p>
                                             <select type="text" required require  name="id_municipio" id="id_municipio" class="form-control">
-                                                <option value="">Elegir Municipio</option>
+                                                <option value="">{{$dato->$id_municipio}}</option>
                                                 @foreach($datos_municipios as $dato_municipio)
                                                     <option value="{{$dato_municipio->$id_municipio}}">{{$dato_municipio->$municipio}}</option>
                                                 @endforeach
@@ -191,16 +215,13 @@
                                     </div>
                                 </div>
 
-                                </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </form>
+
         </div>
     </div>
 </div>
 
-
-@if(old('dato_id') == $dato->$id)
-                     @error('descripcion') <span class="text-danger">{{ $message }}</span> @enderror
-                    @endif

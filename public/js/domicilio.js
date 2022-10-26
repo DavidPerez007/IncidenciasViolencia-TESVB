@@ -1,12 +1,12 @@
 
 
 $(function($){
-    console.log('asas');
     let $id_domicilio=$('#id_domicilio');
+
+
     $id_domicilio.on('change',function () {
         let id = $(this).val();
-        console.log('asads'+id);
-        //ajax
+
         if (! id){
             let html_contenido = ' ' +
                 '\n' +
@@ -43,7 +43,7 @@ $(function($){
             $('#municipios').find("*").prop('disabled',false).show();
             return;
         }
-
+        //ajax
         $.get('/api/domicilio/'+id+'/domicilio', function (data) {
             console.log(data[0][0]);
             let html_contenido = '' +
@@ -95,6 +95,7 @@ $(function($){
             }
             $('#id_municipio').html(html_select);
             $('#municipios').find("*").prop('disabled',true).hide();
+
         });
     })
 

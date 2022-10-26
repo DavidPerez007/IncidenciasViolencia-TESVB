@@ -28,6 +28,8 @@ class Tipo_ViolenciaSeeder extends Seeder
                 'tipo_violencia'=>'Sexual',
             ),array(
                 'tipo_violencia'=>'Simbólica',
+            ),array(
+                'tipo_violencia'=>'Vicaria',
             ),
             ));
 

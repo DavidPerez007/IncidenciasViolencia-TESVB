@@ -20,7 +20,7 @@
                             </div>
                     </div>
                     <div class="modal-footer border-white">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </div>
                 </div>
@@ -32,6 +32,3 @@
     </div>
   </div>
 
-  @if(old("mode")=='crear')
-       @error('descripcion') <span class="text-danger">{{ $message }}</span> @enderror
-@endif

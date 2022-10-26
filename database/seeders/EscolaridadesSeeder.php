@@ -19,13 +19,13 @@ class EscolaridadesSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS = 1;'); // Reactivamos la revisión de claves foráneas
         DB::table( 'escolaridad')->insert(array(
             array(
-                'escolaridad'=>' Educación Primaria',
+                'escolaridad'=>'Educación Primaria',
             ),array(
-                'escolaridad'=>'Educación secundaria',
+                'escolaridad'=>'Educación Secundaria',
             ),array(
-                'escolaridad'=>'Educación media supe',
+                'escolaridad'=>'Educación Media Supe',
             ),array(
-                'escolaridad'=>'Educación superior',
+                'escolaridad'=>'Educación Superior',
             ),));
 
     }

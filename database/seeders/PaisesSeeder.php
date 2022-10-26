@@ -17,9 +17,14 @@ class PaisesSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS = 0;'); // Desactivamos la revisión de claves foráneas
         DB::table('pais')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS = 1;'); // Reactivamos la revisión de claves foráneas
-       DB::table( 'pais')->insert([
-           'id_pais'=>'1',
+       DB::table( 'pais')->insert(array(
+           array(
             'pais'=>'México',
-        ]);
+           ),array(
+           'pais'=>'Estados Unidos de America',
+           ),array(
+               'pais'=>'Canadá',
+           )
+           ) );
     }
 }

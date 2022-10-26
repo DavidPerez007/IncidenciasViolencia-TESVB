@@ -16,13 +16,13 @@ class CreateRegistroVictimaTable extends Migration
         Schema::create('registro_victima', function (Blueprint $table) {
             $table->id('id_registro_victima');
             $table->unsignedBigInteger('id_datos_generales');
-            $table->foreign('id_datos_generales')->references('id_datos_generales')->on('datos_generales');
+            $table->foreign('id_datos_generales')->references('id_datos_generales')->on('datos_generales')->onDelete('cascade');
             $table->string('vive_con',20);
             $table->unsignedBigInteger('id_municipio');
-            $table->foreign('id_municipio')->references('id_municipio')->on('municipio');
+            $table->foreign('id_municipio')->references('id_municipio')->on('municipio')->onDelete('cascade');
             $table->string('curp',18);
             $table->unsignedBigInteger('id_domicilio');
-            $table->foreign('id_domicilio')->references('id_domicilio')->on('domicilio');
+            $table->foreign('id_domicilio')->references('id_domicilio')->on('domicilio')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

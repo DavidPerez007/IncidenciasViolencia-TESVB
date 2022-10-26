@@ -20,7 +20,7 @@ class IdiomasSeeder extends Seeder
 
         DB::table('idioma')->insert(array(
             array(
-                'idioma_espaniol' => "Espanol",
+                'idioma_espaniol' => "Español",
             ),
             array(
                 'idioma_espaniol' => "Náhuatl",
