@@ -289,9 +289,48 @@
 
                                             </select>
                                         </div>
-
                                     </div>
 
+                                    <div class="buttons button_space">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+                                        <button class="back_button">Regresar</button>
+                                        <button class="next_button">Siguiente</button>
+                                    </div>
+                                </div>
+                                <div class="main">
+                                    <div class="text">
+                                        <h2>Canalización Victima:</h2>
+                                    </div>
+
+                                    <div class="input-text">
+                                        <div class="input-div form-floating mb-3">
+
+                                        </div>
+                                        <div class="input-div form-floating mb-3">
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="input-text">
+
+                                        <div class="input-div form-floating mb-3">
+
+                                        </div>
+                                    </div>
+                                    <div class="input-text">
+                                        <div class="input-div ">
+
+                                        </div>
+                                    </div>
+                                    <div class="input-text">
+                                        <div class="input-div">
+
+                                        </div>
+                                        <div class="input-div">
+
+                                        </div>
+
+                                    </div>
                                     <div class="buttons button_space">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
                                         <button class="back_button">Regresar</button>

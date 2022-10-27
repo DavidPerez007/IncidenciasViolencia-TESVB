@@ -52,11 +52,11 @@
 .progress-bar{
     list-style:none;
     /*color:#fff;*/
-    margin-top:30px;
+    margin-top:10px;
     font-size:12px;
     font-weight:700;
     counter-reset:container 0;
-    height: 400px;
+    height: 450px;
 }
 .progress-bar li{
     position:relative;
