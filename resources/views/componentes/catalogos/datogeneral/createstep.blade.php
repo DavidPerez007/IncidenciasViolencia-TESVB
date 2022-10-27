@@ -14,16 +14,17 @@
                         <div class="form">
                             <div class="left-side">
                                 <div class="left-heading">
-                                    <h3>Nuevo Registro</h3>
+                                    <h3>Registro Victima</h3>
                                 </div>
                                 <div class="steps-content">
                                     <h3>Paso <span class="step-number">1</span></h3>
                                 </div>
                                 <ul class="progress-bar">
                                     <li class="active">Información Personal</li>
-                                    <li>Información Personal</li>
-                                    <li>Información Personal</li>
-                                    <li>Domicilio</li>
+                                    <li>Tipo Violencia</li>
+                                    <li>Caracterización Violencia</li>
+                                    <li>Información Contacto</li>
+                                    <li>Canalización</li>
                                 </ul>
 
                             </div>
@@ -90,8 +91,7 @@
                                 </div>
                                 <div class="main">
                                     <div class="text">
-                                        <h2>Información Personal</h2>
-                                        <p>Ingresa tus datos personales</p>
+                                        <h2>Tipo de Violencia</h2>
                                     </div>
 
                                     <div class="input-text">
@@ -115,7 +115,7 @@
 
                                     <div class="input-text">
                                         <div class="input-div">
-                                            <p>Tipos de Violencia</p>
+                                            <p>Tipo de Violencia que ha sufrido</p>
                                             @foreach($datos_tipo_violencia as $dato_tipo_violencia)
                                                 <div class="form-group form-check">
                                                     <input class="form-check-input  " type="checkbox" name="id_tipo_violencia[]" value="{{$dato_tipo_violencia->$id_tipo_violencia}}" id="tipo_violencia" >
@@ -147,8 +147,7 @@
                                 </div>
                                 <div class="main ">
                                     <div class="text">
-                                        <h2>Información Personal</h2>
-                                        <p>Ingresa tus datos personales</p>
+                                        <h2>Caracterización de Victima</h2>
                                     </div>
 
                                     <div class="input-text">
@@ -229,7 +228,7 @@
                                 </div>
                                 <div class="main">
                                     <div class="text">
-                                        <h2>Domicilio:</h2>
+                                        <h2>Informacion de Contacto:</h2>
                                         <p>Ingresa los datos de tu domiclio</p>
                                     </div>
                                     <div class="input-text">
