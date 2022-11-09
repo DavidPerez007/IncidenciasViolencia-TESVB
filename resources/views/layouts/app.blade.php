@@ -82,7 +82,7 @@
             $('#registroVictimas').DataTable({
 
                 "sort": true,
-                "order" : [[0,"desc"]],
+                "order" : [[0,"asc"]],
                 "columnDefs": [ {
                     "targets": [1,2,3,4,5,6,7,8,9,10,11],
                     "orderable": false
