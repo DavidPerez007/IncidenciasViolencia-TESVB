@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Livewire\TipoApoyos;
 use App\Models\DatoGeneral;
 use App\Models\Domicilio;
 use App\Models\Idioma;
@@ -11,6 +12,8 @@ use App\Models\Nacionalidad;
 use App\Models\RegistroVictima;
 use App\Models\Sexo;
 use App\Models\SituConyugal;
+use App\Models\TipoApoyo;
+use App\Models\TipoRelacion;
 use App\Models\TipoViolencia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -28,8 +31,16 @@ class DatoGeneralController extends Controller
                     'domicilio.*')->get(),
             Municipio::all(),
         ];
-        // return Domicilio::where('id_domicilio',$id)->get();
     }
+    public function idioma(Request $request){
+        return [
+            DB::table('idioma')->where('idioma_espaniol', '=','Español')
+                ->select(
+                    'idioma.*')->get(),
+            Idioma::all(),
+        ];
+    }
+
     public function index()
     {
 
@@ -145,7 +156,8 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
         $datos_registro_victima=RegistroVictima::all();
         $datos_tipo_violencia=TipoViolencia::all(['id_tipo_violencia','tipo_violencia']);
         $datos_modalidad_violencia=ModalidadViolencia::all(['id_modalidad_violencia','modalidad']);
-
+        $datos_tipo_apoyo=TipoApoyo::all(['id_tipo_apoyo','tipo_apoyo']);
+        $datos_tipo_relacion=TipoRelacion::all(['id_tiporelacion','tipo_relacion']);
 
 
         return view('catalogos.datogeneral',
@@ -159,7 +171,9 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
                 'datos_municipios' => $datos_municipios,
                 'datos_registro_victima'=>$datos_registro_victima,
                 'datos_tipo_violencia'=>$datos_tipo_violencia,
-                'datos_modalidad_violencia'=>$datos_modalidad_violencia
+                'datos_modalidad_violencia'=>$datos_modalidad_violencia,
+                'datos_tipo_apoyo'=>$datos_tipo_apoyo,
+                'datos_tipo_relacion'=>$datos_tipo_relacion
             ]);
     }
 
@@ -170,6 +184,7 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
 
     public function store(Request $request)
     {
+
 
         $tipos_violecia=$request->id_tipo_violencia;
         foreach ($tipos_violecia as $tipo_violencia )

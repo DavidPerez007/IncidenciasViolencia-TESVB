@@ -1,5 +1,6 @@
 <x-guest-layout>
 
+    <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet" crossorigin="anonymous">
     <script type="text/javascript">
         function mostrarPassword(){
                 var cambio = document.getElementById("password");
@@ -10,8 +11,8 @@
                     cambio.type = "password";
                     $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
                 }
-            } 
-            
+            }
+
             $(document).ready(function () {
             //CheckBox mostrar contraseña
             $('#ShowPassword').click(function () {
@@ -29,7 +30,7 @@
             <div class="row justify-content-center">
                 <div class="col-4">
                     <div class="card">
-                        <div class="card-header alert alert-primary text-center font-weight-bold">
+                        <div class="card-header alert alert-primary text-center font-weight-bold bg-dark">
                            Iniciar sesión
                         </div>
                         <div class="card-body">
@@ -80,7 +81,4 @@
             </div>
 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 </x-guest-layout>

@@ -16,8 +16,12 @@
 <div class="">
     <div class="text-center"><label class="text-center"><h2>{{$nombre}}</h2></label></div>
 
-    <table class = "table table-bordered table-hover table-striped  ">
-        <thead class="thead-dark">
+
+
+    <div class="card">
+        <div class="card-body">
+    <table id="tablaCatalogos" class = "tables table-bordered table-hover table-striped  " >
+        <thead class="thead-dark bg-primary text-white">
             <tr class="text-center">
                 <th>Id</th>
                 <th>Descripción</th>
@@ -49,8 +53,8 @@
             @endforeach
         </tbody>
     </table>
-{!! $datos->links()!!}
-
+        </div>
+    </div>
 
 </div>
 

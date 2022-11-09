@@ -17,23 +17,23 @@ $(function($){
                 ' </div>' +
 
                 '<div class="input-text"> ' +
-                '    <div class="input-div">' +
-                '        <input type="text" name="calle" id="calle" class="form-control" > ' +
-                '        <span>Calle</span> ' +
+                '    <div class="input-div form-floating mb-3">' +
+                '        <input type="text" name="calle" id="calle" class="form-control" placeholder=""> ' +
+                '         <label for="calle">Calle</label> ' +
                 '    </div>' +
-                '    <div class="input-div">' +
-                '        <input type="text" name="colonia" id="colonia" class="form-control" >  ' +
-                '        <span>Colonia</span> ' +
+                '    <div class="input-div form-floating mb-3">' +
+                '        <input type="text" name="colonia" id="colonia" class="form-control" placeholder="">  ' +
+                '        <label for="colonia">Colonia</label>' +
                 '    </div>' +
                 '</div>' +
                 ' <div class="input-text">\n' +
-                '     <div class="input-div">\n' +
-                '         <input type="text" name="no_interior" id="no_interior" class="form-control" >' +
-                '         <span>Número Interior</span>\n' +
+                '     <div class="input-div form-floating mb-3">\n' +
+                '         <input type="text" name="no_interior" id="no_interior" class="form-control" placeholder="">' +
+                '        <label for="no_interior">Número Interior</label>' +
                 '     </div>\n' +
-                '     <div class="input-div">\n' +
-                '         <input type="text" name="no_exterior" id="no_exterior" class="form-control" >' +
-                '         <span>Número exterior</span>\n' +
+                '     <div class="input-div form-floating mb-3">\n' +
+                '         <input type="text" name="no_exterior" id="no_exterior" class="form-control" placeholder="">' +
+                '         <label for="no_exterior">Número Exterior</label>' +
                 '     </div>\n' +
                 ' </div>' +
                 '\n' +
@@ -48,29 +48,29 @@ $(function($){
             console.log(data[0][0]);
             let html_contenido = '' +
                 '\n' +
-                ' <div class="input-text">\n' +
+                ' <div class="input-text ">\n' +
                 '     <div class="input-div" >\n' +
                 '         <label for="">Datos del domicilio:</label>\n' +
                 '     </div>\n' +
                 ' </div> ' +
                 '<div class="input-text"> ' +
-                '    <div class="input-div">' +
+                '    <div class="input-div form-floating mb-3">' +
                 '        <input type="text" name="calle" id="calle" class="form-control" value="' + data[0][0].calle + '"placeholder="' + data[0][0].calle + '">  ' +
-                '        <span>Calle</span> ' +
+                '       <label for="calle">Calle</label> ' +
                 '    </div>' +
-                '    <div class="input-div">' +
+                '    <div class="input-div form-floating mb-3">' +
                 '        <input type="text" name="colonia" id="colonia" class="form-control" value="' + data[0][0].colonia + '"placeholder="' + data[0][0].colonia + '">  ' +
-                '        <span>Colonia</span> ' +
+                '        <label for="colonia">Colonia</label> ' +
                 '    </div>' +
                 '</div>' +
                 ' <div class="input-text">\n' +
-                '     <div class="input-div">\n' +
+                '     <div class="input-div form-floating mb-3">\n' +
                 '         <input type="text" name="no_interior" id="no_interior" class="form-control"  value="' + data[0][0].no_interior + '"placeholder="' + data[0][0].no_interior + '">' +
-                '         <span>Número Interior</span>\n' +
+                '         <label for="no_interior">Número Interior</label>' +
                 '     </div>\n' +
-                '     <div class="input-div">\n' +
+                '     <div class="input-div form-floating mb-3">\n' +
                 '         <input type="text" name="no_exterior" id="no_exterior" class="form-control" value="' + data[0][0].no_exterior + '"placeholder="' + data[0][0].no_exterior + '" >' +
-                '         <span>Número exterior</span>\n' +
+                '         <label for="no_exterior">Número Exterior</label>' +
                 '     </div>\n' +
                 ' </div>' +
                 '\n' +

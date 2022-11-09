@@ -59,7 +59,17 @@
 
 'datos_modalidad_violencia'=>$datos_modalidad_violencia,
 'id_modalidad_violencia'=>'id_modalidad_violencia',
-'modalidad'=>'modalidad'
+'modalidad'=>'modalidad',
+
+
+'datos_tipo_apoyo'=>$datos_tipo_apoyo,
+'tipo_apoyo'=>'tipo_apoyo',
+'id_tipo_apoyo'=>'id_tipo_apoyo',
+
+
+'datos_tipo_relacion'=>$datos_tipo_relacion,
+'tipo_relacion'=>'tipo_relacion',
+'id_tiporelacion'=>'id_tiporelacion'
 
 
 ])

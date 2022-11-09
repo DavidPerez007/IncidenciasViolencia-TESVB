@@ -6,16 +6,23 @@
             <i class="fas fa-plus-circle "></i> Agregar
         </button>
     </div>
-    <script>
+
+    {{--<script>
         function myFunction(){
             $('#modaledit').find("*").prop('disabled',true).hide();
             console.log('ssclic');
         }
-    </script>
+    </script>--}}
+
     <div class="">
         <div class="text-center"><label class="text-center"><h2>{{$nombre}}</h2></label></div>
-        <table class="tables table-bordered table-hover table-striped  ">
-            <thead class="thead-dark">
+
+
+        <div class="card">
+            <div class="card-body">
+
+        <table id="registroVictimas" class="table table-bordered table-hover table-striped  " >
+            <thead class="thead-dark bg-primary text-white  ">
             <tr class="text-center">
                 <th>Id</th>
                 <th>Nombre Completo</th>
@@ -24,7 +31,6 @@
                 <th>Fecha Nacimiento</th>
                 <th>Hijos</th>
                 <th>Telefono</th>
-                <th>Email</th>
                 <th>Grupo Etnico</th>
                 <th>Nacionalidad</th>
                 <th>Idioma</th>
@@ -42,17 +48,24 @@
                     <td class="text-center">{{$dato->$fecha_nacimiento}}</td>
                     <td class="text-center">{{$dato->$hijos}}</td>
                     <td class="text-center">{{$dato->$telefono}}</td>
-                    <td class="text-center">{{$dato->$email}}</td>
+                    {{--<td class="text-center">{{$dato->$email}}</td>--}}
                     <td class="text-center">{{$dato->$grupo_etnico}}</td>
                     <td class="text-center">{{$dato->$nacionalidad}}</td>
                     <td class="text-center">{{$dato->$idioma}}</td>
                     <td class="text-center">{{$dato->$domicilio}}</td>
                     <td class="text-center">
                         <div class="d-inline-flex">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#edit-{{$dato->$id}}">
+                            <button type="button"  onclick="myFunctionedit()" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#edit-{{$dato->$id}}" hidden>
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </button>
+                            {{--             @include('componentes.catalogos.datogeneral.editstep')
+                                      -- <script>
+                                             function myFunctionedit(){
+                                                 $('#modaledit').find("*").prop('disabled',false).show();
+                                                 console.log('editclic');
+                                             }
+                                         </script>--}}
                             </div>
                          <div class="d-inline-flex">
                                 <form action="{{route($ruta_destroy, $dato->$id)}}" method="POST" class="">
@@ -68,9 +81,9 @@
                 </tbody>
             </table>
 
+            </div>
         </div>
-
-
+        </div>
 
     @include('componentes.catalogos.datogeneral.createstep')
 

@@ -7,11 +7,6 @@ use \Illuminate\Support\Facades\DB;
 
 class IdiomasSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         DB::statement('SET FOREIGN_KEY_CHECKS = 0;'); // Desactivamos la revisión de claves foráneas
@@ -21,6 +16,9 @@ class IdiomasSeeder extends Seeder
         DB::table('idioma')->insert(array(
             array(
                 'idioma_espaniol' => "Español",
+            ),
+            array(
+                'idioma_espaniol' => "Inglés",
             ),
             array(
                 'idioma_espaniol' => "Náhuatl",
