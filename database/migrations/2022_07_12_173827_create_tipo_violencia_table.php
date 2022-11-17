@@ -16,6 +16,7 @@ class CreateTipoViolenciaTable extends Migration
         Schema::create('tipo_violencia', function (Blueprint $table) {
             $table->id('id_tipo_violencia');
             $table->string('tipo_violencia',45);
+            $table->timestamp('date')->default(now());
             $table->timestamps();
             $table->softDeletes();
         });

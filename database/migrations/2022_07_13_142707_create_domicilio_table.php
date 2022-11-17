@@ -22,6 +22,7 @@ class CreateDomicilioTable extends Migration
             $table->integer('cod_postal');
             $table->unsignedBigInteger('id_municipio');
             $table->foreign('id_municipio')->references('id_municipio')->on('municipio');
+            $table->timestamp('date')->default(now());
             $table->timestamps();
             $table->softDeletes();
         });

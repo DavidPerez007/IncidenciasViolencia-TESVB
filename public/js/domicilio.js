@@ -18,22 +18,24 @@ $(function($){
 
                 '<div class="input-text"> ' +
                 '    <div class="input-div form-floating mb-3">' +
-                '        <input type="text" name="calle" id="calle" class="form-control" placeholder=""> ' +
-                '         <label for="calle">Calle</label> ' +
+                '        <input type="text" required require name="calle" id="calle" class="form-control" placeholder=""> ' +
+                '         <label for="calle">Calle/ Ñiii</label> ' +
                 '    </div>' +
                 '    <div class="input-div form-floating mb-3">' +
-                '        <input type="text" name="colonia" id="colonia" class="form-control" placeholder="">  ' +
-                '        <label for="colonia">Colonia</label>' +
+                '        <input type="text" required require name="colonia" id="colonia" class="form-control" placeholder="">  ' +
+                '        <label for="colonia">Colonia / Ri xoru</label>' +
                 '    </div>' +
                 '</div>' +
                 ' <div class="input-text">\n' +
                 '     <div class="input-div form-floating mb-3">\n' +
-                '         <input type="text" name="no_interior" id="no_interior" class="form-control" placeholder="">' +
-                '        <label for="no_interior">Número Interior</label>' +
+                '         <input type="text" required require name="no_interior" id="no_interior" class="form-control" placeholder="">' +
+                '        <label for="no_interior">Número Interior / Mberee srrinu</label>' +
                 '     </div>\n' +
+                '</div>' +
+                ' <div class="input-text">\n' +
                 '     <div class="input-div form-floating mb-3">\n' +
-                '         <input type="text" name="no_exterior" id="no_exterior" class="form-control" placeholder="">' +
-                '         <label for="no_exterior">Número Exterior</label>' +
+                '         <input type="text" required require name="no_exterior" id="no_exterior" class="form-control" placeholder="">' +
+                '         <label for="no_exterior">Número Exterior / Mberee mböö</label>' +
                 '     </div>\n' +
                 ' </div>' +
                 '\n' +
@@ -56,30 +58,32 @@ $(function($){
                 '<div class="input-text"> ' +
                 '    <div class="input-div form-floating mb-3">' +
                 '        <input type="text" name="calle" id="calle" class="form-control" value="' + data[0][0].calle + '"placeholder="' + data[0][0].calle + '">  ' +
-                '       <label for="calle">Calle</label> ' +
+                '       <label for="calle">Calle / Ñiii</label> ' +
                 '    </div>' +
                 '    <div class="input-div form-floating mb-3">' +
                 '        <input type="text" name="colonia" id="colonia" class="form-control" value="' + data[0][0].colonia + '"placeholder="' + data[0][0].colonia + '">  ' +
-                '        <label for="colonia">Colonia</label> ' +
+                '        <label for="colonia">Colonia / Ri xoru</label> ' +
                 '    </div>' +
                 '</div>' +
                 ' <div class="input-text">\n' +
                 '     <div class="input-div form-floating mb-3">\n' +
                 '         <input type="text" name="no_interior" id="no_interior" class="form-control"  value="' + data[0][0].no_interior + '"placeholder="' + data[0][0].no_interior + '">' +
-                '         <label for="no_interior">Número Interior</label>' +
+                '         <label for="no_interior">Número Interior / Mberee srrinu</label>' +
                 '     </div>\n' +
+                '</div>' +
+                ' <div class="input-text">\n' +
                 '     <div class="input-div form-floating mb-3">\n' +
                 '         <input type="text" name="no_exterior" id="no_exterior" class="form-control" value="' + data[0][0].no_exterior + '"placeholder="' + data[0][0].no_exterior + '" >' +
-                '         <label for="no_exterior">Número Exterior</label>' +
+                '         <label for="no_exterior">Número Exterior / Mberee mböö</label>' +
                 '     </div>\n' +
                 ' </div>' +
                 '\n' +
                 '<div class="input-text">\n' +
                 '    <div class="input-div">\n' +
-                '        <label>Codigo postal</label>\n' +
+                '        <label>Codigo postal / Xakajiii</label>\n' +
                 '        <input type="text"  name="cod_postal" id="cod_postal" class="form-control" value="' + data[0][0].cod_postal + '"placeholder="' + data[0][0].cod_postal + '" >\n' +                '    </div>\n' +
                 '    <div class="input-div">\n' +
-                '          <label>Municipio</label>'+
+                '          <label>Municipio / Ri menzum</label>'+
                 '        <select type="text" name="id_municipio" id="id_municipio" class="form-control">\n'+
                 '        </select>\n' +
                 '    </div>\n' +

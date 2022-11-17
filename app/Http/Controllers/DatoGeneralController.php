@@ -15,14 +15,14 @@ use App\Models\SituConyugal;
 use App\Models\TipoApoyo;
 use App\Models\TipoRelacion;
 use App\Models\TipoViolencia;
+use App\Models\RutasVictima;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class DatoGeneralController extends Controller
 {
     public function byProject($id){
-
-
         return [
             DB::table('domicilio')->where('id_domicilio', $id)
                 ->join('municipio', 'domicilio.id_municipio', '=', 'municipio.id_municipio')
@@ -39,6 +39,15 @@ class DatoGeneralController extends Controller
                     'idioma.*')->get(),
             Idioma::all(),
         ];
+    }
+
+    public function rutas($id){
+      return [
+         DB::table('rutas_victimas')->where('rutas_victimas.id_datos_generales',$id)
+             ->join('datos_generales','rutas_victimas.id_datos_generales','=','datos_generales.id_datos_generales')
+             ->select('datos_generales.*','rutas_victimas.*')->get(),
+          ];
+
     }
 
     public function index()
@@ -158,7 +167,8 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
         $datos_modalidad_violencia=ModalidadViolencia::all(['id_modalidad_violencia','modalidad']);
         $datos_tipo_apoyo=TipoApoyo::all(['id_tipo_apoyo','tipo_apoyo']);
         $datos_tipo_relacion=TipoRelacion::all(['id_tiporelacion','tipo_relacion']);
-
+        $datos_rutas=RutasVictima::all();
+    ///dd($datos_rutas);
 
         return view('catalogos.datogeneral',
             [
@@ -173,7 +183,8 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
                 'datos_tipo_violencia'=>$datos_tipo_violencia,
                 'datos_modalidad_violencia'=>$datos_modalidad_violencia,
                 'datos_tipo_apoyo'=>$datos_tipo_apoyo,
-                'datos_tipo_relacion'=>$datos_tipo_relacion
+                'datos_tipo_relacion'=>$datos_tipo_relacion,
+                'datos_rutas'=>$datos_rutas
             ]);
     }
 
@@ -185,13 +196,14 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
     public function store(Request $request)
     {
 
-
         $tipos_violecia=$request->id_tipo_violencia;
         foreach ($tipos_violecia as $tipo_violencia )
         {
             echo($tipo_violencia);
             DB::table('clas_violencia')->
-            insert(['id_tipo_violencia'=>$tipo_violencia,'id_modalidad_violencia'=>$request->id_modalidad_violencia]);
+            insert([
+                'id_tipo_violencia'=>$tipo_violencia,
+                'id_modalidad_violencia'=>$request->id_modalidad_violencia]);
 
         }
        // dd($request);;
@@ -204,7 +216,6 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
                 ->insert(['calle' => $request->calle, 'no_interior' => $request->no_interior,
                     'no_exterior' => $request->no_exterior, 'colonia' => $request->colonia, 'cod_postal' => $request->cod_postal
                     , 'id_municipio' => $request->id_municipio]);
-
             //obtener id del ultimo registro
             $domicilio = Domicilio::find(1)->orderBy('id_domicilio', 'desc')->first();
 
@@ -213,7 +224,8 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
                 ->insert(['nombres'=>$request->nombres,'ape_paterno'=>$request->ape_paterno,'ape_materno'=>$request->ape_materno,
                     'id_situ_conyugal'=>$request->id_situ_conyugal,'id_sexo'=>$request->id_sexo,'fecha_nacimiento'=>$request->fecha_nacimiento,
                     'hijos'=>$request->hijos,'telefono'=>$request->telefono,'email'=>$request->email,'grupo_etnico'=>$request->grupo_etnico,
-                    'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$domicilio->id_domicilio]);
+                    'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$domicilio->id_domicilio,
+                    ]);
 
         }
         ////EDITAR UN DOMICILIO YA EXISTENTE
@@ -228,7 +240,8 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
                     'no_interior'=> $request->no_interior,
                     'no_exterior'=> $request->no_exterior,
                     'cod_postal'=> $request->cod_postal,
-                    'id_municipio'=> $request->id_municipio,]);
+                    'id_municipio'=> $request->id_municipio,
+                    ]);
 
             //insertar en datos generales
             DB::table('datos_generales')
@@ -241,6 +254,9 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
 
         //obtener id del ultimo registro en datos generales
         $datos_generales = DatoGeneral::find(1)->orderBy('id_datos_generales', 'desc')->first();
+
+        DB::table('rutas_victimas')->insert(['dependencia'=>'Registro','id_datos_generales'=>$datos_generales->id_datos_generales,]);
+        DB::table('rutas_victimas')->insert(['dependencia'=>'Canalización','id_datos_generales'=>$datos_generales->id_datos_generales,]);
 
         $domicilio = Domicilio::find(1)->orderBy('id_domicilio', 'desc')->first();
         //insertar en Registro Victima

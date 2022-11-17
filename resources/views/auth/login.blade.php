@@ -26,7 +26,6 @@
                 {{ session('status') }}
             </div>
         @endif
-
             <div class="row justify-content-center">
                 <div class="col-4">
                     <div class="card">
@@ -79,6 +78,5 @@
                     </div>
                 </div>
             </div>
-
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </x-guest-layout>

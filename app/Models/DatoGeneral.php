@@ -15,7 +15,7 @@ class DatoGeneral extends Model
     protected $fillable=["nombres","ape_paterno","ape_materno",
                         "fecha_nacimiento","hijos","telefono","email","grupo_etnico",
                         "id_situ_conyugal","id_sexo","id_nacionalidad","id_idioma",
-                        "id_domicilio"];
+                        "id_domicilio","publication_date"];
 
     static $rules = [
         'nombres' => 'required',

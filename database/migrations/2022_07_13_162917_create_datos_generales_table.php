@@ -33,6 +33,7 @@ class CreateDatosGeneralesTable extends Migration
             $table->foreign('id_idioma')->references('id_idioma')->on('idioma')->onDelete('cascade');
             $table->unsignedBigInteger('id_domicilio');
             $table->foreign('id_domicilio')->references('id_domicilio')->on('domicilio')->onDelete('cascade');
+            $table->timestamp('date')->default(now());
             $table->timestamps();
             $table->softDeletes();
         });

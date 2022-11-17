@@ -11,7 +11,7 @@
     background-color:#eee;
 }
 .container .card{
-    height:700px;
+    height:auto;
     width:800px;
     background-color:#fff;
     position:relative;
@@ -451,4 +451,10 @@ select{
 
         display: none;
     }
+}
+
+#containee {
+    min-width: 400px;
+    max-width: 600px;
+    margin: 0 auto;
 }

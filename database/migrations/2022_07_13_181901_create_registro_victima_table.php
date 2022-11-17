@@ -23,6 +23,7 @@ class CreateRegistroVictimaTable extends Migration
             $table->string('curp',18);
             $table->unsignedBigInteger('id_domicilio');
             $table->foreign('id_domicilio')->references('id_domicilio')->on('domicilio')->onDelete('cascade');
+            $table->timestamp('date')->default(now());
             $table->timestamps();
             $table->softDeletes();
         });

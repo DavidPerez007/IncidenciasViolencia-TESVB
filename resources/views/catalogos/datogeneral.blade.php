@@ -69,8 +69,11 @@
 
 'datos_tipo_relacion'=>$datos_tipo_relacion,
 'tipo_relacion'=>'tipo_relacion',
-'id_tiporelacion'=>'id_tiporelacion'
+'id_tiporelacion'=>'id_tiporelacion',
 
+ 'datos_rutas'=>$datos_rutas,
+ 'ruta'=>"dependencia",
+ 'date'=>"date"
 
 ])
 <!--End componente documento-->
