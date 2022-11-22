@@ -50,6 +50,7 @@ Route::resource("idioma", \App\Http\Controllers\IdiomaController::class);
 Route::resource("datos_generales", \App\Http\Controllers\DatoGeneralController::class);
 Route::resource("con_sexual", \App\Http\Controllers\ConsecuenciasSexualesController::class);
 Route::resource("clas_violencia", \App\Http\Controllers\ClasificacionViolenciaController::class);
+Route::resource("seguimiento", \App\Http\Controllers\SeguimientoController::class);
 
 
 // Route::get('vistas/registro-caso-vistima',[])

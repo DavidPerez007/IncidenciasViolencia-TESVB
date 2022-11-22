@@ -2,7 +2,6 @@
 <div class="modal fade" id="edit-{{$dato->$id}}  modaledit" tabindex="-1" aria-labelledby="edit-{{$dato->$id}}" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content " >
-
             <div class="modal-header alert alert-primary">
                 <h5 class="modal-title" id="exampleModalLabel">Editar {{$nombre}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>

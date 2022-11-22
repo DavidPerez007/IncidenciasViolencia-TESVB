@@ -1,5 +1,5 @@
 
-<div class="modal fade" id="seguir_ruta" tabindex="-1" aria-labelledby="seguir_ruta" aria-hidden="true">
+<div class="modal fade" id="seguir_ruta-{{$dato->$id}}" tabindex="-1" aria-labelledby="seguir_ruta" aria-hidden="true">
     <div class="modal-dialog modal-lg" >
         <div class="modal-content " >
             <div class="modal-header alert alert-primary">
@@ -12,7 +12,7 @@
                 <div class="container">
                     <div class="card">
                        <div class="text-end">
-                           <button type="button" class="btn  mt-4 mb-5 " data-bs-toggle="modal" data-bs-target="#seguimiento">
+                           <button type="button" class="btn  mt-4 mb-5 " data-bs-toggle="modal" data-bs-target="#seguimiento-{{$dato->$id}}">
                                <i class="fas fa-plus-circle "></i> Agregar Seguimiento
                            </button>
                        </div>
@@ -26,15 +26,12 @@
             <script>
                 function myFunctionRutaCheck($id){
                     let id = $id;
-                    console.log('rutas-> id_datos_generales: ' +id)
+
                     //ajax
 
                     $.get('/api/ruta/'+id+'/rutas', function (datos){
 
-                        for (let j = 0; j < datos[0].length; j++) {
-                            console.log(j + '  ' + datos[0][j].dependencia)
-                            let dat=datos[0][j].date
-                            console.log(j + '  ' + dat)
+
                         Highcharts.chart("containee", {
 
                                 chart: {
@@ -60,7 +57,7 @@
                                 },
                                 subtitle: {
                                     text:
-                                        'Información de:  '+ datos[0][j].nombres +' '+datos[0][j].ape_paterno+' '+datos[0][j].ape_materno
+                                        'Información de:  '+ datos[0][0].nombres+' '+datos[0][0].ape_paterno+ ' '+ datos[0][0].ape_materno
                                 },
                                 tooltip: {
                                     style: {
@@ -79,18 +76,35 @@
                                             symbol: "circle"
                                         },
 
-                                        data: [
-                                            {
-                                                x: Date.UTC(1959, 0, 4),
-                                                name: '' + datos[0][j].nombres + '',
-                                                label: j+' ' + datos[0][j].dependencia + ' , '+datos[0][j].date,
-                                            },
-                                        ]
+                                        data:
+                                            (function (){
+                                            var data = [],j;
+
+                                            for ( j = 0; j < datos[0].length; j++) {
+                                                var time=(new Date()).getTime();
+                                                var dat=datos[0][j].date;
+
+                                                const offset = new Date().getTimezoneOffset();
+                                                console.log(offset)
+
+                                                const mydate=Date.parse(dat);
+                                                console.log(mydate)
+
+                                                data.push({
+                                                    x: mydate +( 660  +j* 1000),
+                                                    name: datos[0][j].dependencia,
+                                                    label: datos[0][j].dependencia
+                                                });
+                                                console.log(data)
+                                            }
+                                            return data;
+                                            }())
+
                                     }
                                 ]
 
                             });
-                        }
+
                     });
 
                 }

@@ -37,7 +37,8 @@
 
 'ruta_destroy'=>'datos_generales.destroy',
 'ruta_store'=>'datos_generales.store',
-'ruta_edit'=>'datos_generales.update'
+'ruta_edit'=>'datos_generales.update',
+'ruta_seguir'=>'seguimiento.store'
 ],[
 
 'datos_situacion_conyugal' => $datos_situacion_conyugal,

@@ -332,7 +332,7 @@
                                         <button class="next_button">Siguiente</button>
                                     </div>
                                 </div>
-                                <div class="main ">
+                                <div class="main">
                                     <div class="text">
                                         <h2>Canalización Victima:</h2>
                                     </div>

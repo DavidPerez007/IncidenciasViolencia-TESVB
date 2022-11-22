@@ -2,18 +2,11 @@
 @section('contenido')
     <!-- Button trigger modal -->
     <div class="text-end">
-        <button type="button" class="btn btn-primary mt-4 mb-5 " onclick="myFunction()" data-bs-toggle="modal"
+        <button type="button" class="btn btn-primary mt-4 mb-5 "  data-bs-toggle="modal"
                 data-bs-target="#create">
             <i class="fas fa-plus-circle "></i> Agregar
         </button>
     </div>
-
-    {{--<script>
-        function myFunction(){
-            $('#modaledit').find("*").prop('disabled',true).hide();
-            console.log('ssclic');
-        }
-    </script>--}}
 
     <div class="">
         <div class="text-center"><label class="text-center"><h2>{{$nombre}}</h2></label></div>
@@ -60,13 +53,8 @@
                                             data-bs-toggle="modal" data-bs-target="#edit-{{$dato->$id}}">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </button>
-                                    {{--}}   @include('componentes.catalogos.datogeneral.editstep')
-                                        <script>
-                                              function myFunctionedit(){
-                                                  $('#modaledit').find("*").prop('disabled',false).show();
-                                                  console.log('editclic');
-                                              }
-                                          </script>--}}
+                                    {{-- @include('componentes.catalogos.datogeneral.editstep')
+                                        --}}
 
 
                                     <form action="{{route($ruta_destroy, $dato->$id)}}" method="POST" class="">
@@ -79,7 +67,7 @@
 
                                     <button type="button" title="Ruta" class="btn btn-primary"
                                             onclick="myFunctionRutaCheck({{ $dato->$id}})" data-bs-toggle="modal"
-                                            data-bs-target="#seguir_ruta">
+                                            data-bs-target="#seguir_ruta-{{$dato->$id}}">
                                         <i class="bi bi-map-fill"></i>
                                     </button>
                                 </div>
