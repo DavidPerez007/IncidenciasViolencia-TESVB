@@ -1,5 +1,5 @@
 
-<div class="modal fade" id="seguir_ruta-{{$dato[$id]}}" tabindex="-1" aria-labelledby="seguir_ruta-{{$dato[$id]}}" aria-hidden="true">
+<div class="modal fade" id="seguir_ruta" tabindex="-1" aria-labelledby="seguir_ruta" aria-hidden="true">
     <div class="modal-dialog modal-lg" >
         <div class="modal-content " >
             <div class="modal-header alert alert-primary">
