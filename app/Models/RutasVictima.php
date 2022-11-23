@@ -12,6 +12,6 @@ class RutasVictima extends Model
     use SoftDeletes;
     protected $table="rutas_victimas";
     protected $primaryKey="id_ruta_victima";
-    protected $fillable=["rutas","id_datos_generales","date"];
+    protected $fillable=["dependencia",'observaciones',"id_datos_generales","date"];
 
 }

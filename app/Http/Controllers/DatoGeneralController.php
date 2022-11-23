@@ -52,7 +52,6 @@ class DatoGeneralController extends Controller
 
     public function index()
     {
-
         $datos_generales=DB::table( 'registro_victima')
             ->join('datos_generales','registro_victima.id_datos_generales', '=','datos_generales.id_datos_generales')
             ->join('municipio',    'registro_victima.id_municipio',   '=','municipio.id_municipio')
@@ -129,6 +128,7 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
          * and datos_generales.id_idioma=idioma.id_idioma
          * and datos_generales.id_domicilio=domicilio.id_domicilio;
         **/
+
         $datos_gene=DB::table( 'datos_generales')
             ->join('nacionalidad', 'datos_generales.id_nacionalidad', '=','nacionalidad.id_nacionalidad')
             ->join('situ_conyugal','datos_generales.id_situ_conyugal','=','situ_conyugal.id_situ_conyugal')
@@ -155,7 +155,6 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
                 'nacionalidad.nacionalidad',
                 'idioma.idioma_espaniol',
                 'domicilio.*')->get();
-
         $datos_sit_con=SituConyugal::all();
         $datos_sexo=Sexo::all();
         $datos_nacionalidad=Nacionalidad::all();
@@ -206,7 +205,7 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
                 'id_modalidad_violencia'=>$request->id_modalidad_violencia]);
 
         }
-       // dd($request);;
+      // dd($request);;
 
         ///si se va agregar un nuevo domicilio
         if ($request->id_domicilio==null) {
@@ -259,6 +258,7 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
         DB::table('rutas_victimas')->insert(['dependencia'=>'Canalización','id_datos_generales'=>$datos_generales->id_datos_generales,]);
 
         $domicilio = Domicilio::find(1)->orderBy('id_domicilio', 'desc')->first();
+
         //insertar en Registro Victima
         DB::table('registro_victima')->
         insert(['id_datos_generales'=>$datos_generales->id_datos_generales,'vive_con'=>$request->vive_con,

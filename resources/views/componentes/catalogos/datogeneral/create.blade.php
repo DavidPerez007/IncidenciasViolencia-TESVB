@@ -92,6 +92,7 @@
                                     <div class="buttons button_space">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
                                         <button class="next_button">Siguiente</button>
+                                        <button class="next_button">Siguiente</button>
                                     </div>
                                 </div>
                                 <div class="main">

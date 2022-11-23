@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('contenido')
-
 <!-- Button trigger modal -->
-
 <div class="text-end">
     <button type="button" class="btn btn-primary mt-4 mb-5 " data-bs-toggle="modal" data-bs-target="#create">
     <i class="fas fa-plus-circle"></i> Agregar

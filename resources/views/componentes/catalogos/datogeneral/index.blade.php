@@ -2,8 +2,7 @@
 @section('contenido')
     <!-- Button trigger modal -->
     <div class="text-end">
-        <button type="button" class="btn btn-primary mt-4 mb-5 "  data-bs-toggle="modal"
-                data-bs-target="#create">
+        <button type="button" class="btn btn-primary mt-4 mb-5 "  data-bs-toggle="modal" data-bs-target="#create">
             <i class="fas fa-plus-circle "></i> Agregar
         </button>
     </div>
@@ -34,6 +33,7 @@
                     </thead>
                     <tbody>
                     @foreach($datos as $dato)
+
                         <tr>
                             <td class="text-center">{{$loop->index+1}}</td>
                             <td class="text-center">{{$dato->$nombres}}  {{$dato->$ape_paterno}}  {{$dato->$ape_materno}}</td>
@@ -50,7 +50,7 @@
                             <td class="text-center">
                                 <div class="d-inline-flex">
                                     <button type="button" onclick="myFunctionedit()" class="btn btn-primary"
-                                            data-bs-toggle="modal" data-bs-target="#edit-{{$dato->$id}}">
+                                            data-bs-toggle="modal" data-bs-target="#edit-{{$dato->$id}}" hidden>
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </button>
                                     {{-- @include('componentes.catalogos.datogeneral.editstep')
@@ -66,10 +66,11 @@
 
 
                                     <button type="button" title="Ruta" class="btn btn-primary"
-                                            onclick="myFunctionRutaCheck({{ $dato->$id}})" data-bs-toggle="modal"
-                                            data-bs-target="#seguir_ruta-{{$dato->$id}}">
+                                            onclick="myFunctionRutaCheck({{$dato->$id}})" data-bs-toggle="modal"
+                                            data-bs-target="#seguir_ruta-{{$dato[$id]}}" >
                                         <i class="bi bi-map-fill"></i>
                                     </button>
+                                    @include('componentes.catalogos.datogeneral.rutas')
                                 </div>
 
 
@@ -83,7 +84,6 @@
         </div>
     </div>
 
-    @include('componentes.catalogos.datogeneral.rutas')
     @include('componentes.catalogos.datogeneral.seguimiento')
     @include('componentes.catalogos.datogeneral.create')
 

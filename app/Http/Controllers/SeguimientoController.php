@@ -15,7 +15,7 @@ class SeguimientoController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
