@@ -19,7 +19,7 @@ class CreateRutasVictimasTable extends Migration
             $table->string('observaciones','100')->nullable('TRUE');
             $table->unsignedBigInteger('id_datos_generales');
             $table->foreign('id_datos_generales')->references('id_datos_generales')->on('datos_generales')->onDelete('cascade');
-            $table->date('date')->default (DB::raw('CURRENT_TIMESTAMP'));
+            $table->date('date')->default (now());
             $table->timestamps();
             $table->softDeletes();
         });
