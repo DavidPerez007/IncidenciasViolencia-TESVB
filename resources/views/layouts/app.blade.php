@@ -119,6 +119,40 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $('#no_casos').DataTable({
+
+                "sort": true,
+                "order" : [[0,"asc"]],
+                "columnDefs": [ {
+                    "targets": [1,2,3,4,5,6,7,8,9,10,11],
+                    "orderable": false
+                } ],
+                "language":{
+                    "info":"_TOTAL_ Registros",
+                    "search":"Buscar",
+                    "paginate":{
+                        "next":"Siguiente",
+                        "previous":"Anterior",
+                    },
+                    "lengthMenu":'Mostrar <select>'+
+                        '<option value="10">10</option>'+
+                        '<option value="20">20</option>'+
+                        '<option value="30">30</option>'+
+                        '<option value="-1">Todos</option>'+
+                        '</select> registros',
+                    "loadingRecords":"Cargando...",
+                    "processing":"Procesando...",
+                    "emptyTable":"No hay datos.",
+                    "zeroRecords":"No hay coincidencias.",
+                    "infoEmpty":"",
+                    "infoFiltered":"",
+
+                },
+            });
+        });
+    </script>
 
 
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -145,7 +179,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="{{url("dashboard")}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>

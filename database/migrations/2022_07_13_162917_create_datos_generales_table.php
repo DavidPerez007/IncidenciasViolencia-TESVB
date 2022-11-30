@@ -34,6 +34,9 @@ class CreateDatosGeneralesTable extends Migration
             $table->unsignedBigInteger('id_domicilio');
             $table->foreign('id_domicilio')->references('id_domicilio')->on('domicilio')->onDelete('cascade');
             $table->timestamp('date')->default(now());
+
+            $table->string('nic',30);
+            $table->string('nuc',28);
             $table->timestamps();
             $table->softDeletes();
         });

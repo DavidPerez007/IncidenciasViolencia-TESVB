@@ -74,7 +74,11 @@
 
  'datos_rutas'=>$datos_rutas,
  'ruta'=>"dependencia",
- 'date'=>"date"
+ 'date'=>"date",
+
+ 'datos_estados'=>$datos_estados,
+ 'id_estado'=>'id_estado',
+ 'estado'=>'estado'
 
 ])
 <!--End componente documento-->

@@ -286,43 +286,58 @@
                                         </div>
 
                                         <div class="input-text"  >
-                                            <div class="input-div form-floating mb-3">
+                                            <div class="input-div form-floating ">
                                                 <input type="text"  required require  name="calle" id="calle" class="form-control" placeholder="Calle">
                                                 <label for="calle">Calle / Ñiii</label>
                                             </div>
-                                            <div class="input-div form-floating mb-3" >
+                                            <div class="input-div form-floating " >
                                                 <input type="text" required require name="colonia" id="colonia" class="form-control" placeholder="">
                                                 <label for="colonia">Colonia / Ri xoru</label>
                                             </div>
                                         </div>
 
                                         <div class="input-text">
-                                            <div class="input-div form-floating mb-3">
+                                            <div class="input-div form-floating ">
                                                 <input type="text" required require name="no_interior" id="no_interior" class="form-control" placeholder="">
-                                                <label for="no_interior">Número Interior / Mberee srrinu</label>
+                                                <label for="no_interior">Número Interior \n / Mberee srrinu</label>
                                             </div>
                                         </div>
 
                                         <div class="input-text">
-                                            <div class="input-div form-floating mb-3">
+                                            <div class="input-div form-floating ">
                                                 <input type="text" required require name="no_exterior" id="no_exterior" class="form-control" placeholder="" >
                                                 <label for="no_exterior">Número Exterior / Mberee mböö</label>
                                             </div>
                                         </div>
+
+                                        <div class="input-text">
+                                            <div class="input-div">
+                                                <label>Codigo postal / Xakajiii</label>
+                                                <input type="text" name="cod_postal" id="cod_postal" class="form-control" placeholder="Codigo postal">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-text" id="estado" >
+                                        <div class="input-div" >
+                                            <label for="id_estado">Estado</label>
+                                            <select type="text"   name="id_estado" id="id_estado" class="form-select">
+                                                <option value="">Elegir Estado</option>
+                                                @foreach($datos_estados as $datos_estado)
+                                                    <option value="{{$datos_estado->$id_estado}}">{{$datos_estado->$estado}}</option>
+                                                @endforeach
+
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="input-text" id="municipios">
-                                        <div class="input-div">
-                                            <label>Codigo postal / Xakajiii</label>
-                                            <input type="text" required require name="cod_postal" id="cod_postal" class="form-control" placeholder="Codigo postal">
-                                        </div>
                                         <div class="input-div" >
-                                            <label for="">Municipio / Ri menzum</label>
+                                            <label for="id_municipio">Municipio / Ri menzum</label>
                                             <select type="text"   name="id_municipio" id="id_municipio" class="form-select">
-                                                <option value="">Elegir Municipio</option>
+                                              {{--}}  <option value="">Elegir Municipio</option>
                                                 @foreach($datos_municipios as $dato_municipio)
                                                     <option value="{{$dato_municipio->$id_municipio}}">{{$dato_municipio->$municipio}}</option>
                                                 @endforeach
-
+--}}
                                             </select>
                                         </div>
                                     </div>
@@ -358,6 +373,7 @@
                                             <label for="apoyo">Apoyo</label>
                                         </div>
                                     </div>
+
                                     <div class="input-text">
                                         <div class="input-div form-floating mb-3">
                                             <input type="text" required require name="imputado" id="imputado" class="form-control" placeholder="">
@@ -378,6 +394,21 @@
                                         </div>
 
                                     </div>
+
+                                    <div class="input-text">
+                                        <div class="input-div form-floating mb-3">
+                                            <input type="text" required require name="nic" id="nic" class="form-control" placeholder="">
+                                            <label for="imputado">Número interno de control (NIC)</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-text">
+                                        <div class="input-div form-floating mb-3">
+                                            <input type="text" required require name="nuc" id="nuc" class="form-control" placeholder="">
+                                            <label for="imputado">Número único de causa (NUC)</label>
+                                        </div>
+                                    </div>
+
                                     <div class="buttons button_space">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
                                         <button class="back_button">Regresar</button>

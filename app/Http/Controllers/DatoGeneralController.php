@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Livewire\TipoApoyos;
 use App\Models\DatoGeneral;
 use App\Models\Domicilio;
+use App\Models\Estado;
 use App\Models\Idioma;
 use App\Models\ModalidadViolencia;
 use App\Models\Municipio;
@@ -26,11 +27,24 @@ class DatoGeneralController extends Controller
         return [
             DB::table('domicilio')->where('id_domicilio', $id)
                 ->join('municipio', 'domicilio.id_municipio', '=', 'municipio.id_municipio')
+                ->join('estado','municipio.id_estado','=','estado.id_estado')
                 ->select(
                     'municipio.municipio',
-                    'domicilio.*')->get(),
+                    'domicilio.*','estado.*')->get(),
             Municipio::all(),
+            Estado::all(),
         ];
+    }
+    public function estado($id){
+        return [
+            DB::table('municipio')->where('id_estado', $id)
+                ->select(
+                    'municipio.id_municipio',
+                    'municipio.municipio',
+                    'municipio.id_estado'
+                )->get()
+        ];
+
     }
     public function idioma(Request $request){
         return [
@@ -52,6 +66,7 @@ class DatoGeneralController extends Controller
 
     public function index()
     {
+
         $datos_generales=DB::table( 'registro_victima')
             ->join('datos_generales','registro_victima.id_datos_generales', '=','datos_generales.id_datos_generales')
             ->join('municipio',    'registro_victima.id_municipio',   '=','municipio.id_municipio')
@@ -75,6 +90,8 @@ class DatoGeneralController extends Controller
                 'datos_generales.id_nacionalidad',
                 'datos_generales.id_situ_conyugal',
                 'datos_generales.id_domicilio',
+                'datos_generales.nic',
+                'datos_generales.nuc',
                 'sexo.sexo',
                 'situ_conyugal.situacion_conyugal',
                 'nacionalidad.nacionalidad',
@@ -83,83 +100,12 @@ class DatoGeneralController extends Controller
                 'registro_victima.*',
                 'municipio.municipio'
             )->get();
-
-        /**SELECT
-registro_victima.*,
-datos_generales.*
-,municipio.municipio,
-domicilio.*,
-situ_conyugal.situacion_conyugal,
-nacionalidad.id_nacionalidad,
-sexo.sexo,
-idioma.idioma_espaniol
-FROM
-registro_victima,
-datos_generales,
-municipio,
-domicilio,
-situ_conyugal,
-sexo,
-nacionalidad,
-idioma
-WHERE
-registro_victima.id_datos_generales =datos_generales.id_datos_generales
-and registro_victima.id_municipio=municipio.id_municipio
-AND registro_victima.id_domicilio = domicilio.id_domicilio
-AND datos_generales.id_situ_conyugal =situ_conyugal.id_situ_conyugal
-AND datos_generales.id_sexo =sexo.id_sexo
-AND datos_generales.id_nacionalidad=nacionalidad.id_nacionalidad
-AND datos_generales.id_idioma=idioma.id_idioma
-AND datos_generales.id_domicilio =domicilio.id_domicilio;
-**/
-
-
-        /**
-        SELECT
-            datos_generales.nombres,datos_generales.ape_paterno,datos_generales.ape_materno,datos_generales.fecha_nacimiento,datos_generales.hijos,datos_generales.telefono,datos_generales.email,
-            datos_generales.grupo_etnico,
-            sexo.sexo,situ_conyugal.situacion_conyugal,nacionalidad.nacionalidad,idioma.idioma_espaniol,domicilio.calle
-        FROM
-            datos_generales,sexo,situ_conyugal,nacionalidad,idioma,domicilio
-        WHERE
-         *     datos_generales.id_situ_conyugal=situ_conyugal.id_situ_conyugal
-         * and datos_generales.id_sexo=sexo.id_sexo
-         * and datos_generales.id_nacionalidad=nacionalidad.id_nacionalidad
-         * and datos_generales.id_idioma=idioma.id_idioma
-         * and datos_generales.id_domicilio=domicilio.id_domicilio;
-        **/
-
-        $datos_gene=DB::table( 'datos_generales')
-            ->join('nacionalidad', 'datos_generales.id_nacionalidad', '=','nacionalidad.id_nacionalidad')
-            ->join('situ_conyugal','datos_generales.id_situ_conyugal','=','situ_conyugal.id_situ_conyugal')
-            ->join('sexo',         'datos_generales.id_sexo',         '=','sexo.id_sexo')
-            ->join('idioma',       'datos_generales.id_idioma',       '=','idioma.id_idioma')
-            ->join('domicilio',    'datos_generales.id_domicilio',    '=','domicilio.id_domicilio')
-            ->select(
-                'datos_generales.id_datos_generales',
-                'datos_generales.nombres',
-                'datos_generales.ape_paterno',
-                'datos_generales.ape_materno',
-                'datos_generales.fecha_nacimiento',
-                'datos_generales.hijos',
-                'datos_generales.telefono',
-                'datos_generales.email',
-                'datos_generales.grupo_etnico',
-                'datos_generales.id_sexo',
-                'datos_generales.id_idioma',
-                'datos_generales.id_nacionalidad',
-                'datos_generales.id_situ_conyugal',
-                'datos_generales.id_domicilio',
-                'sexo.sexo',
-                'situ_conyugal.situacion_conyugal',
-                'nacionalidad.nacionalidad',
-                'idioma.idioma_espaniol',
-                'domicilio.*')->get();
         $datos_sit_con=SituConyugal::all();
         $datos_sexo=Sexo::all();
         $datos_nacionalidad=Nacionalidad::all();
         $datos_idioma=Idioma::all();
         $datos_domicilio=Domicilio::all();
+        $datos_estados=Estado::all();
         $datos_municipios=Municipio::all();
         $datos_registro_victima=RegistroVictima::all();
         $datos_tipo_violencia=TipoViolencia::all(['id_tipo_violencia','tipo_violencia']);
@@ -183,7 +129,8 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
                 'datos_modalidad_violencia'=>$datos_modalidad_violencia,
                 'datos_tipo_apoyo'=>$datos_tipo_apoyo,
                 'datos_tipo_relacion'=>$datos_tipo_relacion,
-                'datos_rutas'=>$datos_rutas
+                'datos_rutas'=>$datos_rutas,
+                'datos_estados'=>$datos_estados
             ]);
     }
 
@@ -194,7 +141,6 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
 
     public function store(Request $request)
     {
-
         $tipos_violecia=$request->id_tipo_violencia;
         foreach ($tipos_violecia as $tipo_violencia )
         {
@@ -224,6 +170,7 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
                     'id_situ_conyugal'=>$request->id_situ_conyugal,'id_sexo'=>$request->id_sexo,'fecha_nacimiento'=>$request->fecha_nacimiento,
                     'hijos'=>$request->hijos,'telefono'=>$request->telefono,'email'=>$request->email,'grupo_etnico'=>$request->grupo_etnico,
                     'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$domicilio->id_domicilio,
+                    'nic'=>$request->nic,'nuc'=>$request->nuc
                     ]);
 
         }
@@ -247,7 +194,8 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
                 ->insert(['nombres'=>$request->nombres,'ape_paterno'=>$request->ape_paterno,'ape_materno'=>$request->ape_materno,
                     'id_situ_conyugal'=>$request->id_situ_conyugal,'id_sexo'=>$request->id_sexo,'fecha_nacimiento'=>$request->fecha_nacimiento,
                     'hijos'=>$request->hijos,'telefono'=>$request->telefono,'email'=>$request->email,'grupo_etnico'=>$request->grupo_etnico,
-                    'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$request->id_domicilio]);
+                    'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$request->id_domicilio,
+                    'nic'=>$request->nic,'nuc'=>$request->nuc]);
 
         }
 
@@ -255,7 +203,7 @@ AND datos_generales.id_domicilio =domicilio.id_domicilio;
         $datos_generales = DatoGeneral::find(1)->orderBy('id_datos_generales', 'desc')->first();
 
         DB::table('rutas_victimas')->insert(['dependencia'=>'Registro','id_datos_generales'=>$datos_generales->id_datos_generales,]);
-        DB::table('rutas_victimas')->insert(['dependencia'=>'Canalización','id_datos_generales'=>$datos_generales->id_datos_generales,]);
+        DB::table('rutas_victimas')->insert(['dependencia'=>$request->dependencia,'id_datos_generales'=>$datos_generales->id_datos_generales,]);
 
         $domicilio = Domicilio::find(1)->orderBy('id_domicilio', 'desc')->first();
 

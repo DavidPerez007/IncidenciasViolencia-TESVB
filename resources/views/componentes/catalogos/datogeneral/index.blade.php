@@ -10,11 +10,11 @@
     <div class="">
         <div class="text-center"><label class="text-center"><h2>{{$nombre}}</h2></label></div>
 
-
         <div class="card">
             <div class="card-body">
 
                 <table id="registroVictimas" class="table table-bordered table-hover table-striped  ">
+
                     <thead class="thead-dark bg-primary text-white  ">
                     <tr class="text-center">
                         <th>Id</th>
@@ -28,6 +28,7 @@
                         <th>Nacionalidad</th>
                         <th>Idioma</th>
                         <th>Domicilio</th>
+                        <th>Municipio</th>
                         <th class="size">Acción</th>
                     </tr>
                     </thead>
@@ -42,11 +43,12 @@
                             <td class="text-center">{{$dato->$fecha_nacimiento}}</td>
                             <td class="text-center">{{$dato->$hijos}}</td>
                             <td class="text-center">{{$dato->$telefono}}</td>
-                            {{--<td class="text-center">{{$dato->$email}}</td>--}}
+                            {{--<td class="text-center">{{$dato->$email}}</td>----}}
                             <td class="text-center">{{$dato->$grupo_etnico}}</td>
                             <td class="text-center">{{$dato->$nacionalidad}}</td>
                             <td class="text-center">{{$dato->$idioma}}</td>
                             <td class="text-center">{{$dato->$domicilio}}</td>
+                            <td class="text-center">{{$dato->$municipio}}</td>
                             <td class="text-center">
                                 <div class="d-inline-flex">
                                     <button type="button" onclick="myFunctionedit()" class="btn btn-primary"
