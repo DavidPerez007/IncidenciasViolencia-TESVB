@@ -45,7 +45,7 @@
                         </form>
 
 
-                       <div class="form" id="container">
+                       <div class="form" id="container{{$dato->$id}}">
 
                        </div>
 
@@ -53,14 +53,14 @@
                 </div>
 
             <script>
-                function myFunctionRutaCheck($id){
-                    let id = $id;
+                function myFunctionRutaCheck(id){
+                  //  let id = id;
                     console.log(id);
                     //ajax
                     $.get('/api/ruta/'+id+'/rutas', function (datos){
                         console.log(datos);
 
-                        Highcharts.chart("container", {
+                        Highcharts.chart("container"+id, {
 
                                 chart: {
                                     zoomType: "x",

@@ -15,7 +15,6 @@
                                 <h2>Canalización Victima:</h2>
                             </div>
 
-                            <input type="hidden" value="{{$id}}" name="dato_id">
 
                         <div class="col-12">
                                 <div class="input-div form-floating mb-3">
