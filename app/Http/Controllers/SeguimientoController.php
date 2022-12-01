@@ -36,7 +36,7 @@ class SeguimientoController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->id);
+        
         DB::table('rutas_victimas')
             ->insert([
                 'dependencia'=>$request->dependencia,
