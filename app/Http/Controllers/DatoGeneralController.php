@@ -56,6 +56,7 @@ class DatoGeneralController extends Controller
     }
 
     public function rutas($id){
+
       return [
          DB::table('rutas_victimas')->where('rutas_victimas.id_datos_generales',$id)
              ->join('datos_generales','rutas_victimas.id_datos_generales','=','datos_generales.id_datos_generales')

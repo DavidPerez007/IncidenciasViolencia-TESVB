@@ -1,5 +1,5 @@
 
-<div class="modal fade" id="seguir_ruta" tabindex="-1" aria-labelledby="seguir_ruta" aria-hidden="true">
+<div class="modal fade" id="seguir_ruta-{{$dato->$id}}" tabindex="-1" aria-labelledby="seguir_ruta" aria-hidden="true">
     <div class="modal-dialog modal-lg" >
         <div class="modal-content " >
             <div class="modal-header alert alert-primary">
@@ -36,7 +36,7 @@
                                         <label for="observaciones">Observaciones</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <button type="submit" class="btn btn-primary" >Registrar</button>
+                                        <button type="submit" class="btn btn-primary mb-3" >Registrar</button>
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
                                     </div>
                                 </div>
@@ -45,7 +45,7 @@
                         </form>
 
 
-                       <div class="form" id="containee">
+                       <div class="form" id="container">
 
                        </div>
 
@@ -55,10 +55,12 @@
             <script>
                 function myFunctionRutaCheck($id){
                     let id = $id;
+                    console.log(id);
                     //ajax
                     $.get('/api/ruta/'+id+'/rutas', function (datos){
+                        console.log(datos);
 
-                        Highcharts.chart("containee", {
+                        Highcharts.chart("container", {
 
                                 chart: {
                                     zoomType: "x",

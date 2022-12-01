@@ -1,5 +1,5 @@
 
-<div class="modal fade" id="seguimiento" tabindex="-1" aria-labelledby="seguimiento " aria-hidden="true">
+<div class="modal fade" id="seguimiento-{{$dato->$id}}" tabindex="-1" aria-labelledby="seguimiento " aria-hidden="true">
     <div class="modal-dialog " >
         <div class="modal-content " >
             <div class="modal-header alert alert-primary">
@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 </button>
             </div>
-             <form method="POST" action="{{ route($ruta_seguir) }}" id="search-form"role="form" enctype="multipart/form-data">
+             <form method="POST" action="{{ route($ruta_seguir,$dato->$id)}}" id="search-form"role="form" enctype="multipart/form-data">
                  {{ csrf_field() }}
 
                     <div class="modal-body">

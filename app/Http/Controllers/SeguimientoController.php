@@ -43,6 +43,7 @@ class SeguimientoController extends Controller
                 'id_datos_generales'=>$request->dato_id,
             ]);
 
+
         return redirect()->back();
     }
 

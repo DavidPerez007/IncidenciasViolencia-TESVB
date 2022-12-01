@@ -69,7 +69,7 @@
 
                                     <button type="button" title="Ruta" class="btn btn-primary"
                                             onclick="myFunctionRutaCheck({{$dato->$id}})" data-bs-toggle="modal"
-                                            data-bs-target="#seguir_ruta" >
+                                            data-bs-target="#seguir_ruta-{{$dato->$id}}" >
                                         <i class="bi bi-map-fill"></i>
                                     </button>
                                     @include('componentes.catalogos.datogeneral.rutas')
