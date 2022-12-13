@@ -51,108 +51,12 @@
         <script src="https://code.highcharts.com/modules/timeline.js"></script>
 
         <script  type="text/javascript" src="{{asset("/js/ruta.js")}}"></script>
+        <script  type="text/javascript" src="{{asset("/js/DataTable.js")}}"></script>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
     </head>
     <body>
-
-    <script>
-        $(document).ready(function () {
-            $('#tablaCatalogos').DataTable({
-
-                "language":{
-                    "info":"_TOTAL_ Registros",
-                    "search":"Buscar",
-                    "paginate":{
-                        "next":"Siguiente",
-                        "previous":"Anterior",
-                    },
-                    "lengthMenu":'Mostrar <select>'+
-                        '<option value="10">10</option>'+
-                        '<option value="20">20</option>'+
-                        '<option value="30">30</option>'+
-                        '<option value="-1">Todos</option>'+
-                        '</select> registros',
-                    "loadingRecords":"Cargando...",
-                    "processing":"Procesando...",
-                    "emptyTable":"No hay datos.",
-                    "zeroRecords":"No hay coincidencias.",
-                    "infoEmpty":"",
-                    "infoFiltered":"",
-
-                }
-            });
-        });
-    </script>
-    <script>
-            $(document).ready(function () {
-            $('#registroVictimas').DataTable({
-
-                "sort": true,
-                "order" : [[0,"asc"]],
-                "columnDefs": [ {
-                    "targets": [1,2,3,4,5,6,7,8,9,10,11],
-                    "orderable": false
-                } ],
-                "language":{
-                    "info":"_TOTAL_ Registros",
-                    "search":"Buscar",
-                    "paginate":{
-                        "next":"Siguiente",
-                        "previous":"Anterior",
-                    },
-                    "lengthMenu":'Mostrar <select>'+
-                        '<option value="10">10</option>'+
-                        '<option value="20">20</option>'+
-                        '<option value="30">30</option>'+
-                        '<option value="-1">Todos</option>'+
-                        '</select> registros',
-                    "loadingRecords":"Cargando...",
-                    "processing":"Procesando...",
-                    "emptyTable":"No hay datos.",
-                    "zeroRecords":"No hay coincidencias.",
-                    "infoEmpty":"",
-                    "infoFiltered":"",
-
-                },
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $('#no_casos').DataTable({
-
-                "sort": true,
-                "order" : [[0,"asc"]],
-                "columnDefs": [ {
-                    "targets": [1,2,3,4,5,6,7,8,9,10,11],
-                    "orderable": false
-                } ],
-                "language":{
-                    "info":"_TOTAL_ Registros",
-                    "search":"Buscar",
-                    "paginate":{
-                        "next":"Siguiente",
-                        "previous":"Anterior",
-                    },
-                    "lengthMenu":'Mostrar <select>'+
-                        '<option value="10">10</option>'+
-                        '<option value="20">20</option>'+
-                        '<option value="30">30</option>'+
-                        '<option value="-1">Todos</option>'+
-                        '</select> registros',
-                    "loadingRecords":"Cargando...",
-                    "processing":"Procesando...",
-                    "emptyTable":"No hay datos.",
-                    "zeroRecords":"No hay coincidencias.",
-                    "infoEmpty":"",
-                    "infoFiltered":"",
-
-                },
-            });
-        });
-    </script>
 
 
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">

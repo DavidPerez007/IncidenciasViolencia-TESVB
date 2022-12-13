@@ -14,23 +14,32 @@ class DashboardController extends Controller
             ->select('municipio.id_municipio','municipio.municipio','estado.id_estado','estado.estado')
         ->join('estado','estado.id_estado','=','municipio.id_estado')->get();
 
-    //    $datos_generales=DB::table( 'datos_generales')->count();
 
-//dd($datos_municipios);
-     foreach ($datos_municipios as $dato_municipio) {
-        $id=$dato_municipio->id_municipio;
+        foreach ($datos_municipios as $dato_municipio) {
+           $id=$dato_municipio->id_municipio;
 
-         $datos_count = DB::table('domicilio')
+            $datos_count = DB::table('domicilio')
 
-             ->join('datos_generales', 'domicilio.id_domicilio', '=', 'datos_generales.id_domicilio')
-             ->where('domicilio.id_municipio', '=', $id)->count()
-             ;
+                ->join('datos_generales', 'domicilio.id_domicilio', '=', 'datos_generales.id_domicilio')
+                ->where('domicilio.id_municipio', '=', $id)->count()
+                ;
 
-         $dato_municipio->count_row=$datos_count;
-     }
+            $dato_municipio->count_row=$datos_count;
+        }
 
-        //dd($datos_municipios[726]->add_whatever_element_you_want[0]->count_row);
-//dd($datos_municipios[726]);
+       $max= $datos_municipios->max('count_row');
+        $min= $datos_municipios->min('count_row');
+        $median= $datos_municipios->median('count_row');
+
+        /** $max= 500;
+        $min=30;
+        $median= 100;**/
+
+        $rango_minimo=((($median-$min)*60)/100);
+        $rango_maximo=((($max-$median)*70)/100);
+
+
+       // dd('minimo: ',$min,'rango_minimo: ',$rango_min,' median:',$median,' max:', $max,' rango_max:', $rango_max);
 
 
         //SELECT COUNT(*) FROM `datos_generales`, municipio, domicilio
@@ -40,6 +49,11 @@ class DashboardController extends Controller
         ///
         return view('catalogos.dashboard',
             [
-                'datos_municipios' => $datos_municipios]);
+                'datos_municipios' => $datos_municipios,
+                'max'=>$max,
+                'min'=>$min,
+                'rango_minimo'=>$rango_minimo,
+                'rango_maximo'=>$rango_maximo
+                ]);
     }
 }

@@ -10,6 +10,12 @@
 
 'ruta_destroy'=>'dashboard.destroy',
 'ruta_store'=>'dashboard.store',
-'ruta_edit'=>'dashboard.update'
+'ruta_edit'=>'dashboard.update',
+],[
+
+    'num_max' => $max,
+    'num_min' => $min,
+    'rango_min'=>$rango_minimo,
+    'rango_max'=>$rango_maximo
 ])
 <!--End componente catalogo-->
