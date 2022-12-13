@@ -45,9 +45,9 @@
 
                                @if    ($dato->$count_row == $num_max and $dato->$count_row > $rango_max)
                                    <td class="estado3"></td>
-                               @elseif($dato->$count_row >=  $rango_min and $dato->$count_row <=  $rango_max)
+                               @elseif($dato->$count_row == 1)
                                    <td class="estado2"></td>
-                               @elseif($dato->$count_row == $num_min and $dato->$count_row < $rango_min)
+                               @elseif($dato->$count_row <1)
                                    <td class="estado1"></td>
                                @endif
 
