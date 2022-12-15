@@ -43,12 +43,12 @@
                                <td class="text-center">{{$dato->$municipio}}</td>
                                <td class="text-center">{{$dato->$count_row}} </td>
 
-                               @if    ($dato->$count_row == $num_max and $dato->$count_row > $rango_max)
+                               @if    ($dato->$count_row <= $num_max and $dato->$count_row >= $rango_max)
                                    <td class="estado3"></td>
-                               @elseif($dato->$count_row == 1)
-                                   <td class="estado2"></td>
-                               @elseif($dato->$count_row <1)
+                               @elseif($dato->$count_row >= $num_min and $dato->$count_row <= $rango_min)
                                    <td class="estado1"></td>
+                               @elseif($dato->$count_row >  $rango_min and $dato->$count_row < $rango_max)
+                                   <td class="estado2"></td>
                                @endif
 
                            </tr>

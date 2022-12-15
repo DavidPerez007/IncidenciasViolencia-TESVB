@@ -39,7 +39,7 @@ class DashboardController extends Controller
         $rango_maximo=((($max-$median)*70)/100);
 
 
-       // dd('minimo: ',$min,'rango_minimo: ',$rango_min,' median:',$median,' max:', $max,' rango_max:', $rango_max);
+       //dd('minimo: ',$min,'rango_minimo: ',$rango_minimo,' median:',$median,' max:', $max,' rango_max:', $rango_maximo);
 
 
         //SELECT COUNT(*) FROM `datos_generales`, municipio, domicilio

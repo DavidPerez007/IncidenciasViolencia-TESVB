@@ -36,5 +36,7 @@ class DatabaseSeeder extends Seeder
         $this->call([AgentesLesionSeeder::class]);
         $this->call([AreaLesionSeeder::class]);
         $this->call([ServicioMedicoSeeder::class]);
+        $this->call([domicilios_seeder::class]);
+        $this->call([datosGenerales_seeder::class]);
     }
 }
