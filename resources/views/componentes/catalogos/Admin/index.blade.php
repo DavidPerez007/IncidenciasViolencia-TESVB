@@ -30,7 +30,7 @@
                                     data-bs-target="#edit-{{$dato->$id}}">
                               <i class="fa-solid fa-check"></i>
                             </button>
-                          @include('componentes.catalogos.admin.auth')
+                          @include('componentes.catalogos.Admin.auth')
                       </div>
                     </td>
                 </tr>
@@ -64,7 +64,7 @@
                                              data-bs-target="#edit-{{$dato_auth->$id}}">
                                          <i class="fa-solid fa-check-double"></i>
                                      </button>
-                                    @include('componentes.catalogos.admin.desau')
+                                    @include('componentes.catalogos.Admin.desau')
                                </div>
                             </td>
 
@@ -78,8 +78,6 @@
     </div>
 
 
-    {{--}} @include('componentes.catalogos.clas_violencia.create')
---}}
 
     @if($errors->any() && old("mode")=='create' )
         @push("scripts")
