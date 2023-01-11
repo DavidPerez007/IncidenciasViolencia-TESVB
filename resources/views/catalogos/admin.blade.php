@@ -1,5 +1,5 @@
 <!--Componente catalogo-->
-@include('componentes.catalogos.admin.index',
+@include('componentes.catalogos.Admin.index',
 ['datos' => $datos_users,
 'name' => 'name',
 'email' => 'email',
