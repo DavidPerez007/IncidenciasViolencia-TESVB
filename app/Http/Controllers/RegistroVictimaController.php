@@ -46,6 +46,8 @@ class RegistroVictimaController extends Controller
         $datos_domicilios=Domicilio::all();
         $datos_generales=DatoGeneral::all();
        // dd($datos_generales);
+
+
         return view('catalogos.datovictima',
             [
                 'datos_victimas' => $datos_victimas,

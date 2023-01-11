@@ -46,7 +46,7 @@
                     {{ __('¿Ya tiene una cuenta?') }}
                 </a>
             </div>
-        </div>
+
         </form>
 
     </div>

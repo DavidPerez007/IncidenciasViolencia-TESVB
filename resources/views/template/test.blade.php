@@ -75,12 +75,12 @@
   <section class="mb-5 home-banner-area">
     <div class="container">
      <div class="row justify-content-center fullscreen align-items-center">
-        <div class="mb-5 col-12 col-md-7 home-banner-left">
-          <h1 class="text-white">
-            Plataforma web r'aaa jioduú ytuch zobyiiñ dra nuú ndixu. <br />
+                    <div class="mb-5 col-12 col-md-7 home-banner-left">
+                        <h1 class="text-white">
+                            Plataforma web r'aaa jioduú ytuch zobyiiñ dra nuú ndixu. <br />
 
-            <h2 class="text-white">
-            Plataforma web para recabar incidencias de violencia en contra de la mujer.<br />
+                            <h2 class="text-white">
+                                Plataforma web para recabar incidencias de violencia en contra de la mujer.<br />
             <br />
             </h2>
           </h1>
