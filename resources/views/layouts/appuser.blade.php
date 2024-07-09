@@ -103,7 +103,7 @@
                             Plataforma web r'aaa jioduú ytuch zobyiiñ dra nuú ndixu. <br />
 
                             <h2 class="text-white">
-                                Plataforma web para recabar incidencias de violencia en contra de la mujer.<br />
+                                Plataforma Web para recabar incidencias de violencia en contra de la mujer.<br />
                                 <br />
                             </h2>
                         </h1>

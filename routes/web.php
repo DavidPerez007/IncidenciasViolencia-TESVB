@@ -1,7 +1,13 @@
 <?php
 
+use App\Http\Controllers\mapViewController;
 use Illuminate\Support\Facades\Route;
 
+
+#Route for redirecting to 'estadisticas' web page
+Route::get('/estadisticas', [mapViewController::class, 'showStatisticsMap'])->name('estadisticas');
+
+Route::get('/estadisticas/{state}', [MapViewController::class, 'getStatisticsForState'])->name('estadisticas.state');
 
 Route::get('/', function () {
     return view('template.test');

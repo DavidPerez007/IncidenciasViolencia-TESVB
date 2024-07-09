@@ -38,7 +38,7 @@
 <body>
   <!-- ================ Start Header Area ================= -->
   <header class="default-header">
-    <nav class="navbar navbar-expand-lg  navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="index.html">
          <h4 class="text-white">Mujer Segura</h4>
@@ -54,10 +54,8 @@
             <li><a href="{{route('register')}}">Registrarse</a></li>
             <li><a href="#sobreNosotros">¿Quienes somos?</a></li>
             <!-- Dropdown -->
-
             <li><a href="contacts.html">Contactos</a></li>
-
-
+            <li><a href="{{route('estadisticas')}}">Estadísticas</a></li>
           </ul>
         </div>
       </div>

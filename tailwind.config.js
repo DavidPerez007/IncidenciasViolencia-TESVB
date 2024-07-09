@@ -7,6 +7,7 @@ module.exports = {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        "./src/**/*.{html,js}"
     ],
 
     theme: {
@@ -14,6 +15,10 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                customPink: '#a80b88', // Define tu color personalizado aquí
+            },
+        
         },
     },
 
