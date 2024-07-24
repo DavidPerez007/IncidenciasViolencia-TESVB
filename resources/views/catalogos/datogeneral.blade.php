@@ -18,6 +18,7 @@
 'idioma'=>'idioma_espaniol',
 'id_idioma' => 'id_idioma',
 'domicilio'=>'calle',
+'datos_dependencia'=>$datos_dependencia,
 
 'id_domicilio' => 'id_domicilio',
 'id_registro_victima' => 'id_registro_victima',

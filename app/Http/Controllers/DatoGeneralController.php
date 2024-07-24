@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Livewire\TipoApoyos;
 use App\Models\DatoGeneral;
+use App\Models\Dependencia;
 use App\Models\Domicilio;
 use App\Models\Estado;
 use App\Models\Idioma;
@@ -24,6 +25,7 @@ use Illuminate\Support\Facades\DB;
 class DatoGeneralController extends Controller
 {
     public function byProject($id){
+        
         return [
             DB::table('domicilio')->where('id_domicilio', $id)
                 ->join('municipio', 'domicilio.id_municipio', '=', 'municipio.id_municipio')
@@ -107,6 +109,8 @@ class DatoGeneralController extends Controller
         $datos_idioma=Idioma::all();
         $datos_domicilio=Domicilio::all();
         $datos_estados=Estado::all();
+        $datos_dependencia=Dependencia::all();
+        //@dd($datos_dependencia);
         $datos_municipios=Municipio::all();
         $datos_registro_victima=RegistroVictima::all();
         $datos_tipo_violencia=TipoViolencia::all(['id_tipo_violencia','tipo_violencia']);
@@ -126,6 +130,7 @@ class DatoGeneralController extends Controller
                 'datos_domicilios' => $datos_domicilio,
                 'datos_municipios' => $datos_municipios,
                 'datos_registro_victima'=>$datos_registro_victima,
+                'datos_dependencia'=> $datos_dependencia,
                 'datos_tipo_violencia'=>$datos_tipo_violencia,
                 'datos_modalidad_violencia'=>$datos_modalidad_violencia,
                 'datos_tipo_apoyo'=>$datos_tipo_apoyo,
@@ -152,7 +157,6 @@ class DatoGeneralController extends Controller
                 'id_modalidad_violencia'=>$request->id_modalidad_violencia]);
 
         }
-      // dd($request);;
 
         ///si se va agregar un nuevo domicilio
         if ($request->id_domicilio==null) {
@@ -171,7 +175,8 @@ class DatoGeneralController extends Controller
                     'id_situ_conyugal'=>$request->id_situ_conyugal,'id_sexo'=>$request->id_sexo,'fecha_nacimiento'=>$request->fecha_nacimiento,
                     'hijos'=>$request->hijos,'telefono'=>$request->telefono,'email'=>$request->email,'grupo_etnico'=>$request->grupo_etnico,
                     'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$domicilio->id_domicilio,
-                    'nic'=>$request->nic,'nuc'=>$request->nuc
+                    'nic'=>$request->nic,'nuc'=>$request->nuc,
+                    'id_dependencia'=>$request->id_dependencia 
                     ]);
 
         }
@@ -196,15 +201,25 @@ class DatoGeneralController extends Controller
                     'id_situ_conyugal'=>$request->id_situ_conyugal,'id_sexo'=>$request->id_sexo,'fecha_nacimiento'=>$request->fecha_nacimiento,
                     'hijos'=>$request->hijos,'telefono'=>$request->telefono,'email'=>$request->email,'grupo_etnico'=>$request->grupo_etnico,
                     'id_nacionalidad'=>$request->id_nacionalidad,'id_idioma'=>$request->id_idioma,'id_domicilio'=>$request->id_domicilio,
-                    'nic'=>$request->nic,'nuc'=>$request->nuc]);
+                    'nic'=>$request->nic,'nuc'=>$request->nuc,
+                    'id_dependencia'=>$request->id_dependencia               
+                ]);
 
         }
 
         //obtener id del ultimo registro en datos generales
-        $datos_generales = DatoGeneral::find(1)->orderBy('id_datos_generales', 'desc')->first();
+        $datos_generales = DatoGeneral::orderBy('id_datos_generales', 'desc')->first();
+        
+        $id_selected_dependency = Dependencia::find($request->id_dependencia);
+        $selected_dependency = $id_selected_dependency->dependencia;
+        
+        
+        DB::table('rutas_victimas')->insert([
+            'dependencia'=>$selected_dependency,
+            'id_datos_generales'=>$datos_generales->id_datos_generales
+        ]);
+       
 
-        DB::table('rutas_victimas')->insert(['dependencia'=>'Registro','id_datos_generales'=>$datos_generales->id_datos_generales,]);
-        DB::table('rutas_victimas')->insert(['dependencia'=>$request->dependencia,'id_datos_generales'=>$datos_generales->id_datos_generales,]);
 
         $domicilio = Domicilio::find(1)->orderBy('id_domicilio', 'desc')->first();
 
@@ -220,7 +235,6 @@ class DatoGeneralController extends Controller
     {
 
         //dd($request);;
-
         DB::table('datos_generales')
             ->where('datos_generales.id_datos_generales','=',$request->dato_id)
             ->UPDATE([

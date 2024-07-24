@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\RegistroVictima;
+use App\Models\RegistroCaso;
 
 class MapViewController extends Controller
 {
@@ -82,15 +83,23 @@ class MapViewController extends Controller
             ->groupBy('estado.estado')
             ->get();
 
+        
         return $incidents_data;
     }
 
     private function getVictimsRegisters($state){
-        $victim_registers = RegistroVictima::select('registro_victima.id_registro_victima', 'registro_victima.id_municipio', 'registro_victima.vive_con', 'municipio.municipio', 'estado.estado')
-        ->join('municipio', 'registro_victima.id_municipio', '=', 'municipio.id_municipio')
-        ->join('estado', 'municipio.id_estado', '=', 'estado.id_estado')
-        ->where('estado.estado', $state)
-        ->orderBy('registro_victima.id_registro_victima', 'ASC')
+        // $victim_registers = RegistroVictima::select('registro_victima.id_registro_victima', 'registro_victima.id_municipio', 'registro_victima.vive_con', 'municipio.municipio', 'estado.estado')
+        // ->join('municipio', 'registro_victima.id_municipio', '=', 'municipio.id_municipio')
+        // ->join('estado', 'municipio.id_estado', '=', 'estado.id_estado')
+        // ->where('estado.estado', $state)
+        // ->orderBy('registro_victima.id_registro_victima', 'ASC')
+        // ->get();
+        $victim_registers = RegistroCaso::select('registro_caso.id_registro_caso', 'registro_caso.id_clas_violencia', 'registro_caso.id_domicilio', 'est.estado', 'mun.municipio')
+        ->join('domicilio as dom', 'registro_caso.id_domicilio', '=', 'dom.id_domicilio')
+        ->join('municipio as mun', 'dom.id_municipio', '=', 'mun.id_municipio')
+        ->join('estado as est', 'mun.id_estado', '=', 'est.id_estado')
+        ->where('est.estado', $state)
+        ->orderBy('registro_caso.id_registro_caso', 'ASC')
         ->get();
 
         return $victim_registers;

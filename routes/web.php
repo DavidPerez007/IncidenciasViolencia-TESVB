@@ -11,7 +11,6 @@ Route::get('/estadisticas/{state}', [MapViewController::class, 'getStatisticsFor
 
 Route::get('/', function () {
     return view('template.test');
-   // return view('welcome');
 });
 
 Route::middleware([ 'auth:sanctum',
